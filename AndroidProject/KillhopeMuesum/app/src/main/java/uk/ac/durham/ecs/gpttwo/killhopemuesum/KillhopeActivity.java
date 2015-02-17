@@ -1,16 +1,13 @@
 package uk.ac.durham.ecs.gpttwo.killhopemuesum;
 
-import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 
+import uk.ac.durham.ecs.gpttwo.killhopemuesum.uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.FragmentHistory;
 import uk.ac.durham.ecs.gpttwo.killhopemuesum.uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.FragmentMain;
 import uk.ac.durham.ecs.gpttwo.killhopemuesum.uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.FragmentSplash;
 
@@ -27,7 +24,7 @@ public class KillhopeActivity extends ActionBarActivity {
 
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
-                    .add(R.id.container, new FragmentSplash())
+                    .add(R.id.container, FragmentSplash.newInstance())
                     .commit();
 
             Handler handler = new Handler();
@@ -35,10 +32,25 @@ public class KillhopeActivity extends ActionBarActivity {
                 @Override
                 public void run() {
                     getSupportFragmentManager().beginTransaction()
-                            .add(R.id.container, new FragmentMain())
+                            .add(R.id.container, FragmentMain.newInstance())
                             .commit();
+
+                    View v = findViewById(R.id.button_menu_history);
+                    if(v!=null){
+                        v.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                getSupportFragmentManager()
+                                        .beginTransaction()
+                                        .add(R.id.container, FragmentHistory.newInstance())
+                                        .addToBackStack(null)
+                                        .commit();
+                            }
+                        });
+                    }
                 }
             }, SPLASH_LENGTH);
+
 
         }
     }

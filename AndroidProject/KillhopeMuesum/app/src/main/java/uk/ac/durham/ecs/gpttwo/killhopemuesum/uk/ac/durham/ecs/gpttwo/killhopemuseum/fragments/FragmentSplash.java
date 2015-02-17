@@ -19,4 +19,8 @@ public class FragmentSplash  extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_splash, container, false);
         return rootView;
     }
+
+    public static FragmentSplash newInstance(){
+        return new FragmentSplash();
+    }
 }

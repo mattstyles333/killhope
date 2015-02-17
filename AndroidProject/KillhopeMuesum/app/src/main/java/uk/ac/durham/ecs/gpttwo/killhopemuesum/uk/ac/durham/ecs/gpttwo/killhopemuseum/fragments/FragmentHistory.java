@@ -19,4 +19,8 @@ public class FragmentHistory extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_history, container, false);
         return rootView;
     }
+
+    public static FragmentHistory newInstance(){
+        return new FragmentHistory();
+    }
 }
