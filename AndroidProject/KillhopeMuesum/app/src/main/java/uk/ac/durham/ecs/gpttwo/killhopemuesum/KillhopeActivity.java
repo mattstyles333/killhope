@@ -1,7 +1,8 @@
 package uk.ac.durham.ecs.gpttwo.killhopemuesum;
 
+import android.content.Intent;
+import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,19 +10,36 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.os.Build;
+
+import uk.ac.durham.ecs.gpttwo.killhopemuesum.uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.FragmentMain;
+import uk.ac.durham.ecs.gpttwo.killhopemuesum.uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.FragmentSplash;
 
 
 public class KillhopeActivity extends ActionBarActivity {
 
+    public static final long SPLASH_LENGTH = 2500l;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_killhope);
+
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
-                    .add(R.id.container, new PlaceholderFragment())
+                    .add(R.id.container, new FragmentSplash())
                     .commit();
+
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable(){
+                @Override
+                public void run() {
+                    getSupportFragmentManager().beginTransaction()
+                            .add(R.id.container, new FragmentMain())
+                            .commit();
+                }
+            }, SPLASH_LENGTH);
+
         }
     }
 
@@ -48,19 +66,4 @@ public class KillhopeActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    /**
-     * A placeholder fragment containing a simple view.
-     */
-    public static class PlaceholderFragment extends Fragment {
-
-        public PlaceholderFragment() {
-        }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_killhope, container, false);
-            return rootView;
-        }
-    }
 }
