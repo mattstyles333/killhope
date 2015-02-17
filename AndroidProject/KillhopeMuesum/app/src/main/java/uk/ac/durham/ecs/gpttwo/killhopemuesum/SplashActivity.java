@@ -75,7 +75,6 @@ public class SplashActivity extends ActionBarActivity {
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_splash, container, false);
-            rootView.setOnClickListener();
             return rootView;
         }
     }
