@@ -11,7 +11,7 @@ import uk.ac.durham.ecs.gpttwo.killhopemuesum.R;
 /**
  * Created by Ally on 17/02/15.
  */
-public class FragmentHistory extends Fragment {
+public class HistoryFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -20,7 +20,7 @@ public class FragmentHistory extends Fragment {
         return rootView;
     }
 
-    public static FragmentHistory newInstance(){
-        return new FragmentHistory();
+    public static HistoryFragment newInstance(){
+        return new HistoryFragment();
     }
 }

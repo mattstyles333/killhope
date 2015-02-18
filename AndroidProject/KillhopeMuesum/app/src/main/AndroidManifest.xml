@@ -28,6 +28,10 @@
             </intent-filter>
 
         </activity>
+        <activity
+            android:name=".HistoryActivity"
+            android:label="@string/history_name" >
+        </activity>
 
     </application>
 

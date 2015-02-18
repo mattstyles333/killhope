@@ -11,7 +11,7 @@ import uk.ac.durham.ecs.gpttwo.killhopemuesum.R;
 /**
  * Created by Ally on 17/02/15.
  */
-public class FragmentSplash  extends Fragment {
+public class SplashFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -20,7 +20,7 @@ public class FragmentSplash  extends Fragment {
         return rootView;
     }
 
-    public static FragmentSplash newInstance(){
-        return new FragmentSplash();
+    public static SplashFragment newInstance(){
+        return new SplashFragment();
     }
 }

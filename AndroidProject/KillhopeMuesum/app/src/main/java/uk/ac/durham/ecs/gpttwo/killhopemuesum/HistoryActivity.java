@@ -1,21 +1,18 @@
 package uk.ac.durham.ecs.gpttwo.killhopemuesum;
 
-import android.content.Context;
-import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 
 import uk.ac.durham.ecs.gpttwo.killhopemuesum.uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.HistoryFragment;
 import uk.ac.durham.ecs.gpttwo.killhopemuesum.uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.MainFragment;
 import uk.ac.durham.ecs.gpttwo.killhopemuesum.uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.SplashFragment;
 
 
-public class KillhopeActivity extends ActionBarActivity {
+public class HistoryActivity extends ActionBarActivity {
 
     public static final long SPLASH_LENGTH = 2500l;
 
@@ -24,25 +21,11 @@ public class KillhopeActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_killhope);
-        final Context context = this;
+
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
-                    .add(R.id.container, SplashFragment.newInstance())
+                    .add(R.id.container, HistoryFragment.newInstance())
                     .commit();
-
-            Handler handler = new Handler();
-            handler.postDelayed(new Runnable(){
-                @Override
-                public void run() {
-                    getSupportFragmentManager().beginTransaction()
-                            .add(R.id.container, MainFragment.newInstance())
-                            .commit();
-
-
-                }
-            }, SPLASH_LENGTH);
-
-
         }
     }
 
