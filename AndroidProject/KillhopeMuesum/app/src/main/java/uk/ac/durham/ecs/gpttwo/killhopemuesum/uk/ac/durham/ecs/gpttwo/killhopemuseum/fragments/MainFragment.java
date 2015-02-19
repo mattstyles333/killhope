@@ -10,6 +10,7 @@ import android.widget.Button;
 
 import uk.ac.durham.ecs.gpttwo.killhopemuesum.HistoryActivity;
 import uk.ac.durham.ecs.gpttwo.killhopemuesum.MineralsActivity;
+import uk.ac.durham.ecs.gpttwo.killhopemuesum.QuizActivity;
 import uk.ac.durham.ecs.gpttwo.killhopemuesum.R;
 
 /**
@@ -55,6 +56,39 @@ public class MainFragment extends Fragment{
                 }
             });
         }
+        Button v3 = (Button)rootView.findViewById(R.id.button_menu_floorplan);
+        if(v3!=null){
+            v3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v3) {
+
+                    Intent intent = new Intent(getActivity(), MineralsActivity.class);
+                    startActivity(intent);
+//                                getSupportFragmentManager()
+//                                        .beginTransaction()
+//                                        .add(R.id.container, HistoryFragment.newInstance())
+//                                        .addToBackStack(null)
+//                                        .commit();
+                }
+            });
+        }
+        Button v4 = (Button)rootView.findViewById(R.id.button_menu_quiz);
+        if(v4!=null){
+            v4.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v4) {
+
+                    Intent intent = new Intent(getActivity(), QuizActivity.class);
+                    startActivity(intent);
+//                                getSupportFragmentManager()
+//                                        .beginTransaction()
+//                                        .add(R.id.container, HistoryFragment.newInstance())
+//                                        .addToBackStack(null)
+//                                        .commit();
+                }
+            });
+        }
+
 
         return rootView;
     }
