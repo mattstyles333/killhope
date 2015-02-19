@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navigationModel
+  ns = "http://schemas.android.com?import=com.android.tools.idea.editors.navigation.model.*">
+  <locations  
+    class = "java.util.ArrayList">
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.MenuState"      
+        className = "uk.ac.durham.ecs.gpttwo.killhopemuesum.MineralsActivity"/>
+      <point      
+        x = "1768"      
+        y = "1480"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "uk.ac.durham.ecs.gpttwo.killhopemuesum.MineralsActivity"/>
+      <point      
+        x = "500"      
+        y = "1480"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.MenuState"      
+        className = "uk.ac.durham.ecs.gpttwo.killhopemuesum.HistoryActivity"/>
+      <point      
+        x = "2840"      
+        y = "272"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "uk.ac.durham.ecs.gpttwo.killhopemuesum.HistoryActivity"/>
+      <point      
+        x = "1572"      
+        y = "272"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "uk.ac.durham.ecs.gpttwo.killhopemuesum.KillhopeActivity"/>
+      <point      
+        x = "500"      
+        y = "100"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.MenuState"      
+        className = "uk.ac.durham.ecs.gpttwo.killhopemuesum.KillhopeActivity"/>
+      <point      
+        x = "1768"      
+        y = "100"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "uk.ac.durham.ecs.gpttwo.killhopemuesum.SplashActivity"/>
+      <point      
+        x = "500"      
+        y = "1480"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.MenuState"      
+        className = "uk.ac.durham.ecs.gpttwo.killhopemuesum.SplashActivity"/>
+      <point      
+        x = "1768"      
+        y = "1480"/>
+    </statePointEntry>
+  </locations>
+</navigationModel>
