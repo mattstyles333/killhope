@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import uk.ac.durham.ecs.gpttwo.killhopemuesum.HistoryActivity;
+import uk.ac.durham.ecs.gpttwo.killhopemuesum.MineralsActivity;
 import uk.ac.durham.ecs.gpttwo.killhopemuesum.R;
 
 /**
@@ -28,6 +29,23 @@ public class MainFragment extends Fragment{
                 public void onClick(View v) {
 
                     Intent intent = new Intent(getActivity(), HistoryActivity.class);
+                    startActivity(intent);
+//                                getSupportFragmentManager()
+//                                        .beginTransaction()
+//                                        .add(R.id.container, HistoryFragment.newInstance())
+//                                        .addToBackStack(null)
+//                                        .commit();
+                }
+            });
+        }
+
+        Button v2 = (Button)rootView.findViewById(R.id.button_menu_minerals);
+        if(v2!=null){
+            v2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v2) {
+
+                    Intent intent = new Intent(getActivity(), MineralsActivity.class);
                     startActivity(intent);
 //                                getSupportFragmentManager()
 //                                        .beginTransaction()

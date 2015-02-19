@@ -34,7 +34,8 @@
                 android:id="@+id/button_menu_minerals"
                 android:text="@string/menu_minerals"
                 android:layout_below="@+id/button_menu_history"
-                android:layout_centerHorizontal="true" />
+                android:layout_centerHorizontal="true"
+                android:onClick="setContentView" />
 
             <Button
                 android:layout_width="match_parent"
