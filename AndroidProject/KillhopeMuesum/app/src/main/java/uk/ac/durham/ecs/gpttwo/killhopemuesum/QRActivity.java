@@ -23,6 +23,7 @@ public class QRActivity extends ActionBarActivity {
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.container, QRFragment.newInstance())
                     .commit();
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
     }
 

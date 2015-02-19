@@ -23,7 +23,9 @@ public class MineralActivity extends ActionBarActivity {
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.container, MineralFragment.newInstance())
                     .commit();
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
+
     }
 
 

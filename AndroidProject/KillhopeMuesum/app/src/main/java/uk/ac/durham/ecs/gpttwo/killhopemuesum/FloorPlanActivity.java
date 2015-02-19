@@ -23,6 +23,7 @@ public class FloorPlanActivity extends ActionBarActivity {
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.container, FloorPlanFragment.newInstance())
                     .commit();
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
     }
 

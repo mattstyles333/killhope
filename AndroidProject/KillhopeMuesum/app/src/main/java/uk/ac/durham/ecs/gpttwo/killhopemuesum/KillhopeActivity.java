@@ -29,6 +29,7 @@ public class KillhopeActivity extends ActionBarActivity {
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.container, SplashFragment.newInstance())
                     .commit();
+            getSupportActionBar().hide();
 
             Handler handler = new Handler();
             handler.postDelayed(new Runnable(){
@@ -37,7 +38,7 @@ public class KillhopeActivity extends ActionBarActivity {
                     getSupportFragmentManager().beginTransaction()
                             .add(R.id.container, MainFragment.newInstance())
                             .commit();
-
+                    getSupportActionBar().show();
 
                 }
             }, SPLASH_LENGTH);
@@ -63,6 +64,11 @@ public class KillhopeActivity extends ActionBarActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            return true;
+        }else if (id == R.id.action_help) {
+            Intent intent = new Intent(this, HelpActivity.class);
+            startActivity(intent);
+
             return true;
         }
 

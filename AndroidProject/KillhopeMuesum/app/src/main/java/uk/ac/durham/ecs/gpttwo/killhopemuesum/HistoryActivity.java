@@ -1,16 +1,10 @@
 package uk.ac.durham.ecs.gpttwo.killhopemuesum;
 
-import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-
 import uk.ac.durham.ecs.gpttwo.killhopemuesum.uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.HistoryFragment;
-import uk.ac.durham.ecs.gpttwo.killhopemuesum.uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.MainFragment;
-import uk.ac.durham.ecs.gpttwo.killhopemuesum.uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.SplashFragment;
-
 
 public class HistoryActivity extends ActionBarActivity {
 
@@ -26,9 +20,9 @@ public class HistoryActivity extends ActionBarActivity {
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.container, HistoryFragment.newInstance())
                     .commit();
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
