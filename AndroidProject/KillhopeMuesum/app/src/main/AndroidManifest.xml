@@ -36,8 +36,21 @@
         </activity>
         <activity
             android:name=".QuizActivity"
-            android:label="QuizActivity">
+            android:label="@string/title_quiz">
             </activity>
+        <activity
+            android:name=".GalleryActivity"
+            android:label="@string/title_gallery">
+            </activity>
+        <activity android:name=".HelpActivity"
+            android:label="@string/title_help"
+            ></activity>
+        <activity android:name=".QRActivity"
+            android:label="@string/title_qr">
+            </activity>
+        <activity android:name=".MineralActivity"
+            android:label="@string/title_mineral"
+            ></activity>
     </application>
 
 </manifest>
