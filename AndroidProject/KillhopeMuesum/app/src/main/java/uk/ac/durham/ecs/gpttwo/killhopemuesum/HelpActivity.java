@@ -1,5 +1,6 @@
 package uk.ac.durham.ecs.gpttwo.killhopemuesum;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.Fragment;
@@ -7,12 +8,16 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.Window;
+
 import uk.ac.durham.ecs.gpttwo.killhopemuesum.uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.HelpPageFragment;
 
 
-public class HelpActivity extends FragmentActivity {
+public class HelpActivity extends ActionBarActivity {
 
     public static final int NUM_PAGES = 5;
 
@@ -34,10 +39,11 @@ public class HelpActivity extends FragmentActivity {
 //        getActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_killhope, menu);
+        getMenuInflater().inflate(R.menu.menu_help, menu);
         return true;
     }
 
@@ -49,9 +55,19 @@ public class HelpActivity extends FragmentActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_nextpage) {
+            if(mPager.getCurrentItem() != 0) {
+                mPager.setCurrentItem(mPager.getCurrentItem() - 1);
+            }
+            return true;
+        }else if (id == R.id.action_prevpage) {
+            if(mPager.getCurrentItem() != NUM_PAGES - 1) {
+                mPager.setCurrentItem(mPager.getCurrentItem() + 1);
+            }
             return true;
         }
+
+
 
         return super.onOptionsItemSelected(item);
     }

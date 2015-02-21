@@ -20,6 +20,8 @@ public class HelpPageFragment extends Fragment {
         return rootView;
     }
 
+
+
     public static HelpFragment newInstance(){
         return new HelpFragment();
     }
