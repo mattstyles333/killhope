@@ -42,8 +42,6 @@ public class KillhopeActivity extends ActionBarActivity {
 
                 }
             }, SPLASH_LENGTH);
-
-
         }
     }
 
