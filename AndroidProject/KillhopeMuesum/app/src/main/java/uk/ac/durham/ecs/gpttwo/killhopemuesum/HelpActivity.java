@@ -35,8 +35,8 @@ public class HelpActivity extends ActionBarActivity {
         mPageAdapter = new HelpPagerAdapter(getSupportFragmentManager());
         mPager.setAdapter(mPageAdapter);
 
-//        getActionBar().show();
-//        getActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
     }
 
 
@@ -55,12 +55,12 @@ public class HelpActivity extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_nextpage) {
+        if (id == R.id.action_prevpage) {
             if(mPager.getCurrentItem() != 0) {
                 mPager.setCurrentItem(mPager.getCurrentItem() - 1);
             }
             return true;
-        }else if (id == R.id.action_prevpage) {
+        }else if (id == R.id.action_nextpage) {
             if(mPager.getCurrentItem() != NUM_PAGES - 1) {
                 mPager.setCurrentItem(mPager.getCurrentItem() + 1);
             }
