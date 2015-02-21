@@ -20,12 +20,10 @@
     <string name="title_qr">QR Scanner</string>
     <string name="title_mineral">title_mineral</string>
     <string name="menu_help">Help</string>
-<<<<<<< HEAD
+
     <string name="title_floorplan">title_floorplan</string>
 
-=======
     <string name="help_next">Next</string>
     <string name="help_previous">Prev</string>
->>>>>>> origin/master
 
 </resources>
