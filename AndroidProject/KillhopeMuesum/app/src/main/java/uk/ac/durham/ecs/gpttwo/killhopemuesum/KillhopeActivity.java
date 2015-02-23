@@ -17,7 +17,7 @@ import uk.ac.durham.ecs.gpttwo.killhopemuesum.uk.ac.durham.ecs.gpttwo.killhopemu
 
 public class KillhopeActivity extends ActionBarActivity {
 
-    public static final long SPLASH_LENGTH = 2500l;
+    public static final long SPLASH_LENGTH = 5000l;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
