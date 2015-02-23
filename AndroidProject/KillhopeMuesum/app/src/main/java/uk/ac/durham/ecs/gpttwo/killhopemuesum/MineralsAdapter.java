@@ -1,60 +1,49 @@
 package uk.ac.durham.ecs.gpttwo.killhopemuesum;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
 
+import java.util.ArrayList;
+
+import uk.ac.durham.ecs.gpttwo.killhopemuesum.uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.MineralThumbFragment;
+
 public class MineralsAdapter extends BaseAdapter {
     private Context mContext;
 
+    private ArrayList<MineralThumbFragment> mineralThumbs = new ArrayList<MineralThumbFragment>();
     // Constructor
     public MineralsAdapter(Context c) {
         mContext = c;
+        MineralThumbFragment mtf = MineralThumbFragment.newInstance(1, mContext);
+        mtf.setTitle();
+        mtf.setThumb();
+
+        mineralThumbs.add(mtf);
     }
 
     public int getCount() {
-        return mThumbIds.length;
+        return mineralThumbs.size();
     }
 
     public Object getItem(int position) {
-        return null;
+        return mineralThumbs.get(position);
     }
 
     public long getItemId(int position) {
-        return 0;
+        return getItem(position).getId();
     }
 
     // create a new ImageView for each item referenced by the Adapter
     public View getView(int position, View convertView, ViewGroup parent) {
-        ImageView imageView;
-        if (convertView == null) {
-            imageView = new ImageView(mContext);
-            imageView.setLayoutParams(new GridView.LayoutParams(85, 85));
-            imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-            imageView.setPadding(8, 8, 8, 8);
-        } else {
-            imageView = (ImageView) convertView;
-        }
+        LayoutInflater inflator = (LayoutInflater)mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-        imageView.setImageResource(mThumbIds[position]);
-        return imageView;
+        View view = inflator.inflate(R.layout.fragment_mineral_thumb,parent,false);
+
+        return view;
     }
-
-    // Keep all Images in array
-    public Integer[] mThumbIds = {
-            R.drawable.ic_launcher, R.drawable.ic_launcher,
-            R.drawable.ic_launcher, R.drawable.ic_launcher,
-            R.drawable.ic_launcher, R.drawable.ic_launcher,
-            R.drawable.ic_launcher, R.drawable.ic_launcher,
-            R.drawable.ic_launcher, R.drawable.ic_launcher,
-            R.drawable.ic_launcher, R.drawable.ic_launcher,
-            R.drawable.ic_launcher, R.drawable.ic_launcher,
-            R.drawable.ic_launcher, R.drawable.ic_launcher,
-            R.drawable.ic_launcher, R.drawable.ic_launcher,
-            R.drawable.ic_launcher, R.drawable.ic_launcher,
-            R.drawable.ic_launcher, R.drawable.ic_launcher
-    };
 }
