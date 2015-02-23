@@ -19,7 +19,7 @@ public class MineralsAdapter extends BaseAdapter {
     // Constructor
     public MineralsAdapter(Context c) {
         mContext = c;
-        MineralThumbFragment mtf = MineralThumbFragment.newInstance(1,"test",R.drawable.ic_launcher, mContext);
+        MineralThumbFragment mtf = MineralThumbFragment.newInstance(1,"Name", R.drawable.ic_launcher, mContext);
 
         mineralThumbs.add(mtf);
     }
