@@ -16,10 +16,7 @@ public class MineralsActivity extends ActionBarActivity {
 
     private GridView gridView;
     private MineralsAdapter adapter;
-<<<<<<< HEAD
-=======
     public static final long SPLASH_LENGTH = 2500l;
->>>>>>> master
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
