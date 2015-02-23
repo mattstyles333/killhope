@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import uk.ac.durham.ecs.gpttwo.killhopemuesum.FloorPlanActivity;
-import uk.ac.durham.ecs.gpttwo.killhopemuesum.GalleryActivity;
 import uk.ac.durham.ecs.gpttwo.killhopemuesum.HistoryActivity;
 import uk.ac.durham.ecs.gpttwo.killhopemuesum.MineralsActivity;
 import uk.ac.durham.ecs.gpttwo.killhopemuesum.QuizActivity;
@@ -90,22 +89,7 @@ public class MainFragment extends Fragment{
                 }
             });
         }
-        Button v5 = (Button)rootView.findViewById(R.id.button_menu_gallery);
-        if(v5!=null){
-            v5.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v5) {
 
-                    Intent intent = new Intent(getActivity(), GalleryActivity.class);
-                    startActivity(intent);
-//                                getSupportFragmentManager()
-//                                        .beginTransaction()
-//                                        .add(R.id.container, HistoryFragment.newInstance())
-//                                        .addToBackStack(null)
-//                                        .commit();
-                }
-            });
-        }
 
         return rootView;
     }

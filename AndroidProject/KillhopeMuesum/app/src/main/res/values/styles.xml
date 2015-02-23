@@ -15,10 +15,4 @@
     <!-- Support library compatibility -->
     <item name="background">@color/navbar_background</item>
 </style>
-
-<style name="Theme.Splash" parent="android:Theme">
-<item name="android:windowBackground">@drawable/bg</item>
-<item name="android:windowNoTitle">true</item>
-</style>
-
 </resources>

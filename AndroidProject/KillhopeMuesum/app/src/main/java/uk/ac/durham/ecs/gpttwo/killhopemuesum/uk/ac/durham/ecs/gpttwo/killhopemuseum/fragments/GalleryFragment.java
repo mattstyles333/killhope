@@ -5,10 +5,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.GridView;
 
-import uk.ac.durham.ecs.gpttwo.killhopemuesum.GalleryAdapter;
 import uk.ac.durham.ecs.gpttwo.killhopemuesum.R;
 
 /**
@@ -20,13 +17,6 @@ public class GalleryFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_gallery, container, false);
-
-        GridView gridView = (GridView) rootView.findViewById(R.id.gallery_gridView);
-
-        GalleryAdapter adapter = new GalleryAdapter(getActivity());
-
-        gridView.setAdapter(adapter);
-
         return rootView;
     }
 
