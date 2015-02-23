@@ -26,13 +26,12 @@ public class MineralThumbFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_mineral_thumb, container, false);
 
-        .set;
         TextView text = (TextView)rootView.findViewById(R.id.mineral_thumb_text);
         ImageView image = (ImageView)rootView.findViewById(R.id.mineral_thumb_image);
         return rootView;
     }
 
-    public static MineralThumbFragment newInstance(int id, String name, int imageId Context mContext){
+    public static MineralThumbFragment newInstance(int id, String name, int imageId, Context mContext){
         MineralThumbFragment mtf = new MineralThumbFragment();
 
         mtf.id = id;
