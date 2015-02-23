@@ -13,19 +13,11 @@ import uk.ac.durham.ecs.gpttwo.killhopemuesum.uk.ac.durham.ecs.gpttwo.killhopemu
 
 public class GalleryActivity extends ActionBarActivity {
 
-    private GridView gridView;
-    private GalleryAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_gallery);
-
-        gridView = (GridView) findViewById(R.id.gallery_gridView);
-
-        adapter = new GalleryAdapter(this);
-
-        gridView.setAdapter(adapter);
+        setContentView(R.layout.activity_killhope);
 
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
