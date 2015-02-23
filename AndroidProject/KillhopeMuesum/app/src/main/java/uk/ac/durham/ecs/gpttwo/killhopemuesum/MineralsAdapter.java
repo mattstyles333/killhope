@@ -19,9 +19,7 @@ public class MineralsAdapter extends BaseAdapter {
     // Constructor
     public MineralsAdapter(Context c) {
         mContext = c;
-        MineralThumbFragment mtf = MineralThumbFragment.newInstance(1, mContext);
-        mtf.setTitle();
-        mtf.setThumb();
+        MineralThumbFragment mtf = MineralThumbFragment.newInstance(1,"test",R.drawable.ic_launcher, mContext);
 
         mineralThumbs.add(mtf);
     }
@@ -35,7 +33,7 @@ public class MineralsAdapter extends BaseAdapter {
     }
 
     public long getItemId(int position) {
-        return getItem(position).getId();
+        return 0;
     }
 
     // create a new ImageView for each item referenced by the Adapter
