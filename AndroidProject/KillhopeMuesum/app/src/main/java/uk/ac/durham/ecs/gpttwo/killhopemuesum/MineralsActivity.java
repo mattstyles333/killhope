@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MineralsActivity extends ActionBarActivity {
+
     private GridView gridView;
     private MineralsAdapter adapter;
     public static final long SPLASH_LENGTH = 2500l;
@@ -28,6 +29,9 @@ public class MineralsActivity extends ActionBarActivity {
         adapter = new MineralsAdapter(this);
 
         gridView.setAdapter(adapter);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
     }
 
 
@@ -44,11 +48,13 @@ public class MineralsActivity extends ActionBarActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
+        if(id == android.R.id.home){
+            onBackPressed();
+        }
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
-        }
-
+        } else
         return super.onOptionsItemSelected(item);
     }
 
