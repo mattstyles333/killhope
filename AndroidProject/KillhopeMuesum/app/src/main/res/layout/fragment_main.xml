@@ -51,6 +51,13 @@
                 android:text="@string/menu_quiz"
                 android:layout_below="@+id/button_menu_floorplan"
                 android:layout_centerHorizontal="true" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_menu_gallery"
+                android:text="gallery"
+                android:layout_below="@+id/button_menu_gallery"
+                android:layout_centerHorizontal="true" />
         </LinearLayout>
     </ScrollView>
 

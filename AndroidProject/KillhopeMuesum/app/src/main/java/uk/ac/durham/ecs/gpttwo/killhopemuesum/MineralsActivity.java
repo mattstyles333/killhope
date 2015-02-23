@@ -16,13 +16,6 @@ public class MineralsActivity extends ActionBarActivity {
     private GridView gridView;
     private MineralsAdapter adapter;
     public static final long SPLASH_LENGTH = 2500l;
-    static final String[] numbers = new String[] {
-            "A", "B", "C", "D", "E",
-            "F", "G", "H", "I", "J",
-            "K", "L", "M", "N", "O",
-            "P", "Q", "R", "S", "T",
-            "U", "V", "W", "X", "Y", "Z"};
-
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
