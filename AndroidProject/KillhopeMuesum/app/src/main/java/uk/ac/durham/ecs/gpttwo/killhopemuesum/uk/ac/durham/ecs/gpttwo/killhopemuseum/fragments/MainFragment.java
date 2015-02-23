@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import uk.ac.durham.ecs.gpttwo.killhopemuesum.FloorPlanActivity;
 import uk.ac.durham.ecs.gpttwo.killhopemuesum.HistoryActivity;
 import uk.ac.durham.ecs.gpttwo.killhopemuesum.MineralsActivity;
 import uk.ac.durham.ecs.gpttwo.killhopemuesum.QuizActivity;
@@ -62,7 +63,7 @@ public class MainFragment extends Fragment{
                 @Override
                 public void onClick(View v3) {
 
-                    Intent intent = new Intent(getActivity(), MineralsActivity.class);
+                    Intent intent = new Intent(getActivity(), FloorPlanActivity.class);
                     startActivity(intent);
 //                                getSupportFragmentManager()
 //                                        .beginTransaction()

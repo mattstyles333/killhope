@@ -18,7 +18,7 @@ public class FloorPlanFragment extends Fragment {
         return rootView;
     }
 
-    public static HistoryFragment newInstance(){
-        return new HistoryFragment();
+    public static FloorPlanFragment newInstance(){
+        return new FloorPlanFragment();
     }
 }

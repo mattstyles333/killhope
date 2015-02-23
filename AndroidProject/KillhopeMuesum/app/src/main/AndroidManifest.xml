@@ -51,6 +51,10 @@
         <activity android:name=".MineralActivity"
             android:label="@string/title_mineral"
             ></activity>
+        <activity android:name=".FloorPlanActivity"
+            android:label="@string/title_floorplan">
+
+            </activity>
     </application>
 
 </manifest>
