@@ -1,6 +1,7 @@
 package uk.ac.durham.ecs.gpttwo.killhopemuesum;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,7 +22,9 @@ public class MineralsAdapter extends BaseAdapter {
         mContext = c;
         MineralThumbFragment mtf = MineralThumbFragment.newInstance(1,"Name", R.drawable.ic_launcher, mContext);
 
-        mineralThumbs.add(mtf);
+        for(int i=0;i<15;i++) {
+            mineralThumbs.add(mtf);
+        }
     }
 
     public int getCount() {

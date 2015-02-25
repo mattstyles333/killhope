@@ -1,8 +1,10 @@
 package uk.ac.durham.ecs.gpttwo.killhopemuesum;
 
 import android.os.Handler;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -12,23 +14,23 @@ import android.widget.GridView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MineralsActivity extends ActionBarActivity {
+import uk.ac.durham.ecs.gpttwo.killhopemuesum.uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.GalleryFragment;
+import uk.ac.durham.ecs.gpttwo.killhopemuesum.uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.MineralsFragment;
 
-    private GridView gridView;
-    private MineralsAdapter adapter;
-    public static final long SPLASH_LENGTH = 2500l;
+public class MineralsActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_minerals);
+        setContentView(R.layout.activity_killhope);
 
-        gridView = (GridView) findViewById(R.id.minerals_gridview);
-
-        adapter = new MineralsAdapter(this);
-
-        gridView.setAdapter(adapter);
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction()
+                    .add(R.id.container, MineralsFragment.newInstance())
+                    .commit();
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -37,7 +39,22 @@ public class MineralsActivity extends ActionBarActivity {
 
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_killhope, menu);
+        getMenuInflater().inflate(R.menu.menu_minerals, menu);
+        MenuItem searchItem = menu.findItem(R.id.action_search);
+        SearchView searchView = (SearchView)MenuItemCompat.getActionView(searchItem);
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+                return false;
+            }
+        });
+
         return true;
     }
 
