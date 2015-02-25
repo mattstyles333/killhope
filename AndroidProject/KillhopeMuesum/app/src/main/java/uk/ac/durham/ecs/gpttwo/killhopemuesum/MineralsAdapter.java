@@ -1,17 +1,14 @@
 package uk.ac.durham.ecs.gpttwo.killhopemuesum;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.GridView;
-import android.widget.ImageView;
 
 import java.util.ArrayList;
 
-import uk.ac.durham.ecs.gpttwo.killhopemuesum.uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.MineralThumbFragment;
+import uk.ac.durham.ecs.gpttwo.killhopemuesum.fragments.MineralThumbFragment;
 
 public class MineralsAdapter extends BaseAdapter {
     private Context mContext;

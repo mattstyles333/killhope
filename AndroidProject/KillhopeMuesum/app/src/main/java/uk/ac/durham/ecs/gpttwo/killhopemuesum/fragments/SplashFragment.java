@@ -1,4 +1,4 @@
-package uk.ac.durham.ecs.gpttwo.killhopemuesum.uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments;
+package uk.ac.durham.ecs.gpttwo.killhopemuesum.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -8,17 +8,19 @@ import android.view.ViewGroup;
 
 import uk.ac.durham.ecs.gpttwo.killhopemuesum.R;
 
-
-public class FloorPlanFragment extends Fragment {
+/**
+ * Created by Ally on 17/02/15.
+ */
+public class SplashFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_floorplan, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_splash, container, false);
         return rootView;
     }
 
-    public static FloorPlanFragment newInstance(){
-        return new FloorPlanFragment();
+    public static SplashFragment newInstance(){
+        return new SplashFragment();
     }
 }

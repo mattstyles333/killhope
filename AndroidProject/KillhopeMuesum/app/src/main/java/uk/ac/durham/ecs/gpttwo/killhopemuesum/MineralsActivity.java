@@ -1,21 +1,13 @@
 package uk.ac.durham.ecs.gpttwo.killhopemuesum;
 
-import android.os.Handler;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.GridView;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import uk.ac.durham.ecs.gpttwo.killhopemuesum.uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.GalleryFragment;
-import uk.ac.durham.ecs.gpttwo.killhopemuesum.uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.MineralsFragment;
+import uk.ac.durham.ecs.gpttwo.killhopemuesum.fragments.MineralsFragment;
 
 public class MineralsActivity extends ActionBarActivity {
 

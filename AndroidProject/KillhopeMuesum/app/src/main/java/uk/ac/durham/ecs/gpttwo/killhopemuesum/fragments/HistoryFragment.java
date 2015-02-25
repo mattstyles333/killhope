@@ -1,4 +1,4 @@
-package uk.ac.durham.ecs.gpttwo.killhopemuesum.uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments;
+package uk.ac.durham.ecs.gpttwo.killhopemuesum.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -11,7 +11,7 @@ import uk.ac.durham.ecs.gpttwo.killhopemuesum.R;
 /**
  * Created by Ally on 17/02/15.
  */
-public class MineralFragment extends Fragment {
+public class HistoryFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -20,7 +20,7 @@ public class MineralFragment extends Fragment {
         return rootView;
     }
 
-    public static MineralFragment newInstance(){
-        return new MineralFragment();
+    public static HistoryFragment newInstance(){
+        return new HistoryFragment();
     }
 }
