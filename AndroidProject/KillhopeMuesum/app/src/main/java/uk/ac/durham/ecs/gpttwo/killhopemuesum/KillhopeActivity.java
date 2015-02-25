@@ -7,12 +7,9 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 
-import uk.ac.durham.ecs.gpttwo.killhopemuesum.uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.HistoryFragment;
-import uk.ac.durham.ecs.gpttwo.killhopemuesum.uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.MainFragment;
-import uk.ac.durham.ecs.gpttwo.killhopemuesum.uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.SplashFragment;
+import uk.ac.durham.ecs.gpttwo.killhopemuesum.fragments.MainFragment;
+import uk.ac.durham.ecs.gpttwo.killhopemuesum.fragments.SplashFragment;
 
 
 public class KillhopeActivity extends ActionBarActivity {

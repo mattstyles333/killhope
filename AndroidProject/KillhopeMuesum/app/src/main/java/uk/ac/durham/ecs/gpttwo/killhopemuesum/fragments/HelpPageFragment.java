@@ -1,4 +1,4 @@
-package uk.ac.durham.ecs.gpttwo.killhopemuesum.uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments;
+package uk.ac.durham.ecs.gpttwo.killhopemuesum.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -9,18 +9,20 @@ import android.view.ViewGroup;
 import uk.ac.durham.ecs.gpttwo.killhopemuesum.R;
 
 /**
- * Created by Ally on 17/02/15.
+ * Created by Ally on 19/02/15.
  */
-public class QRFragment extends Fragment {
+public class HelpPageFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_history, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_help_page, container, false);
         return rootView;
     }
 
-    public static QRFragment newInstance(){
-        return new QRFragment();
+
+
+    public static HelpFragment newInstance(){
+        return new HelpFragment();
     }
 }

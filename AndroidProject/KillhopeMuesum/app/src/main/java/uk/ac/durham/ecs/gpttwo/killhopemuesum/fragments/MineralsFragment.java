@@ -1,4 +1,4 @@
-package uk.ac.durham.ecs.gpttwo.killhopemuesum.uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments;
+package uk.ac.durham.ecs.gpttwo.killhopemuesum.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;

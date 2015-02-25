@@ -5,8 +5,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import uk.ac.durham.ecs.gpttwo.killhopemuesum.uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.FloorPlanFragment;
-import uk.ac.durham.ecs.gpttwo.killhopemuesum.uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.QuizFragment;
+import uk.ac.durham.ecs.gpttwo.killhopemuesum.fragments.QuizFragment;
 
 
 public class QuizActivity extends ActionBarActivity {
