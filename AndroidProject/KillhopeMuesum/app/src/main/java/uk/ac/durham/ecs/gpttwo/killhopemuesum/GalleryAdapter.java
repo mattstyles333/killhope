@@ -45,7 +45,7 @@ public class GalleryAdapter extends BaseAdapter {
 
     // Keep all Images in array
     public Integer[] mThumbIds = {
-            R.drawable.ic_launcher, R.drawable.ic_launcher,
+            R.drawable.ic_launcher, R.drawable.bg,
             R.drawable.ic_launcher, R.drawable.ic_launcher,
             R.drawable.ic_launcher, R.drawable.ic_launcher,
             R.drawable.ic_launcher, R.drawable.ic_launcher,
