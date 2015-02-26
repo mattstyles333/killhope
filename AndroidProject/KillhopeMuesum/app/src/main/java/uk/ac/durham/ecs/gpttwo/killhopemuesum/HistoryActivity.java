@@ -1,41 +1,43 @@
 package uk.ac.durham.ecs.gpttwo.killhopemuesum;
 
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import uk.ac.durham.ecs.gpttwo.killhopemuesum.fragments.HistoryFragment;
+
+import uk.ac.durham.ecs.gpttwo.killhopemuesum.fragments.HistoryPageFragment;
 
 public class HistoryActivity extends ActionBarActivity {
 
-    public static final long SPLASH_LENGTH = 2500l;
+    private ViewPager mPager;
+    private PagerAdapter mPageAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_killhope);
+        setContentView(R.layout.activity_history_page);
 
-        if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction()
-                    .add(R.id.container, HistoryFragment.newInstance())
-                    .commit();
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        }
+        mPager = (ViewPager)findViewById(R.id.history_pager);
+        mPageAdapter = new HistoryPagerAdapter(getSupportFragmentManager());
+        mPager.setAdapter(mPageAdapter);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
-    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_killhope, menu);
+        getMenuInflater().inflate(R.menu.menu_history, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
@@ -43,7 +45,27 @@ public class HistoryActivity extends ActionBarActivity {
             return true;
         }
 
+
+        if (id == R.id.action_prevpage) {
+            if(mPager.getCurrentItem() != 0) {
+                mPager.setCurrentItem(mPager.getCurrentItem() - 1);
+            }
+            return true;
+        }else if (id == R.id.action_nextpage) {
+            if(mPager.getCurrentItem() != mPageAdapter.getCount() - 1) {
+                mPager.setCurrentItem(mPager.getCurrentItem() + 1);
+            }
+            return true;
+        }else if (id == android.R.id.home) {
+            onBackPressed();
+            return true;
+        }
+
         return super.onOptionsItemSelected(item);
+    }
+
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 
 }
