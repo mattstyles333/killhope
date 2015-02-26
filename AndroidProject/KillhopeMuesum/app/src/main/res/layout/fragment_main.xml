@@ -24,10 +24,12 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <Button
+                android:background="@drawable/red_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/button_menu_history"
-                android:text="@string/menu_history" />
+                android:text="@string/menu_history"
+                style="@style/button_text" />
 
             <Button
                 android:layout_width="match_parent"
