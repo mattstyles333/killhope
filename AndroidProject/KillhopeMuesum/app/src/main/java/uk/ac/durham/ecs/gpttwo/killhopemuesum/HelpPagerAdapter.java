@@ -18,7 +18,7 @@ public class HelpPagerAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        return HelpPageFragment.newInstance();
+        return HelpPageFragment.newInstance(position);
     }
 
     @Override
