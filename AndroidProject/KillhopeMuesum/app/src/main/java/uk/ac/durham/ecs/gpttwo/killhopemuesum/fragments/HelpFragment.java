@@ -11,16 +11,16 @@ import uk.ac.durham.ecs.gpttwo.killhopemuesum.R;
 /**
  * Created by Ally on 17/02/15.
  */
-public class QRFragment extends Fragment {
+public class HelpFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_history, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_help, container, false);
         return rootView;
     }
 
-    public static QRFragment newInstance(){
-        return new QRFragment();
+    public static HelpFragment newInstance(){
+        return new HelpFragment();
     }
 }

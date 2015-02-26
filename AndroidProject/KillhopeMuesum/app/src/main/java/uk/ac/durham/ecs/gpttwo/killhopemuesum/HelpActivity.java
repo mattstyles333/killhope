@@ -15,7 +15,7 @@ import uk.ac.durham.ecs.gpttwo.killhopemuesum.fragments.HelpPageFragment;
 
 public class HelpActivity extends ActionBarActivity {
 
-
+    public static final int NUM_PAGES = 5;
 
     private ViewPager mPager;
 
@@ -57,7 +57,7 @@ public class HelpActivity extends ActionBarActivity {
             }
             return true;
         }else if (id == R.id.action_nextpage) {
-            if(mPager.getCurrentItem() != mPageAdapter.getCount() - 1) {
+            if(mPager.getCurrentItem() != NUM_PAGES - 1) {
                 mPager.setCurrentItem(mPager.getCurrentItem() + 1);
             }
             return true;
@@ -83,5 +83,25 @@ public class HelpActivity extends ActionBarActivity {
 //            mPager.setCurrentItem(mPager.getCurrentItem() - 1);
 //        }
         super.onBackPressed();
+    }
+
+    /**
+     * A simple pager adapter that represents 5 ScreenSlidePageFragment objects, in
+     * sequence.
+     */
+    private class HelpPagerAdapter extends FragmentStatePagerAdapter {
+        public HelpPagerAdapter(FragmentManager fm) {
+            super(fm);
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            return new HelpPageFragment();
+        }
+
+        @Override
+        public int getCount() {
+            return NUM_PAGES;
+        }
     }
 }

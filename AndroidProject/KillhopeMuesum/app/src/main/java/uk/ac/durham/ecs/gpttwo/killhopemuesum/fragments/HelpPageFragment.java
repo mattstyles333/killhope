@@ -22,7 +22,7 @@ public class HelpPageFragment extends Fragment {
 
 
 
-    public static HelpPageFragment newInstance(){
-        return new HelpPageFragment();
+    public static HelpFragment newInstance(){
+        return new HelpFragment();
     }
 }

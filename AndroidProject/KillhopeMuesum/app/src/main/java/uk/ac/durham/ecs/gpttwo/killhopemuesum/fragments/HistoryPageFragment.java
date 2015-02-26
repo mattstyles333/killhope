@@ -8,44 +8,21 @@ import android.view.ViewGroup;
 
 import uk.ac.durham.ecs.gpttwo.killhopemuesum.R;
 
+/**
+ * Created by Ally on 19/02/15.
+ */
 public class HistoryPageFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        int layID = getArguments().getInt("layID");
-        View rootView = inflater.inflate(layID, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_history_page, container, false);
         return rootView;
     }
 
-    public static HistoryPageFragment newInstance(int pos){
-        HistoryPageFragment hpf = new HistoryPageFragment();
-        Bundle args = new Bundle();
-        int layID = -1;
-        switch(pos){
-            case(0):
-                layID = R.layout.fragment_history_page_0;
-                break;
-            case(1):
-                layID=R.layout.fragment_history_page_1;
-                break;
-            case(2):
-                layID=R.layout.fragment_history_page_2;
-                break;
-            case(3):
-                layID=R.layout.fragment_history_page_3;
-                break;
-            case(4):
-                layID=R.layout.fragment_history_page_4;
-                break;
 
-            default:
-                layID = R.layout.fragment_history_page;
-                break;
-        }
 
-        args.putInt("layID", layID);
-        hpf.setArguments(args);
-        return hpf;
+    public static HistoryFragment newInstance(){
+        return new HistoryFragment();
     }
 }
