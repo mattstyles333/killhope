@@ -32,7 +32,7 @@ public class KillhopeActivity extends ActionBarActivity {
             handler.postDelayed(new Runnable(){
                 @Override
                 public void run() {
-//                    MineralManager.loadMinerals(context);
+                    MineralManager.loadMinerals(context);
                     getSupportFragmentManager().beginTransaction()
                             .add(R.id.container, MainFragment.newInstance())
                             .commit();

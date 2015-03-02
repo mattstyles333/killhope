@@ -17,7 +17,7 @@ public class MineralManager {
     public static void loadMinerals(Context context){
         JSONObject mineralData = parseJSONData(context);
         for (int i=0; i<= mineralData.length(); i++){
-
+            
         }
 
     }
@@ -28,7 +28,7 @@ public class MineralManager {
 
     public static JSONObject parseJSONData(Context context) {
         String JSONString = null;
-        JSONObject JSONObject = null;
+        JSONObject jsonObject = null;
         try {
 
             //open the inputStream to the file
@@ -47,8 +47,7 @@ public class MineralManager {
 
             JSONString = new String(bytes, "UTF-8");
             System.out.println(JSONString);
-            JSONObject = new JSONObject(JSONString);
-
+            jsonObject = new JSONObject(JSONString);
         } catch (IOException ex) {
             ex.printStackTrace();
             return null;
@@ -57,7 +56,7 @@ public class MineralManager {
             x.printStackTrace();
             return null;
         }
-        return JSONObject;
+        return jsonObject;
     }
 
 
