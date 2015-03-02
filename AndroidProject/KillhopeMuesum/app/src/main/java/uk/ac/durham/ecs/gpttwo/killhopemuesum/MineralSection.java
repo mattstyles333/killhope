@@ -1,5 +1,9 @@
 package uk.ac.durham.ecs.gpttwo.killhopemuesum;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 
 /**
@@ -9,8 +13,17 @@ public class MineralSection {
 
     private ArrayList<MineralSectionSub> mineralSectionSubs;
 
-    public MineralSection() {
+    public MineralSection(JSONArray data) {
         mineralSectionSubs = new ArrayList<MineralSectionSub>();
+        for (int i=0; i<= data.length()-1; i++){
+            try {
+                JSONObject mineralObj = data.getJSONObject(i);
+                MineralSectionSub ms = new MineralSectionSub(mineralObj.getString("title"),mineralObj.getString("info"));
+                addMineralSectionSub(ms);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     public void addMineralSectionSub(MineralSectionSub mss)

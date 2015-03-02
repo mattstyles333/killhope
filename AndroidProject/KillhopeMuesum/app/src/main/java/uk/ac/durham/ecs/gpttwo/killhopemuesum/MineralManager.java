@@ -16,8 +16,14 @@ public class MineralManager {
 
     public static void loadMinerals(Context context){
         JSONObject mineralData = parseJSONData(context);
-        for (int i=0; i<= mineralData.length(); i++){
-            
+        for (int i=0; i<= mineralData.length()-1; i++){
+            try {
+                JSONObject mineralObj = mineralData.getJSONObject("" + i);
+                Mineral m = new Mineral(mineralObj);
+                addMineral(m);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
         }
 
     }
