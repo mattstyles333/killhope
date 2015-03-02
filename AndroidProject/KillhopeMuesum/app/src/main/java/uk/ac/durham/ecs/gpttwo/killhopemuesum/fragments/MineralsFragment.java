@@ -16,19 +16,16 @@ import uk.ac.durham.ecs.gpttwo.killhopemuesum.R;
 
 public class MineralsFragment extends Fragment implements AdapterView.OnItemClickListener {
 
-    private GridView gridView;
-    private MineralsAdapter adapter;
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_minerals, container, false);
 
-        gridView = (GridView) rootView.findViewById(R.id.minerals_gridview);
+        GridView gridView = (GridView) rootView.findViewById(R.id.minerals_gridview);
 
         gridView.setOnItemClickListener(this);
 
-        adapter = new MineralsAdapter(getActivity());
+        MineralsAdapter adapter = new MineralsAdapter(getActivity());
 
         gridView.setAdapter(adapter);
 
