@@ -6,7 +6,7 @@
         android:orderInCategory="100" app:showAsAction="never" />
     <item android:id="@+id/action_qr" android:title="QR"
         android:orderInCategory="10" app:showAsAction="always"
-        android:icon="@drawable/ic_launcher"/>
+        android:icon="@drawable/qr_button_white"/>
     <item android:id="@+id/action_search" android:title="Search"
         android:orderInCategory="1"
         android:icon="@drawable/abc_ic_search_api_mtrl_alpha"

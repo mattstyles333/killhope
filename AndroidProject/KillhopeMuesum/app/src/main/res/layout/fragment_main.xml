@@ -18,7 +18,9 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/image_menu_logo">
+        android:layout_below="@+id/image_menu_logo"
+        android:paddingLeft="@dimen/menu_padding"
+        android:paddingRight="@dimen/menu_padding">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
