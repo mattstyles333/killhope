@@ -31,4 +31,8 @@ public class MineralSection {
         mineralSectionSubs.add(mss);
     }
 
+    public MineralSectionSub getSub(int id){
+        return mineralSectionSubs.get(id);
+    }
+
 }

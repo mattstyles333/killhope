@@ -29,7 +29,6 @@ public class MineralsFragment extends Fragment implements AdapterView.OnItemClic
 
         gridView.setAdapter(adapter);
 
-
         return rootView;
     }
 
@@ -40,6 +39,9 @@ public class MineralsFragment extends Fragment implements AdapterView.OnItemClic
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Intent intent = new Intent(getActivity(), MineralActivity.class);
+        Bundle b = new Bundle();
+        b.putInt("mineralID", position);
+        intent.putExtras(b);
         startActivity(intent);
     }
 }

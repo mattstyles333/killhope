@@ -1,21 +1,24 @@
 package uk.ac.durham.ecs.gpttwo.killhopemuesum;
 
 import android.content.Context;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 /**
  * Created by Ally on 26/02/15.
  */
 public class MineralSubSectionAdapter extends BaseAdapter {
     private Context mContext;
-
+    private MineralSection mineralSection;
     // Constructor
-    public MineralSubSectionAdapter(Context c) {
+    public MineralSubSectionAdapter(Context c, MineralSection mineralSection) {
         mContext = c;
+        this.mineralSection = mineralSection;
     }
 
     public int getCount() {
@@ -36,6 +39,10 @@ public class MineralSubSectionAdapter extends BaseAdapter {
 
         View view = inflator.inflate(R.layout.fragment_mineral_list_item_sub,parent,false);
 
+        TextView title = (TextView)view.findViewById(R.id.mineral_sub_title);
+        TextView desc = (TextView)view.findViewById(R.id.mineral_sub_description);
+        title.setText(Html.fromHtml(mineralSection.getSub(position).getTitle()));
+        desc.setText(Html.fromHtml(mineralSection.getSub(position).getInfo()));
         return view;
     }
 }

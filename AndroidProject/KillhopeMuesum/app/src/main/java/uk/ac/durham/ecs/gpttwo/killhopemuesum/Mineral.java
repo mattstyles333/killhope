@@ -54,4 +54,8 @@ public class Mineral {
         mineralSection.add(ms);
     }
 
+    public MineralSection getMineralSection(int id){
+        return mineralSection.get(id);
+    }
+
 }

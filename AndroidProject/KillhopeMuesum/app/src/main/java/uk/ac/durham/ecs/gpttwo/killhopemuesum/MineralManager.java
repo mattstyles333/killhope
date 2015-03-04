@@ -32,6 +32,14 @@ public class MineralManager {
         mineral.add(m);
     }
 
+    public static int getSize(){
+        return mineral.size();
+    }
+
+    public static Mineral getMineral(int mineralID){
+        return mineral.get(mineralID);
+    }
+
     public static JSONObject parseJSONData(Context context) {
         String JSONString = null;
         JSONObject jsonObject = null;
@@ -52,7 +60,7 @@ public class MineralManager {
             inputStream.close();
 
             JSONString = new String(bytes, "UTF-8");
-            System.out.println(JSONString);
+//            System.out.println(JSONString);
             jsonObject = new JSONObject(JSONString);
         } catch (IOException ex) {
             ex.printStackTrace();

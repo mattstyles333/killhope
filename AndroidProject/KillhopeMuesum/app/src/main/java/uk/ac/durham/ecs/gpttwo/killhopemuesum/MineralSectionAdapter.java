@@ -16,10 +16,11 @@ import uk.ac.durham.ecs.gpttwo.killhopemuesum.fragments.MineralThumbFragment;
  */
 public class MineralSectionAdapter  extends BaseAdapter {
     private Context mContext;
-
+    private Mineral mineral;
     // Constructor
-    public MineralSectionAdapter(Context c) {
+    public MineralSectionAdapter(Context c, Mineral mineral) {
         mContext = c;
+        this.mineral = mineral;
     }
 
     public int getCount() {
@@ -42,7 +43,7 @@ public class MineralSectionAdapter  extends BaseAdapter {
 
         ListView listView = (ListView) view.findViewById(R.id.mineral_sublist);
 
-        MineralSubSectionAdapter adapter = new MineralSubSectionAdapter(mContext);
+        MineralSubSectionAdapter adapter = new MineralSubSectionAdapter(mContext,mineral.getMineralSection(position));
 
         listView.setAdapter(adapter);
 
