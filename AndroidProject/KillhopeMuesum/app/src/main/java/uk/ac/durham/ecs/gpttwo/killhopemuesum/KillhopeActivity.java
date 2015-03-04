@@ -14,7 +14,7 @@ import uk.ac.durham.ecs.gpttwo.killhopemuesum.fragments.SplashFragment;
 
 public class KillhopeActivity extends ActionBarActivity {
 
-    public static final long SPLASH_LENGTH = 5000l;
+    public static final long SPLASH_LENGTH = 3000l;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,11 +32,11 @@ public class KillhopeActivity extends ActionBarActivity {
             handler.postDelayed(new Runnable(){
                 @Override
                 public void run() {
+//                    MineralManager.loadMinerals(context);
                     getSupportFragmentManager().beginTransaction()
                             .add(R.id.container, MainFragment.newInstance())
                             .commit();
                     getSupportActionBar().show();
-
                 }
             }, SPLASH_LENGTH);
         }
