@@ -3,6 +3,8 @@ package uk.ac.durham.ecs.gpttwo.killhopemuesum;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Handler;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -12,7 +14,7 @@ import uk.ac.durham.ecs.gpttwo.killhopemuesum.fragments.MainFragment;
 import uk.ac.durham.ecs.gpttwo.killhopemuesum.fragments.SplashFragment;
 
 
-public class KillhopeActivity extends ActionBarActivity {
+public class KillhopeActivity extends FragmentActivity {
 
     public static final long SPLASH_LENGTH = 3000l;
 
@@ -26,17 +28,17 @@ public class KillhopeActivity extends ActionBarActivity {
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.container, SplashFragment.newInstance())
                     .commit();
-            getSupportActionBar().hide();
+//            getSupportActionBar().hide();
 
             Handler handler = new Handler();
             handler.postDelayed(new Runnable(){
                 @Override
                 public void run() {
-//                    MineralManager.loadMinerals(context);
+                    MineralManager.loadMinerals(context);
                     getSupportFragmentManager().beginTransaction()
                             .add(R.id.container, MainFragment.newInstance())
                             .commit();
-                    getSupportActionBar().show();
+//                    getSupportActionBar().show();
                 }
             }, SPLASH_LENGTH);
         }
