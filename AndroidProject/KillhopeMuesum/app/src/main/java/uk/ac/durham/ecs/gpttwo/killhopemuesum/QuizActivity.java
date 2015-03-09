@@ -1,20 +1,16 @@
 package uk.ac.durham.ecs.gpttwo.killhopemuesum;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
-import android.widget.Toast;
 
 import uk.ac.durham.ecs.gpttwo.killhopemuesum.fragments.QuizFragment;
 
 
 public class QuizActivity extends ActionBarActivity {
 
+    public static final long SPLASH_LENGTH = 2500l;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,12 +18,12 @@ public class QuizActivity extends ActionBarActivity {
 
         setContentView(R.layout.activity_killhope);
 
-       if (savedInstanceState == null) {
+        if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.container, QuizFragment.newInstance())
                     .commit();
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-      }
+        }
     }
 
 
