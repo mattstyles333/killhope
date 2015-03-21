@@ -4,21 +4,19 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/history_textlorem"
-        android:id="@+id/textView"
-        android:layout_gravity="center_horizontal" />
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@string/history_textlorem"-->
+        <!--android:id="@+id/textView"-->
+        <!--android:layout_gravity="center_horizontal" />-->
 
-    <ScrollView
+    <it.sephiroth.android.library.imagezoom.ImageViewTouch
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageView" />
-    </ScrollView>
+        android:layout_height="match_parent"
+        android:id="@+id/floor_image"
+        android:src="@drawable/bg"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="Floor plan" />
 
 </LinearLayout>
