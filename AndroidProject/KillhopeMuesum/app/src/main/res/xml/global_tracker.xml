@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="TypographyDashes">
+
+    <string name="ga_logLevel">verbose</string>
+    <integer name="ga_dispatchPeriod">30</integer>
+
+    <!--<bool name="ga_dryRun">true</bool>-->
+
+    <!--<string name="uk.ac.durham.ecs.gpttwo.killhopemuesum.KillhopeActivity">Main Activity</string>-->
+
+</resources>

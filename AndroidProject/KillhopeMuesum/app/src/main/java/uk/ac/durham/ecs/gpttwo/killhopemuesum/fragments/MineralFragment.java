@@ -4,12 +4,17 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.Html;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.abhi.gif.lib.AnimatedGifImageView;
+
+import uk.ac.durham.ecs.gpttwo.killhopemuesum.KillhopeApplication;
 import uk.ac.durham.ecs.gpttwo.killhopemuesum.Mineral;
 import uk.ac.durham.ecs.gpttwo.killhopemuesum.MineralManager;
 import uk.ac.durham.ecs.gpttwo.killhopemuesum.MineralSectionAdapter;
@@ -28,12 +33,18 @@ public class MineralFragment extends Fragment {
 
         int mineralID = getActivity().getIntent().getExtras().getInt("mineralID");
 
-        Mineral mineral = MineralManager.getMineral(mineralID);
+        Mineral mineral = ((KillhopeApplication)getActivity().getApplication()).mineralManager.getMineral(mineralID);
 
         TextView name = (TextView)rootView.findViewById(R.id.mineral_name);
         TextView formula = (TextView)rootView.findViewById(R.id.mineral_formula);
+//      ImageView image = (ImageView)rootView.findViewById(R.id.mineral_image);
+        final AnimatedGifImageView image = (AnimatedGifImageView)rootView.findViewById(R.id.mineral_image);
+        image.setAnimatedGif(mineral.getImg3d(), AnimatedGifImageView.TYPE.FIT_CENTER);
+
         name.setText(Html.fromHtml(mineral.getName()));
         formula.setText(Html.fromHtml(mineral.getFormula()));
+//        image.setImageResource(mineral.getImage(0));
+
 
         ListView listView = (ListView) rootView.findViewById(R.id.mineral_list);
 

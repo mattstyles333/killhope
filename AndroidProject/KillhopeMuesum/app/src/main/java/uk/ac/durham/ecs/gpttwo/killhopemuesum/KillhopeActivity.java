@@ -1,5 +1,6 @@
 package uk.ac.durham.ecs.gpttwo.killhopemuesum;
 
+import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Handler;
@@ -10,6 +11,12 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.google.android.gms.analytics.HitBuilders;
+import com.google.android.gms.analytics.Tracker;
+import com.google.android.gms.analytics.GoogleAnalytics;
+
+import java.util.HashMap;
+
 import uk.ac.durham.ecs.gpttwo.killhopemuesum.fragments.MainFragment;
 import uk.ac.durham.ecs.gpttwo.killhopemuesum.fragments.SplashFragment;
 
@@ -18,9 +25,14 @@ public class KillhopeActivity extends FragmentActivity {
 
     public static final long SPLASH_LENGTH = 3000l;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Tracker t = ((KillhopeApplication)getApplication()).getTracker(KillhopeApplication.TrackerName.APP_TRACKER);
+        t.setScreenName("Home");
+        t.send(new HitBuilders.AppViewBuilder().build());
 
         setContentView(R.layout.activity_killhope);
         final Context context = this;
@@ -34,7 +46,7 @@ public class KillhopeActivity extends FragmentActivity {
             handler.postDelayed(new Runnable(){
                 @Override
                 public void run() {
-                    MineralManager.loadMinerals(context);
+//                    MineralManager.loadMinerals(context);
                     getSupportFragmentManager().beginTransaction()
                             .add(R.id.container, MainFragment.newInstance())
                             .commit();
@@ -44,6 +56,19 @@ public class KillhopeActivity extends FragmentActivity {
         }
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        //Get an Analytics tracker to report app starts and uncaught exceptions etc.
+        GoogleAnalytics.getInstance(this).reportActivityStart(this);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        //Stop the analytics tracking
+        GoogleAnalytics.getInstance(this).reportActivityStop(this);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

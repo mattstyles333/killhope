@@ -7,6 +7,10 @@ import android.os.Bundle;
 import android.support.v7.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
+
+import com.google.zxing.integration.android.IntentIntegrator;
+import com.google.zxing.integration.android.IntentResult;
 
 import uk.ac.durham.ecs.gpttwo.killhopemuesum.fragments.MineralsFragment;
 
@@ -58,8 +62,13 @@ public class MineralsActivity extends ActionBarActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
         if(id==R.id.action_qr){
-            Intent i = new Intent(this, QRActivity.class);
-            startActivity(i);
+            IntentIntegrator integrator = new IntentIntegrator(this);
+            integrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE_TYPES);
+            integrator.setPrompt("Scan a QR code");
+            integrator.setResultDisplayDuration(0);
+//            integrator.setWide();  // Wide scanning rectangle, may work better for 1D barcodes
+            integrator.setCameraId(0);  // Use a specific camera of the device
+            integrator.initiateScan();
         }
         if(id == android.R.id.home){
             onBackPressed();
@@ -71,4 +80,23 @@ public class MineralsActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    public void onActivityResult(int requestCode, int resultCode, Intent intent) {
+        IntentResult scanResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
+        if (scanResult != null) {
+            // handle scan result
+            String qrid = scanResult.getContents();
+
+            int loadid = ((KillhopeApplication)getApplication()).mineralManager.getMineralIdFromQRId(qrid);
+            if(loadid == -1){
+                Toast toast = Toast.makeText(this, "QR Code is not a mineral qr code.", Toast.LENGTH_LONG);
+                toast.show();
+            }else{
+                Intent newintent = new Intent(this, MineralActivity.class);
+                Bundle b = new Bundle();
+                b.putInt("mineralID", loadid);
+                newintent.putExtras(b);
+                startActivity(newintent);
+            }
+        }
+    }
 }

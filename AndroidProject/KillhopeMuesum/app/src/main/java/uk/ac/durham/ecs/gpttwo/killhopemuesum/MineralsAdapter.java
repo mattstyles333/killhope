@@ -1,11 +1,15 @@
 package uk.ac.durham.ecs.gpttwo.killhopemuesum;
 
 import android.content.Context;
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.drawable.Drawable;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -21,7 +25,7 @@ public class MineralsAdapter extends BaseAdapter {
     }
 
     public int getCount() {
-        return MineralManager.getSize();
+        return ((KillhopeApplication)mContext.getApplicationContext()).mineralManager.getSize();
     }
 
     public Object getItem(int position) {
@@ -34,13 +38,37 @@ public class MineralsAdapter extends BaseAdapter {
 
     // create a new ImageView for each item referenced by the Adapter
     public View getView(int position, View convertView, ViewGroup parent) {
-        LayoutInflater inflator = (LayoutInflater)mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        ViewHolder holder;
+        Mineral mineral = ((KillhopeApplication) mContext.getApplicationContext()).mineralManager.getMineral(position);
+        if(convertView == null) {
+            LayoutInflater inflator = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-        View view = inflator.inflate(R.layout.fragment_mineral_thumb,parent,false);
+            holder = new ViewHolder();
 
-        TextView title = (TextView)view.findViewById(R.id.mineral_thumb_text);
-        title.setText(Html.fromHtml(MineralManager.getMineral(position).getName()));
+            convertView = inflator.inflate(R.layout.fragment_mineral_thumb, parent, false);
 
-        return view;
+            holder.txt = (TextView) convertView.findViewById(R.id.mineral_thumb_text);
+            holder.img = (ImageView) convertView.findViewById(R.id.mineral_thumb_image);
+
+            convertView.setTag(holder);
+        }else{
+            holder = (ViewHolder)convertView.getTag();
+        }
+        holder.txt.setText(Html.fromHtml( mineral.getName()));
+//        if(holder.id == -1) {
+            holder.id = mineral.getImage(0);
+//        }
+        try {
+            holder.img.setImageResource(holder.id);
+        } catch (Exception e) {
+            System.err.println(holder.id);
+        }
+        return convertView;
+    }
+
+    static class ViewHolder{
+        ImageView img;
+        TextView txt;
+        int id = -1;
     }
 }

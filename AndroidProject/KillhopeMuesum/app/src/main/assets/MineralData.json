@@ -1,7 +1,12 @@
 {
   "0": {
-    "name": "Ankerite ",
+    "name": "Ankerite",
     "formula": "Ca(Mg,Fe<sup>2+</sup>,Mn)(CO<sub>3</sub>)<sub>2</sub>",
+    "3dcrystal": "mineral_ankerite_gif",
+    "qrcode": "killhope_museum_mineral_ankerite",
+    "images": [
+      "mineral_ankerite_image_1"
+    ],
     "stage1": [
       {
         "title": "Colour:",
@@ -100,8 +105,13 @@
     ]
   },
   "1": {
-    "name": "Argonite",
+    "name": "Aragonite",
     "formula": "CaCO<sub>3</sub>",
+    "3dcrystal": "mineral_aragonite_gif",
+    "qrcode": "killhope_museum_mineral_aragonite",
+    "images": [
+      "mineral_aragonite_image_1"
+    ],
     "stage1": [
       {
         "title": "Colour:",
@@ -198,6 +208,11 @@
   "2": {
     "name": "Baryte",
     "formula": "BaSO<sub>4</sub>",
+    "3dcrystal": "mineral_baryte_gif",
+    "qrcode": "killhope_museum_mineral_baryte",
+    "images": [
+      "mineral_baryte_image_1"
+    ],
     "stage1": [
       {
         "title": "Colour:",
@@ -298,6 +313,11 @@
   "3": {
     "name": "Barytocalcite",
     "formula": "BaCa(CO<sub>3</sub>)",
+    "3dcrystal": "mineral_barytocalcite_gif",
+    "qrcode": "killhope_museum_mineral_barytocalcite",
+    "images": [
+      "mineral_barytocalcite_image_1"
+    ],
     "stage1": [
       {
         "title": "Colour:",
@@ -398,6 +418,11 @@
   "4": {
     "name": "Calcite",
     "formula": "CaCO<sub>2</sub>",
+    "3dcrystal": "mineral_calcite_gif",
+    "qrcode": "killhope_museum_mineral_calcite",
+    "images": [
+      "mineral_calcite_image_1"
+    ],
     "stage1": [
       {
         "title": "Colour:",
@@ -498,6 +523,12 @@
   "5": {
     "name": "Cerussite",
     "formula": "PbCO<sub>3</sub>",
+    "3dcrystal": "mineral_cerussite_gif",
+    "qrcode": "killhope_museum_mineral_cerussite",
+    "images": [
+      "mineral_cerussite_image_1",
+      "mineral_cerussite_image_2"
+    ],
     "stage1": [
       {
         "title": "Colour:",
@@ -598,6 +629,16 @@
   "6": {
     "name": "Fluorite",
     "formula": "CaF<sub>3</sub>Calcium Fluoride [also known as Flurospar]",
+    "3dcrystal": "mineral_fluorite_gif",
+    "qrcode": "killhope_museum_mineral_fluorite",
+    "images": [
+      "mineral_fluorite_image_1",
+      "mineral_fluorite_image_2",
+      "mineral_fluorite_image_3",
+      "mineral_fluorite_image_4",
+      "mineral_fluorite_image_5",
+      "mineral_fluorite_image_6"
+    ],
     "stage1": [
       {
         "title": "Colour:",
@@ -688,8 +729,13 @@
     ]
   },
   "7": {
-    "name": "Galena ",
+    "name": "Galena",
     "formula": "PbS Lead(II)Sulfide",
+    "3dcrystal": "mineral_galena_gif",
+    "qrcode": "killhope_museum_mineral_galena",
+    "images": [
+      "mineral_galena_image_1"
+    ],
     "stage1": [
       {
         "title": "Colour:",
@@ -806,6 +852,11 @@
   "8": {
     "name": "Limonite",
     "formula": "FeO.OH.nH<sub>2</sub>O",
+    "3dcrystal": "mineral_limonite_gif",
+    "qrcode": "killhope_museum_mineral_limonite",
+    "images": [
+      "mineral_limonite_image_1"
+    ],
     "stage1": [
       {
         "title": "Colour:",
@@ -910,6 +961,11 @@
   "9": {
     "name": "Quartz",
     "formula": "SiO<sub>2</sub>",
+    "3dcrystal": "mineral_quartz_gif",
+    "qrcode": "killhope_museum_mineral_quartz",
+    "images": [
+      "mineral_quartz_image_1"
+    ],
     "stage1": [
       {
         "title": "Colour:",
@@ -1006,6 +1062,11 @@
   "10": {
     "name": "Siderite",
     "formula": "FeCO<sub>3</sub>",
+    "3dcrystal": "mineral_siderite_gif",
+    "qrcode": "killhope_museum_mineral_siderite",
+    "images": [
+      "mineral_siderite_image_1"
+    ],
     "stage1": [
       {
         "title": "Colour:",
@@ -1106,6 +1167,11 @@
   "11": {
     "name": "Smithsonite",
     "formula": "ZnCO<sub>3</sub>",
+    "3dcrystal": "mineral_smithsonite_gif",
+    "qrcode": "killhope_museum_mineral_smithsonite",
+    "images": [
+      "mineral_smithsonite_image_1"
+    ],
     "stage1": [
       {
         "title": "Colour:",
@@ -1210,6 +1276,11 @@
   "12": {
     "name": "Sphalerite",
     "formula": "((Zn,Fe)S) Zinc Sulfide",
+    "3dcrystal": "mineral_sphalerite_gif",
+    "qrcode": "killhope_museum_mineral_sphalerite",
+    "images": [
+      "mineral_sphalerite_image_1"
+    ],
     "stage1": [
       {
         "title": "Colour:",
@@ -1314,6 +1385,11 @@
   "13": {
     "name": "Witherite",
     "formula": "ZnCO<sub>3</sub>",
+    "3dcrystal": "mineral_witherite_gif",
+    "qrcode": "killhope_museum_mineral_witherite",
+    "images": [
+      "mineral_witherite_image_1"
+    ],
     "stage1": [
       {
         "title": "Colour:",
