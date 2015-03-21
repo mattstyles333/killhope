@@ -30,6 +30,10 @@ public class KillhopeActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        Tracker t = ((KillhopeApplication)getApplication()).getTracker(KillhopeApplication.TrackerName.APP_TRACKER);
+        t.setScreenName("Home");
+        t.send(new HitBuilders.AppViewBuilder().build());
+
         setContentView(R.layout.activity_killhope);
         final Context context = this;
         if (savedInstanceState == null) {
@@ -50,10 +54,6 @@ public class KillhopeActivity extends FragmentActivity {
                 }
             }, SPLASH_LENGTH);
         }
-
-        Tracker t = ((KillhopeApplication)getApplication()).getTracker(KillhopeApplication.TrackerName.APP_TRACKER);
-        t.setScreenName("Home");
-        t.send(new HitBuilders.AppViewBuilder().build());
     }
 
     @Override

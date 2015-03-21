@@ -4,8 +4,8 @@
     <string name="ga_logLevel">verbose</string>
     <integer name="ga_dispatchPeriod">30</integer>
 
-    <bool name="ga_dryRun">false</bool>
+    <!--<bool name="ga_dryRun">true</bool>-->
 
-    <string name="uk.ac.durham.ecs.gpttwo.killhopemuesum.KillhopeActivity">Main Activity</string>
+    <!--<string name="uk.ac.durham.ecs.gpttwo.killhopemuesum.KillhopeActivity">Main Activity</string>-->
 
 </resources>
