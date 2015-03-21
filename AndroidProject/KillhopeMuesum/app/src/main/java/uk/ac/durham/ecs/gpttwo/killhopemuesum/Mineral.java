@@ -1,5 +1,7 @@
 package uk.ac.durham.ecs.gpttwo.killhopemuesum;
 
+import android.content.Context;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -12,13 +14,20 @@ import java.util.ArrayList;
 public class Mineral {
     private String name;
     private String formula;
+    private int img3d;
+    private String qrid;
+    private ArrayList<Integer> images;
     private ArrayList<MineralSection> mineralSection;
 
-    public Mineral(JSONObject data){
+    public Mineral(JSONObject data, Context context){
         mineralSection = new ArrayList<MineralSection>();
+        images = new ArrayList<Integer>();
         try {
             name = data.getString("name");
             formula = data.getString("formula");
+            String img3dname = data.getString("3dcrystal");
+            img3d = context.getResources().getIdentifier(img3dname, "raw", context.getPackageName());
+            qrid = data.getString("qrcode");
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -31,6 +40,16 @@ public class Mineral {
                 e.printStackTrace();
             }
         }
+        try {
+            JSONArray mineralObj = data.getJSONArray("images");
+            for(int i=0;i<mineralObj.length();i++){
+                String resname = mineralObj.getString(i);
+                int id = context.getResources().getIdentifier(resname, "drawable", context.getPackageName());
+                images.add(id);
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 
     public String getName() {
@@ -41,12 +60,40 @@ public class Mineral {
         this.name = name;
     }
 
+    public String getQRId() {
+        return qrid;
+    }
+
+    public void setQRId(String id) {
+        this.qrid = id;
+    }
+
+    public int getImg3d() {
+        return img3d;
+    }
+
+    public void setImg3d(int img3d) {
+        this.img3d = img3d;
+    }
+
     public String getFormula() {
         return formula;
     }
 
     public void setFormula(String formula) {
         this.formula = formula;
+    }
+
+    public int getImage(int i){
+        return images.get(i);
+    }
+
+    public void addImage(int s){
+        images.add(s);
+    }
+
+    public int getImageLength(){
+        return images.size();
     }
 
     public void addMineralSection(MineralSection ms)

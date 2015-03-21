@@ -5,6 +5,7 @@ import android.app.Application;
 import com.google.android.gms.analytics.GoogleAnalytics;
 import com.google.android.gms.analytics.Tracker;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
@@ -12,8 +13,17 @@ import java.util.HashMap;
  */
 public class KillhopeApplication extends Application {
 
+    public MineralManager mineralManager;
+
     public KillhopeApplication(){
         super();
+
+    }
+
+    public void onCreate(){
+        super.onCreate();
+        mineralManager = new MineralManager();
+        mineralManager.loadMinerals(this);
     }
 
     private static final String PROPERTY_ID = "UA-43848738-5";

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
@@ -83,7 +84,19 @@ public class MineralsActivity extends ActionBarActivity {
         IntentResult scanResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
         if (scanResult != null) {
             // handle scan result
-            System.out.println(scanResult.getContents());
+            String qrid = scanResult.getContents();
+
+            int loadid = ((KillhopeApplication)getApplication()).mineralManager.getMineralIdFromQRId(qrid);
+            if(loadid == -1){
+                Toast toast = Toast.makeText(this, "QR Code is not a mineral qr code.", Toast.LENGTH_LONG);
+                toast.show();
+            }else{
+                Intent newintent = new Intent(this, MineralActivity.class);
+                Bundle b = new Bundle();
+                b.putInt("mineralID", loadid);
+                newintent.putExtras(b);
+                startActivity(newintent);
+            }
         }
     }
 }

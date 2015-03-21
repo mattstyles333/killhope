@@ -12,14 +12,14 @@ import java.util.ArrayList;
  * Created by Robert Clarke on 26-02-15.
  */
 public class MineralManager {
-    private static ArrayList<Mineral> mineral = new ArrayList<Mineral>();;
+    private ArrayList<Mineral> mineral = new ArrayList<Mineral>();
 
-    public static void loadMinerals(Context context){
+    public void loadMinerals(Context context){
         JSONObject mineralData = parseJSONData(context);
         for (int i=0; i<= mineralData.length()-1; i++){
             try {
                 JSONObject mineralObj = mineralData.getJSONObject("" + i);
-                Mineral m = new Mineral(mineralObj);
+                Mineral m = new Mineral(mineralObj,context);
                 addMineral(m);
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -28,19 +28,19 @@ public class MineralManager {
 
     }
 
-    public static void addMineral(Mineral m){
+    public void addMineral(Mineral m){
         mineral.add(m);
     }
 
-    public static int getSize(){
+    public int getSize(){
         return mineral.size();
     }
 
-    public static Mineral getMineral(int mineralID){
+    public Mineral getMineral(int mineralID){
         return mineral.get(mineralID);
     }
 
-    public static JSONObject parseJSONData(Context context) {
+    public JSONObject parseJSONData(Context context) {
         String JSONString = null;
         JSONObject jsonObject = null;
         try {
@@ -71,6 +71,15 @@ public class MineralManager {
             return null;
         }
         return jsonObject;
+    }
+
+    public int getMineralIdFromQRId(String qrid){
+        for(int i=0;i<mineral.size();i++){
+            if(mineral.get(i).getQRId().equals(qrid)){
+                return i;
+            }
+        }
+        return -1;
     }
 
 

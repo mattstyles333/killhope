@@ -9,7 +9,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/mineral_thumb_image"
-        android:text="HELLO WORLD"
         android:src="@drawable/ic_launcher" />
     <TextView
         android:layout_width="match_parent"
