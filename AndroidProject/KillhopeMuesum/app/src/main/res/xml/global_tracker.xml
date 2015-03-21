@@ -6,6 +6,6 @@
 
     <!--<bool name="ga_dryRun">true</bool>-->
 
-    <!--<string name="uk.ac.durham.ecs.gpttwo.killhopemuesum.KillhopeActivity">Main Activity</string>-->
+    <!--<string name="killhopemuseum.KillhopeActivity">Main Activity</string>-->
 
 </resources>
