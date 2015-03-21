@@ -17,6 +17,6 @@
         android:id="@+id/floor_image"
         android:src="@drawable/bg"
         android:layout_gravity="center_horizontal"
-        android:contentDescription="Selected_Image" />
+        android:contentDescription="Floor plan" />
 
 </LinearLayout>

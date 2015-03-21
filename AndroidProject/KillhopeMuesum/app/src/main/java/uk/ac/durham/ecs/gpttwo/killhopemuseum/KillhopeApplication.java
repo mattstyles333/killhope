@@ -13,6 +13,7 @@ import java.util.HashMap;
 public class KillhopeApplication extends Application {
 
     public MineralManager mineralManager;
+    public GlossaryManager glossaryManager;
 
     public KillhopeApplication(){
         super();
@@ -23,6 +24,8 @@ public class KillhopeApplication extends Application {
         super.onCreate();
         mineralManager = new MineralManager();
         mineralManager.loadMinerals(this);
+        glossaryManager = new GlossaryManager();
+        glossaryManager.loadGlossary(this);
     }
 
     private static final String PROPERTY_ID = "UA-43848738-5";
