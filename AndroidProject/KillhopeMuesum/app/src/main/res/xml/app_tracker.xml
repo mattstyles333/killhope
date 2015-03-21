@@ -9,6 +9,6 @@
 
     <integer name="ga_sessionTimeout">300</integer>
 
-    <screenName name="uk.ac.durham.ecs.gpttwo.killhopemuesum.KillhopeActivity">Main Screen</screenName>
+    <screenName name="uk.ac.durham.ecs.gpttwo.killhopemuseum.activities.KillhopeActivity">Main Screen</screenName>
 
 </resources>

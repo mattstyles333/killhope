@@ -6,7 +6,7 @@
     <statePointEntry>
       <state      
         class = "com.android.tools.idea.editors.navigation.model.MenuState"      
-        className = "uk.ac.durham.ecs.gpttwo.killhopemuesum.MineralsActivity"/>
+        className = "uk.ac.durham.ecs.gpttwo.killhopemuseum.MineralsActivity"/>
       <point      
         x = "1768"      
         y = "1480"/>
@@ -14,7 +14,7 @@
     <statePointEntry>
       <state      
         class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
-        className = "uk.ac.durham.ecs.gpttwo.killhopemuesum.MineralsActivity"/>
+        className = "uk.ac.durham.ecs.gpttwo.killhopemuseum.MineralsActivity"/>
       <point      
         x = "500"      
         y = "1480"/>
@@ -22,7 +22,7 @@
     <statePointEntry>
       <state      
         class = "com.android.tools.idea.editors.navigation.model.MenuState"      
-        className = "uk.ac.durham.ecs.gpttwo.killhopemuesum.HistoryActivity"/>
+        className = "uk.ac.durham.ecs.gpttwo.killhopemuseum.HistoryActivity"/>
       <point      
         x = "2840"      
         y = "272"/>
@@ -30,7 +30,7 @@
     <statePointEntry>
       <state      
         class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
-        className = "uk.ac.durham.ecs.gpttwo.killhopemuesum.HistoryActivity"/>
+        className = "uk.ac.durham.ecs.gpttwo.killhopemuseum.HistoryActivity"/>
       <point      
         x = "1572"      
         y = "272"/>
@@ -38,7 +38,7 @@
     <statePointEntry>
       <state      
         class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
-        className = "uk.ac.durham.ecs.gpttwo.killhopemuesum.KillhopeActivity"/>
+        className = "uk.ac.durham.ecs.gpttwo.killhopemuseum.KillhopeActivity"/>
       <point      
         x = "500"      
         y = "100"/>
@@ -46,7 +46,7 @@
     <statePointEntry>
       <state      
         class = "com.android.tools.idea.editors.navigation.model.MenuState"      
-        className = "uk.ac.durham.ecs.gpttwo.killhopemuesum.KillhopeActivity"/>
+        className = "uk.ac.durham.ecs.gpttwo.killhopemuseum.KillhopeActivity"/>
       <point      
         x = "1768"      
         y = "100"/>
@@ -54,7 +54,7 @@
     <statePointEntry>
       <state      
         class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
-        className = "uk.ac.durham.ecs.gpttwo.killhopemuesum.SplashActivity"/>
+        className = "uk.ac.durham.ecs.gpttwo.killhopemuseum.SplashActivity"/>
       <point      
         x = "500"      
         y = "1480"/>
@@ -62,7 +62,7 @@
     <statePointEntry>
       <state      
         class = "com.android.tools.idea.editors.navigation.model.MenuState"      
-        className = "uk.ac.durham.ecs.gpttwo.killhopemuesum.SplashActivity"/>
+        className = "uk.ac.durham.ecs.gpttwo.killhopemuseum.SplashActivity"/>
       <point      
         x = "1768"      
         y = "1480"/>
