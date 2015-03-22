@@ -35,4 +35,8 @@ public class MineralSection {
         return mineralSectionSubs.get(id);
     }
 
+    public int getCount(){
+        return mineralSectionSubs.size();
+    }
+
 }

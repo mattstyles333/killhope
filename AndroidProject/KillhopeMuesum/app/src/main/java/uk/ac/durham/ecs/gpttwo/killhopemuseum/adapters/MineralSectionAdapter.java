@@ -1,19 +1,23 @@
 package uk.ac.durham.ecs.gpttwo.killhopemuseum.adapters;
 
 import android.content.Context;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.Mineral;
+import uk.ac.durham.ecs.gpttwo.killhopemuseum.MineralSection;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.R;
 
 /**
  * Created by Ally on 26/02/15.
  */
-public class MineralSectionAdapter  extends BaseAdapter {
+public class MineralSectionAdapter extends BaseAdapter {
     private Context mContext;
     private Mineral mineral;
     // Constructor
@@ -40,11 +44,29 @@ public class MineralSectionAdapter  extends BaseAdapter {
 
         View view = inflator.inflate(R.layout.fragment_mineral_list_item,parent,false);
 
-        ListView listView = (ListView) view.findViewById(R.id.mineral_sublist);
+//        ListView listView = (ListView) view.findViewById(R.id.mineral_sublist);
 
-        MineralSubSectionAdapter adapter = new MineralSubSectionAdapter(mContext,mineral.getMineralSection(position));
+//        MineralSubSectionAdapter adapter = new MineralSubSectionAdapter(mContext,mineral.getMineralSection(position));
 
-        listView.setAdapter(adapter);
+//        listView.setAdapter(adapter);
+
+        TextView sectionName = (TextView)view.findViewById(R.id.section_name);
+        sectionName.setText("Section " + (position+1));
+
+        MineralSection ms = mineral.getMineralSection(position);
+
+        LinearLayout listView = (LinearLayout) view.findViewById(R.id.mineral_sublist);
+
+        for(int i=0;i<ms.getCount();i++) {
+            View subview = inflator.inflate(R.layout.fragment_mineral_list_item_sub, parent, false);
+
+            TextView title = (TextView) subview.findViewById(R.id.mineral_sub_title);
+            TextView desc = (TextView) subview.findViewById(R.id.mineral_sub_description);
+            title.setText(Html.fromHtml(ms.getSub(i).getTitle()));
+            desc.setText(Html.fromHtml(ms.getSub(i).getInfo()));
+
+            listView.addView(subview);
+        }
 
         return view;
     }
