@@ -5,6 +5,7 @@ import android.app.Application;
 import com.google.android.gms.analytics.GoogleAnalytics;
 import com.google.android.gms.analytics.Tracker;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
@@ -14,10 +15,11 @@ public class KillhopeApplication extends Application {
 
     public MineralManager mineralManager;
     public GlossaryManager glossaryManager;
+    private String currentSearch = "";
 
     public KillhopeApplication(){
         super();
-
+        currentSearch = "";
     }
 
     public void onCreate(){
@@ -26,6 +28,7 @@ public class KillhopeApplication extends Application {
         mineralManager.loadMinerals(this);
         glossaryManager = new GlossaryManager();
         glossaryManager.loadGlossary(this);
+        currentSearch = "";
     }
 
     private static final String PROPERTY_ID = "UA-43848738-5";
@@ -49,6 +52,14 @@ public class KillhopeApplication extends Application {
         APP_TRACKER, // Tracker used only in this app.
         GLOBAL_TRACKER, // Tracker used by all the apps from a company. eg: roll-up tracking.
         ECOMMERCE_TRACKER, // Tracker used by all ecommerce transactions from a company.
+    }
+
+    public void setCurrentSearch(String s){
+        currentSearch = s;
+    }
+
+    public String getCurrentSearch(){
+        return currentSearch;
     }
 
     HashMap<TrackerName, Tracker> mTrackers = new HashMap<TrackerName, Tracker>();

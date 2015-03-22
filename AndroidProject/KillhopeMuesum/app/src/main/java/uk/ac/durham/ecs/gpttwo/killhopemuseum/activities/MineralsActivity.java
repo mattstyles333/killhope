@@ -1,5 +1,7 @@
 package uk.ac.durham.ecs.gpttwo.killhopemuseum.activities;
 
+import android.app.SearchManager;
+import android.content.Context;
 import android.content.Intent;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.ActionBarActivity;
@@ -7,6 +9,7 @@ import android.os.Bundle;
 import android.support.v7.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.GridView;
 import android.widget.Toast;
 
 import com.google.zxing.integration.android.IntentIntegrator;
@@ -14,6 +17,7 @@ import com.google.zxing.integration.android.IntentResult;
 
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.KillhopeApplication;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.R;
+import uk.ac.durham.ecs.gpttwo.killhopemuseum.adapters.MineralsAdapter;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.MineralsFragment;
 
 public class MineralsActivity extends ActionBarActivity {
@@ -39,8 +43,12 @@ public class MineralsActivity extends ActionBarActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_minerals, menu);
+
         MenuItem searchItem = menu.findItem(R.id.action_search);
+        SearchManager searchManager = (SearchManager)getSystemService(Context.SEARCH_SERVICE);
         SearchView searchView = (SearchView)MenuItemCompat.getActionView(searchItem);
+
+        searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -50,6 +58,10 @@ public class MineralsActivity extends ActionBarActivity {
 
             @Override
             public boolean onQueryTextChange(String s) {
+                GridView gv = (GridView)findViewById(R.id.minerals_gridview);
+                MineralsAdapter ma = (MineralsAdapter) gv.getAdapter();
+                ((KillhopeApplication) getApplication()).setCurrentSearch(s);
+                ma.notifyDataSetChanged();
                 return false;
             }
         });
