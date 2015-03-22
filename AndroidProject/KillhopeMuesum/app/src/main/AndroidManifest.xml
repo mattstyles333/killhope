@@ -44,9 +44,9 @@
                 android:value="uk.ac.durham.ecs.gpttwo.killhopemuseum.activities.MineralsActivity" />
             <meta-data android:name="android.app.searchable"
                 android:resource="@xml/searchable"/>
-            <intent-filter>
-                <action android:name="android.intent.action.SEARCH" />
-            </intent-filter>
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.SEARCH" />-->
+            <!--</intent-filter>-->
         </activity>
         <activity
             android:name="uk.ac.durham.ecs.gpttwo.killhopemuseum.activities.QuizActivity"

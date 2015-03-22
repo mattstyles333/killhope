@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.support.v7.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.GridView;
 import android.widget.Toast;
 
@@ -46,14 +47,15 @@ public class MineralsActivity extends ActionBarActivity {
 
         MenuItem searchItem = menu.findItem(R.id.action_search);
         SearchManager searchManager = (SearchManager)getSystemService(Context.SEARCH_SERVICE);
-        SearchView searchView = (SearchView)MenuItemCompat.getActionView(searchItem);
+        final SearchView searchView = (SearchView)MenuItemCompat.getActionView(searchItem);
 
         searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String s) {
-                return false;
+                searchView.clearFocus();
+                return true;
             }
 
             @Override
@@ -62,7 +64,7 @@ public class MineralsActivity extends ActionBarActivity {
                 MineralsAdapter ma = (MineralsAdapter) gv.getAdapter();
                 ((KillhopeApplication) getApplication()).setCurrentSearch(s);
                 ma.notifyDataSetChanged();
-                return false;
+                return true;
             }
         });
 
