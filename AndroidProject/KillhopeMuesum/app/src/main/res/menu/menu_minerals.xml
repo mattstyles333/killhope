@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" tools:context=".KillhopeActivity">
     <item android:id="@+id/action_help" android:title="@string/menu_help"
-        android:orderInCategory="100" app:showAsAction="never" />
+        android:orderInCategory="100" app:showAsAction="always"
+        android:icon="@drawable/ic_help_small"/>
     <item android:id="@+id/action_qr" android:title="QR"
         android:orderInCategory="10" app:showAsAction="always"
         android:icon="@drawable/qr_button_white"/>

@@ -16,9 +16,9 @@ import uk.ac.durham.ecs.gpttwo.killhopemuseum.R;
  */
 public class MineralThumbFragment extends Fragment {
 
-    int id;
-    String name;
-    int imageId;
+//    int id;
+//    String name;
+//    int imageId;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -33,9 +33,9 @@ public class MineralThumbFragment extends Fragment {
     public static MineralThumbFragment newInstance(int id, String name, int imageId, Context mContext){
         MineralThumbFragment mtf = new MineralThumbFragment();
 
-        mtf.id = id;
-        mtf.name = name;
-        mtf.imageId = imageId;
+//        mtf.id = id;
+//        mtf.name = name;
+//        mtf.imageId = imageId;
 
         return mtf;
     }
