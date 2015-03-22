@@ -82,5 +82,21 @@ public class MineralManager {
         return -1;
     }
 
+    private String lastSearch = "";
+    private ArrayList<Mineral> lastSearchMinerals = null;
 
+
+
+    public ArrayList<Mineral> getMineralsFromSearch(String search){
+        if(lastSearchMinerals == null || !lastSearch.equals(search)) {
+            lastSearchMinerals = new ArrayList<Mineral>();
+            lastSearch = search;
+            for (int i = 0; i < getSize(); i++) {
+                if (getMineral(i).getName().toLowerCase().contains(search.toLowerCase())) {
+                    lastSearchMinerals.add(getMineral(i));
+                }
+            }
+        }
+        return lastSearchMinerals;
+    }
 }

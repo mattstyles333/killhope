@@ -22,7 +22,7 @@ public class MineralsAdapter extends BaseAdapter {
     }
 
     public int getCount() {
-        return ((KillhopeApplication)mContext.getApplicationContext()).mineralManager.getSize();
+        return ((KillhopeApplication)mContext.getApplicationContext()).mineralManager.getMineralsFromSearch(((KillhopeApplication) mContext.getApplicationContext()).getCurrentSearch()).size();
     }
 
     public Object getItem(int position) {
@@ -36,7 +36,7 @@ public class MineralsAdapter extends BaseAdapter {
     // create a new ImageView for each item referenced by the Adapter
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder holder;
-        Mineral mineral = ((KillhopeApplication) mContext.getApplicationContext()).mineralManager.getMineral(position);
+        Mineral mineral = ((KillhopeApplication) mContext.getApplicationContext()).mineralManager.getMineralsFromSearch(((KillhopeApplication) mContext.getApplicationContext()).getCurrentSearch()).get(position);
         if(convertView == null) {
             LayoutInflater inflator = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
