@@ -87,6 +87,14 @@ public class MineralsActivity extends ActionBarActivity {
         if(id == android.R.id.home){
             onBackPressed();
         }
+        if (id == R.id.action_help) {
+            Intent helpIntent = new Intent(this, HelpActivity.class);
+            Bundle b = new Bundle();
+            b.putInt("helppage", 0);
+            helpIntent.putExtras(b);
+            startActivity(helpIntent);
+            return true;
+        }
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;

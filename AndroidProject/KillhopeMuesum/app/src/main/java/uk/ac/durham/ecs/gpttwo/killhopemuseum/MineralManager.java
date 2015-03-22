@@ -91,6 +91,8 @@ public class MineralManager {
         if(lastSearchMinerals == null || !lastSearch.equals(search)) {
             lastSearchMinerals = new ArrayList<Mineral>();
             lastSearch = search;
+
+            //The search function, currently adds if the title contains the query. Lowercase important.
             for (int i = 0; i < getSize(); i++) {
                 if (getMineral(i).getName().toLowerCase().contains(search.toLowerCase())) {
                     lastSearchMinerals.add(getMineral(i));
