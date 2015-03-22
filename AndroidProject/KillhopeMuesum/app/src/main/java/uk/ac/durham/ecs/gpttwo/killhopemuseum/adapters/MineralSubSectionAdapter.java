@@ -24,7 +24,7 @@ public class MineralSubSectionAdapter extends BaseAdapter {
     }
 
     public int getCount() {
-        return 4;
+        return mineralSection.getCount();
     }
 
     public Object getItem(int position) {
