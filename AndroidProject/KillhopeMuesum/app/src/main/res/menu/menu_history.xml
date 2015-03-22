@@ -2,8 +2,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" tools:context=".KillhopeActivity">
     <item android:id="@+id/action_prevpage" android:title="@string/help_previous"
-        android:orderInCategory="100" app:showAsAction="always" />
+        android:orderInCategory="100" app:showAsAction="always"
+        android:icon="@drawable/ic_chev_left_small"/>
     <item android:id="@+id/action_nextpage" android:title="@string/help_next"
-        android:orderInCategory="100" app:showAsAction="always" />
-
+        android:orderInCategory="100" app:showAsAction="always"
+        android:icon="@drawable/ic_chev_right_small"/>
 </menu>
