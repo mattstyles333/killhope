@@ -56,19 +56,21 @@ public class HelpActivity extends ActionBarActivity {
         if (id == R.id.action_prevpage) {
             if(mPager.getCurrentItem() != 0) {
                 mPager.setCurrentItem(mPager.getCurrentItem() - 1);
+            }else{
+                mPager.setCurrentItem(mPageAdapter.getCount() - 1);
             }
             return true;
         }else if (id == R.id.action_nextpage) {
             if(mPager.getCurrentItem() != mPageAdapter.getCount() - 1) {
                 mPager.setCurrentItem(mPager.getCurrentItem() + 1);
+            }else{
+                mPager.setCurrentItem(0);
             }
             return true;
         }else if (id == android.R.id.home) {
             onBackPressed();
             return true;
         }
-
-
 
         return super.onOptionsItemSelected(item);
     }

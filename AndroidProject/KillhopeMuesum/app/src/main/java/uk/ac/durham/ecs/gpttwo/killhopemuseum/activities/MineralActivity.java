@@ -1,5 +1,6 @@
 package uk.ac.durham.ecs.gpttwo.killhopemuseum.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -47,6 +48,15 @@ public class MineralActivity extends ActionBarActivity {
         }
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            return true;
+        }
+        if (id == R.id.action_help) {
+            Intent helpIntent = new Intent(this, HelpActivity.class);
+            Bundle b = new Bundle();
+            b.putInt("helppage", 0);
+            helpIntent.putExtras(b);
+            startActivity(helpIntent);
+
             return true;
         }
 
