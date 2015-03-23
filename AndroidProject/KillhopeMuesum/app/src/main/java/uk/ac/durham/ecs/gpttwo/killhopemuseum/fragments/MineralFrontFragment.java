@@ -1,12 +1,13 @@
 package uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments;
 
+import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -14,20 +15,19 @@ import com.abhi.gif.lib.AnimatedGifImageView;
 
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.KillhopeApplication;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.Mineral;
-import uk.ac.durham.ecs.gpttwo.killhopemuseum.activities.GalleryActivity;
-import uk.ac.durham.ecs.gpttwo.killhopemuseum.activities.HelpActivity;
-import uk.ac.durham.ecs.gpttwo.killhopemuseum.adapters.MineralSectionAdapter;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.R;
+import uk.ac.durham.ecs.gpttwo.killhopemuseum.activities.GalleryActivity;
+import uk.ac.durham.ecs.gpttwo.killhopemuseum.adapters.MineralSectionAdapter;
 
 /**
- * Created by Ally on 17/02/15.
+ * Created by Ally on 22/03/15.
  */
-public class MineralFragment extends Fragment {
+public class MineralFrontFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_mineral, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_mineral_front, container, false);
 
         final int mineralID = getActivity().getIntent().getExtras().getInt("mineralID");
 
@@ -41,7 +41,7 @@ public class MineralFragment extends Fragment {
 
         name.setText(Html.fromHtml(mineral.getName()));
         formula.setText(Html.fromHtml(mineral.getFormula()));
-//        image.setImageResource(mineral.getImage(0));
+        image.setImageResource(mineral.getImage(0));
 
         image.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,7 +57,7 @@ public class MineralFragment extends Fragment {
 
         ListView listView = (ListView) rootView.findViewById(R.id.mineral_list);
 
-        MineralSectionAdapter adapter = new MineralSectionAdapter(getActivity(),mineral);
+        MineralSectionAdapter adapter = new MineralSectionAdapter(getActivity(),mineral,true);
 
         listView.setAdapter(adapter);
 
@@ -65,8 +65,7 @@ public class MineralFragment extends Fragment {
         return rootView;
     }
 
-    public static MineralFragment newInstance() {
-        return new MineralFragment();
+    public static MineralFrontFragment newInstance() {
+        return new MineralFrontFragment();
     }
-
 }

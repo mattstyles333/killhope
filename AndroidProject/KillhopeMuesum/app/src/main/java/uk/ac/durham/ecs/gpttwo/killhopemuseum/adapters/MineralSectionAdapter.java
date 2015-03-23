@@ -20,14 +20,16 @@ import uk.ac.durham.ecs.gpttwo.killhopemuseum.R;
 public class MineralSectionAdapter extends BaseAdapter {
     private Context mContext;
     private Mineral mineral;
+    private boolean isFront = false;
     // Constructor
-    public MineralSectionAdapter(Context c, Mineral mineral) {
+    public MineralSectionAdapter(Context c, Mineral mineral, boolean isFront) {
         mContext = c;
         this.mineral = mineral;
+        this.isFront = isFront;
     }
 
     public int getCount() {
-        return 4;
+        return 2;
     }
 
     public Object getItem(int position) {
@@ -49,11 +51,13 @@ public class MineralSectionAdapter extends BaseAdapter {
 //        MineralSubSectionAdapter adapter = new MineralSubSectionAdapter(mContext,mineral.getMineralSection(position));
 
 //        listView.setAdapter(adapter);
+        int extra = 0;
+        if(!isFront)extra = 2;
 
         TextView sectionName = (TextView)view.findViewById(R.id.section_name);
-        sectionName.setText("Section " + (position+1));
+        sectionName.setText("Section " + (position + extra + 1));
 
-        MineralSection ms = mineral.getMineralSection(position);
+        MineralSection ms = mineral.getMineralSection(position + extra);
 
         LinearLayout listView = (LinearLayout) view.findViewById(R.id.mineral_sublist);
 
