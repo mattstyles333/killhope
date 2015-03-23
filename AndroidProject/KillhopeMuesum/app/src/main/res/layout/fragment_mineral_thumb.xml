@@ -23,7 +23,7 @@
         android:layout_alignBottom="@+id/mineral_thumb_image"
         android:layout_alignParentBottom="true"
         android:padding="5dp"
-        android:gravity="center"
+        android:gravity="bottom"
         style="@style/button_text"
         android:id="@+id/mineral_thumb_text"
         android:text="HELLO WORLD" />
