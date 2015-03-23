@@ -1,24 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="wrap_content" android:background="@drawable/mineral_button"
-    android:scaleType="fitXY" >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
 
 
     <ImageView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:padding="5dp"
         android:id="@+id/mineral_thumb_image"
-        android:src="@drawable/ic_launcher" />
+        android:src="@drawable/ic_launcher"
+        android:background="@drawable/mineral_button"
+        />
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_centerHorizontal="true"
-        android:gravity="center_horizontal"
-        style="@style/button_text"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
+        android:layout_alignLeft="@+id/mineral_thumb_image"
+        android:layout_alignTop="@+id/mineral_thumb_image"
+        android:layout_alignRight="@+id/mineral_thumb_image"
+        android:layout_alignBottom="@+id/mineral_thumb_image"
+        android:layout_alignParentBottom="true"
+        android:padding="5dp"
+        android:gravity="center"
+        style="@style/button_text"
         android:id="@+id/mineral_thumb_text"
         android:text="HELLO WORLD" />
 
 
-</LinearLayout>
+</RelativeLayout>
 
