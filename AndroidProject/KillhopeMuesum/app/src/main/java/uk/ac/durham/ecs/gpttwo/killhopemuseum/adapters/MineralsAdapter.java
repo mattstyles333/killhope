@@ -53,11 +53,14 @@ public class MineralsAdapter extends BaseAdapter {
         }
         holder.txt.setText(Html.fromHtml( mineral.getName()));
 //        if(holder.id == -1) {
-            holder.id = mineral.getImage(0);
+            int id = mineral.getImage(0);
 //            holder.id = R.drawable.icon_baryte;
 //        }
         try {
-            holder.img.setImageResource(holder.id);
+            if(holder.id != id) {
+                holder.id = id;
+                holder.img.setImageResource(holder.id);
+            }
         } catch (Exception e) {
             System.err.println(holder.id);
         }

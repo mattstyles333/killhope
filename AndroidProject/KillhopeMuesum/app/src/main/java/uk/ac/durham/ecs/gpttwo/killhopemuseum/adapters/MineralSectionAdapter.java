@@ -10,6 +10,8 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.Mineral;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.MineralSection;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.R;
@@ -61,13 +63,21 @@ public class MineralSectionAdapter extends BaseAdapter {
 
         LinearLayout listView = (LinearLayout) view.findViewById(R.id.mineral_sublist);
 
+//        ArrayList<String> glossaryTerms = mContext
+
         for(int i=0;i<ms.getCount();i++) {
             View subview = inflator.inflate(R.layout.fragment_mineral_list_item_sub, parent, false);
 
             TextView title = (TextView) subview.findViewById(R.id.mineral_sub_title);
             TextView desc = (TextView) subview.findViewById(R.id.mineral_sub_description);
-            title.setText(Html.fromHtml(ms.getSub(i).getTitle()));
-            desc.setText(Html.fromHtml(ms.getSub(i).getInfo()));
+
+            String titleText = ms.getSub(i).getTitle();
+            String descText = ms.getSub(i).getInfo();
+
+            descText = descText.replace("and", "<b>and</b>");
+
+            title.setText(Html.fromHtml(titleText));
+            desc.setText(Html.fromHtml(descText));
 
             listView.addView(subview);
         }
