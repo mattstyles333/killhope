@@ -6,11 +6,12 @@
 
     <TextView
         android:background="@drawable/cleartext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="The Traditional Geological History Model"
         android:id="@+id/historyHeader"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="0.60" />
+        android:layout_weight="0.60"
+        style="@style/info_title"/>
 </LinearLayout>

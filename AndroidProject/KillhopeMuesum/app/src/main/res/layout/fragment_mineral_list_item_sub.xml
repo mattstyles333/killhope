@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content" >
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Some Title"
-        android:id="@+id/mineral_sub_title"/>
+        android:id="@+id/mineral_sub_title"
+        style="@style/info_title"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Some Description"
-        android:id="@+id/mineral_sub_description"/>
+        android:id="@+id/mineral_sub_description"
+        style="@style/info_text"/>
 </LinearLayout>
