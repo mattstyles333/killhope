@@ -5,7 +5,7 @@
     <!--android:layout_height="match_parent" />-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent" android:background="@drawable/bgminerals">
 
     <com.abhi.gif.lib.AnimatedGifImageView
         android:layout_width="match_parent"
@@ -16,12 +16,16 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/mineral_name"/>
+        android:id="@+id/mineral_name"
+        android:background="@drawable/blue_button"
+        style="@style/button_text"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/mineral_formula"/>
+        android:id="@+id/mineral_formula"
+        android:background="@drawable/blue_button"
+        style="@style/button_text"/>
 
     <!--<ListView-->
         <!--android:layout_width="match_parent"-->
@@ -29,13 +33,15 @@
         <!--android:id="@+id/mineral_list"></ListView>-->
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:id="@+id/mineral_list"/>
+            android:id="@+id/mineral_list"
+            />
 
     </ScrollView>
 
