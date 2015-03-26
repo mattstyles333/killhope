@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="New Geological Model (Dempsey et al. Unp.)"
+        android:id="@+id/textView4"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New geological dating methods have shown that the minerals originally thought to be sourced from the Ordovician sediments, are in fact Early Permian in age. This suggests that the minerals were in fact sourced from the Whin Sill, a Dolerite intrusion thought to be approximately 300 Million years old. The Whin Sill intruded the North Pennine area after the Variscan Orogeny. The Variscan Orogeny refers to a great movement of tectonic plates that eventually led to the amalgamation of continents to make the supercontinent Pangea. The after effect of the Variscan event led to extension across England, giving the opportunity for the Whin Sill to intrude, and supply the mineralising fluids for the North Pennine ore field.  Remobilisation of fluids did occur as a result of heating from the weardale granite, although this was not the source of the mineralisation as originally thought."
+        android:id="@+id/textView5"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>

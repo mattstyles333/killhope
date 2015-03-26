@@ -2,8 +2,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
-<TextView
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:text="This is page 3"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Carboniferous Sediments "
+        android:id="@+id/textView2"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="In the Early Carboniferous movement of the Earths tectonic plates  opened up sedimentary basins in Northumberland and Yorkshire. This allowed the deposition of the Carboniferous sedimentary rocks we observe today during the period from 354-300 million years ago.  During this time, the North Pennines was drifting north across the equator and was episodically submerged beneath shallow tropical seas, similar to that around the present day Bahamas.  Skeletons of sea creatures accumulated as calcitic ooze on the seafloor, whilst rivers fed mud and sand particles into the sea, building up vast deltas on which swampy forests grew. Over millions of years, the calcitic ooze, mud, sand and wood rich swamps compacted into layers of limestone, shale, sandstone and coal.  Fluctuating sea levels covered and exposed the deltas, allowing for a cyclic pattern of sedimentary rock to form. Each cycle of limestone, shale, sandstone and coal is referred to as a cyclothem.    "
+        android:id="@+id/textView3"
+        android:layout_gravity="center_horizontal" />
 </LinearLayout>
