@@ -3,7 +3,9 @@ package uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments;
 import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -16,6 +18,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.abhi.gif.lib.AnimatedGifImageView;
+
+import java.util.ArrayList;
 
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.KillhopeApplication;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.Mineral;
@@ -33,15 +37,18 @@ public class MineralFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_mineral, container, false);
+        View rootView;
+        if(getResources().getConfiguration().orientation == 1){
+            rootView = inflater.inflate(R.layout.fragment_mineral, container, false);
+        }else{
+            rootView = inflater.inflate(R.layout.fragment_mineral_land, container, false);
+        }
 
         final int mineralID = getActivity().getIntent().getExtras().getInt("mineralID");
 
         final Mineral mineral = ((KillhopeApplication)getActivity().getApplication()).mineralManager.getMineral(mineralID);
 
         TextView name = (TextView)rootView.findViewById(R.id.mineral_name);
-        TextView formula = (TextView)rootView.findViewById(R.id.mineral_formula);
-//      ImageView image = (ImageView)rootView.findViewById(R.id.mineral_image);
         final AnimatedGifImageView image = (AnimatedGifImageView)rootView.findViewById(R.id.mineral_image);
         image.setAnimatedGif(mineral.getImg3d(), AnimatedGifImageView.TYPE.FIT_CENTER);
 
@@ -65,9 +72,9 @@ public class MineralFragment extends Fragment {
             }
         });
 
-        name.setText(Html.fromHtml(mineral.getName()));
-        formula.setText(Html.fromHtml(mineral.getFormula()));
-//        image.setImageResource(mineral.getImage(0));
+        name.setText(Html.fromHtml(mineral.getName() + ": " + mineral.getFormula()));
+
+        ((ActionBarActivity)getActivity()).getSupportActionBar().setTitle(Html.fromHtml(mineral.getName() /*+ ": <small style=\"font-size:60%;\">" + mineral.getFormula() + "</small>"*/));
 
         image.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,12 +87,6 @@ public class MineralFragment extends Fragment {
             }
         });
 
-
-//        ListView listView = (ListView) rootView.findViewById(R.id.mineral_list);
-//
-//        MineralSectionAdapter adapter = new MineralSectionAdapter(getActivity(),mineral,true);
-//
-//        listView.setAdapter(adapter);
         LinearLayout list = (LinearLayout) rootView.findViewById(R.id.mineral_list);
         list.addView(getNextView(0, null, null));
 
@@ -101,20 +102,23 @@ public class MineralFragment extends Fragment {
 
         final Mineral mineral = ((KillhopeApplication)getActivity().getApplication()).mineralManager.getMineral(mineralID);
 
-//        ListView listView = (ListView) view.findViewById(R.id.mineral_sublist);
-
-//        MineralSubSectionAdapter adapter = new MineralSubSectionAdapter(mContext,mineral.getMineralSection(position));
-
-//        listView.setAdapter(adapter);
-
         TextView sectionName = (TextView)view.findViewById(R.id.section_name);
         sectionName.setText("Section " + (position + 1));
+        if(position == 0){
+            sectionName.setText("Basic");
+        }else if(position == 1){
+            sectionName.setText("Intermediate");
+        }else if(position == 2){
+            sectionName.setText("Advanced");
+        }else{
+            sectionName.setText("Expert");
+        }
 
         MineralSection ms = mineral.getMineralSection(position);
 
         LinearLayout listView = (LinearLayout) view.findViewById(R.id.mineral_sublist);
 
-//        ArrayList<String> glossaryTerms = mContext
+        ArrayList<String> glossaryTerms = ((KillhopeApplication)getActivity().getApplication()).glossaryManager.getNames();
 
         for(int i=0;i<ms.getCount();i++) {
             View subview = inflator.inflate(R.layout.fragment_mineral_list_item_sub, new RelativeLayout(getActivity()), false);
@@ -125,8 +129,19 @@ public class MineralFragment extends Fragment {
             String titleText = ms.getSub(i).getTitle();
             String descText = ms.getSub(i).getInfo();
 
+            for(String term : glossaryTerms){
+                String nocaps = term.toLowerCase();
+//                String firstCap = (nocaps.charAt(0) + "").toUpperCase() + nocaps.substring(1);
+                titleText.replace(nocaps, "<b>" + nocaps + "</b>");
+                titleText.replace(term, "<b>" + term + "</b>");
+
+                descText.replace(nocaps, "<b>" + nocaps + "</b>");
+                descText.replace(term, "<b>" + term + "</b>");
+                System.out.println(term);
+            }
+
             //placeholder, soon to be the whole glossary
-            descText = descText.replace("and", "<b>and</b>");
+//            descText = descText.replace("and", "<b>and</b>");
 
             title.setText(Html.fromHtml(titleText));
             desc.setText(Html.fromHtml(descText));

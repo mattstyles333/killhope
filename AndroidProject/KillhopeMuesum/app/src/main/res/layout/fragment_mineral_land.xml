@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="match_parent" android:background="@drawable/bgminerals"
     android:id="@+id/mineral_parent">
 
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:id="@+id/mineral_paneleft">
+        android:id="@+id/mineral_paneleft"
+        android:layout_weight="1">
+
         <com.abhi.gif.lib.AnimatedGifImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -22,12 +24,14 @@
             android:id="@+id/mineral_name"
             android:background="@drawable/blue_button"
             style="@style/button_text"/>
+
     </LinearLayout>
 
     <ScrollView
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:id="@+id/mineral_paneright">
+        android:id="@+id/mineral_paneright"
+        android:layout_weight="1">
 
         <LinearLayout
             android:layout_width="match_parent"
