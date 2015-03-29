@@ -209,12 +209,7 @@ public class AnimatedGifImageView extends ImageView {
                         }
                         if (mMovie != null) {
                                 p.setAntiAlias(true);
-                                int dur = mMovie.duration();
-                                if (dur == 0) {
-                                        dur = 1000;
-                                }
-                                int relTime = (int) ((now - mMovieStart) % dur);
-                                mMovie.setTime(relTime);
+                                mMovie.setTime(getMovieTime());
                                 canvas.save(Canvas.MATRIX_SAVE_FLAG);
                                 canvas.scale(mScaleW, mScaleH);
                                 mMovie.draw(canvas, mLeft / mScaleW, mTop / mScaleH);
@@ -225,5 +220,57 @@ public class AnimatedGifImageView extends ImageView {
 
         }
 
+
+//    Alastair Breeze 2015
+    private int getMovieTime(){
+        long now = android.os.SystemClock.uptimeMillis();
+        int dur = mMovie.duration();
+        if (dur == 0) {
+            dur = 1000;
+        }
+        if(touching){
+            int time = (pauseTime + (int)((pausePos - lastPos)*(float)dur));
+            while(time < 0){
+                time+=dur;
+            }
+            return time % dur;
+        }else {
+            return (int) ((now - mMovieStart) % dur);
+        }
+    }
+
+    private boolean touching = false;
+    private int pauseTime;
+    private long pauseMoment;
+    private float pausePos;
+    private float lastPos;
+
+    public void touchUp(float f){
+        int dur = mMovie.duration();
+        if (dur == 0) {
+            dur = 1000;
+        }
+        long now = android.os.SystemClock.uptimeMillis();
+        long tp = now - pauseMoment;
+        touching = false;
+        lastPos = f;
+        mMovieStart-=(int)((pausePos - lastPos)*(float)dur) - (int)tp;
+        while(mMovieStart < 0){
+            mMovieStart += dur;
+        }
+        mMovieStart%=dur;
+    }
+
+    public void touchDown(float f){
+        pauseMoment = android.os.SystemClock.uptimeMillis();
+        pauseTime = getMovieTime();
+        touching = true;
+        pausePos = f;
+        lastPos = f;
+    }
+
+    public void touchMove(float f){
+        lastPos = f;
+    }
 }
 

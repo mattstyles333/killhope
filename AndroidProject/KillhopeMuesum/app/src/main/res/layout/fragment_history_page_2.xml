@@ -3,4 +3,16 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="The Weardale Granite"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Movement of the Earths plates caused compression in the North East of England, beginning at around 490 million years ago.  Approximately 400 million years ago a large mass of magma (molten rock) was injected into the Ordovician slates and volcanic rocks. This cooled and crystallised, forming the Weardale Granite.  An unconformity lies above the granite, a time gap in the rock record caused by millions of years of erosion of the overlying rocks. After this significant ‘time gap’ the Carboniferous rocks that make up most of the Northern Pennines were deposited on top of the granite. "
+        android:layout_gravity="center_horizontal" />
 </LinearLayout>

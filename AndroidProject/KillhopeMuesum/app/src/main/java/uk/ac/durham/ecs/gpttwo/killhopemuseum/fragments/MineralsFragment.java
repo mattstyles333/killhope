@@ -29,6 +29,12 @@ public class MineralsFragment extends Fragment implements AdapterView.OnItemClic
 
         gridView.setAdapter(adapter);
 
+        if(getResources().getConfiguration().orientation == 1){
+            gridView.setNumColumns(2);
+        }else{
+            gridView.setNumColumns(3);
+        }
+
         return rootView;
     }
 

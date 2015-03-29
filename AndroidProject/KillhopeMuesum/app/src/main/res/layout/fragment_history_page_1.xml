@@ -3,22 +3,26 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Early Earth"
+        android:id="@+id/historyHeader2"
+        android:layout_gravity="center_horizontal" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About 450 million years ago, during the Ordovician period of Earth history, the area we know as northern England was located 15°S of the equator (Matte, 2001). Here it lay beneath a deep ocean, in which mud and silt were deposited.
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/history_textlorem" />
+As geological time progressed, vast movements of the Earth’s tectonic plates compressed these muds, turning them into slate and forming the Skiddaw Group. (These same movements causes gigantic volcanoes to erupt lava and ash.)
 
-        </LinearLayout>
+"
+        android:id="@+id/textView"
+        android:layout_gravity="center_horizontal" />
 
-    </ScrollView>
+
+
 
 </LinearLayout>

@@ -3,7 +3,9 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
     <TextView
+        android:background="@drawable/cleartext"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:text="This is page 1"/>
+        android:text="This is page 1"
+        style="@style/info_title"/>
 </LinearLayout>
