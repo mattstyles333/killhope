@@ -15,6 +15,7 @@ public class HelpPageFragment extends Fragment {
                              Bundle savedInstanceState) {
         int layID = getArguments().getInt("layID");
         View rootView = inflater.inflate(layID, container, false);
+
         return rootView;
     }
 

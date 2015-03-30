@@ -36,6 +36,9 @@ public class HelpActivity extends ActionBarActivity {
         if (pg >= 0 && pg < mPageAdapter.getCount()) {
             mPager.setCurrentItem(pg);
         }
+        if(getResources().getConfiguration().orientation != 1){
+            mPager.setBackgroundResource(R.drawable.bg_land);
+        }
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 

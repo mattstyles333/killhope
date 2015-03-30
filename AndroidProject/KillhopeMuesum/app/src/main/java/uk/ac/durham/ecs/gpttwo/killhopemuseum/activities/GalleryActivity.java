@@ -21,8 +21,8 @@ public class GalleryActivity extends ActionBarActivity {
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.container, GalleryFragment.newInstance())
                     .commit();
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
 
@@ -43,11 +43,6 @@ public class GalleryActivity extends ActionBarActivity {
         if(id == android.R.id.home){
             onBackPressed();
         }
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
         return super.onOptionsItemSelected(item);
     }
 

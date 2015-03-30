@@ -53,7 +53,7 @@ public class MineralsAdapter extends BaseAdapter {
 
             holder = new ViewHolder();
 
-            convertView = inflator.inflate(R.layout.fragment_mineral_thumb, parent, false);
+            convertView = inflator.inflate(R.layout.fragment_minerals_thumb, parent, false);
 
             holder.txt = (TextView) convertView.findViewById(R.id.mineral_thumb_text);
             holder.img = (ImageView) convertView.findViewById(R.id.mineral_thumb_image);

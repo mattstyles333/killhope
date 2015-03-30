@@ -24,8 +24,8 @@ public class QuizActivity extends ActionBarActivity {
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.container, QuizFragment.newInstance())
                     .commit();
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
 
@@ -45,10 +45,7 @@ public class QuizActivity extends ActionBarActivity {
         if(id == android.R.id.home){
             onBackPressed();
         }
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+
         if (id == R.id.action_help) {
             Intent helpIntent = new Intent(this, HelpActivity.class);
             Bundle b = new Bundle();

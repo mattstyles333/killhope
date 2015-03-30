@@ -29,6 +29,9 @@ public class MainFragment extends Fragment{
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
 
+        if(getResources().getConfiguration().orientation != 1){
+            rootView.setBackgroundResource(R.drawable.bg_land);
+        }
 
         if(getResources().getConfiguration().orientation == 1){
 
