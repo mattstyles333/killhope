@@ -20,6 +20,10 @@ public class FloorPlanFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_floorplan, container, false);
 
+        if(getResources().getConfiguration().orientation != 1){
+            rootView.setBackgroundResource(R.drawable.bg_land);
+        }
+
         ImageViewTouch mainImage= (ImageViewTouch) rootView.findViewById(R.id.floor_image);
         mainImage.setDisplayType(ImageViewTouchBase.DisplayType.FIT_IF_BIGGER);
 

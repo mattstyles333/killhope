@@ -17,6 +17,11 @@ public class SplashFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_splash, container, false);
+
+        if(getResources().getConfiguration().orientation != 1){
+            rootView.setBackgroundResource(R.drawable.bg_land);
+        }
+
         return rootView;
     }
 

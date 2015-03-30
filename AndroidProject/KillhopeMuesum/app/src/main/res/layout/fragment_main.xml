@@ -26,6 +26,24 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="right">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_info"
+                    android:id="@+id/button_main_info"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_help"
+                    android:id="@+id/button_main_help"/>
+            </LinearLayout>
+
             <Button
                 android:background="@drawable/blue_button"
                 android:layout_width="match_parent"
@@ -63,7 +81,34 @@
                 style="@style/button_text"
                 android:layout_below="@+id/button_menu_floorplan"
                 android:layout_centerHorizontal="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_facebook"
+                    android:id="@+id/button_main_facebook"/>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_twitter"
+                    android:id="@+id/button_main_twitter"/>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_linkedin"
+                    android:id="@+id/button_main_linkedin"/>
+            </LinearLayout>
+
         </LinearLayout>
+
+
     </ScrollView>
 
 </RelativeLayout>

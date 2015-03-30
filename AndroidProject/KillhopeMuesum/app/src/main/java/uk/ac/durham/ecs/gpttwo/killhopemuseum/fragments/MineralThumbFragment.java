@@ -23,7 +23,7 @@ public class MineralThumbFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_mineral_thumb, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_minerals_thumb, container, false);
 
         TextView text = (TextView)rootView.findViewById(R.id.mineral_thumb_text);
         ImageView image = (ImageView)rootView.findViewById(R.id.mineral_thumb_image);

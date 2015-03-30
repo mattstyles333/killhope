@@ -97,10 +97,6 @@ public class MineralsActivity extends ActionBarActivity {
             startActivity(helpIntent);
             return true;
         }
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        } else
         return super.onOptionsItemSelected(item);
     }
 

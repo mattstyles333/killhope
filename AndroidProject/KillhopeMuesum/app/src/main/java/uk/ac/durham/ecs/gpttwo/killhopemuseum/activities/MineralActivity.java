@@ -1,6 +1,5 @@
 package uk.ac.durham.ecs.gpttwo.killhopemuseum.activities;
 
-import android.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -9,9 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.R;
-import uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.MineralBackFragment;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.MineralFragment;
-import uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.MineralFrontFragment;
 
 
 public class MineralActivity extends ActionBarActivity {
@@ -28,8 +25,8 @@ public class MineralActivity extends ActionBarActivity {
             getFragmentManager().beginTransaction()
                     .add(R.id.container, MineralFragment.newInstance())
                     .commit();
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 //        setContentView(R.layout.fragment_mineral);
 
@@ -107,11 +104,7 @@ public class MineralActivity extends ActionBarActivity {
         if(id == android.R.id.home){
             onBackPressed();
         }
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-//            flipCard();
-            return true;
-        }
+
         if (id == R.id.action_help) {
             Intent helpIntent = new Intent(this, HelpActivity.class);
             Bundle b = new Bundle();

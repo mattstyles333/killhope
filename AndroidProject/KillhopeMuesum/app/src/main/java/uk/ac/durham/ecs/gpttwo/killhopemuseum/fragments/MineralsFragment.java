@@ -35,6 +35,10 @@ public class MineralsFragment extends Fragment implements AdapterView.OnItemClic
             gridView.setNumColumns(3);
         }
 
+        if(getResources().getConfiguration().orientation !=1){
+            rootView.setBackgroundResource(R.drawable.bg_minerals_land);
+        }
+
         return rootView;
     }
 
