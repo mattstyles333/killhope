@@ -3,7 +3,7 @@
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingBottom="100dp"
     tools:context="uk.ac.durham.ecs.gpttwo.killhopemuseum.SplashActivity$PlaceholderFragment"
     android:background="@drawable/bg">
     <ImageView
@@ -22,4 +22,27 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="bottom">
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <ImageView
+            android:layout_width="3dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/image_menu_durham"
+            android:src="@drawable/ic_durham"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:layout_weight="2"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+    </LinearLayout>
 </RelativeLayout>

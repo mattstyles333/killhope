@@ -28,8 +28,12 @@ public class HelpActivity extends ActionBarActivity {
         mPager = (ViewPager)findViewById(R.id.help_pager);
         mPageAdapter = new HelpPagerAdapter(getSupportFragmentManager());
         mPager.setAdapter(mPageAdapter);
-        int pg = getIntent().getExtras().getInt("helppage");
-        if(pg >= 0 && pg < mPageAdapter.getCount()){
+        Bundle bundle = getIntent().getExtras();
+        int pg = 0;
+        if(bundle!=null) {
+            pg = bundle.getInt("helppage");
+        }
+        if (pg >= 0 && pg < mPageAdapter.getCount()) {
             mPager.setCurrentItem(pg);
         }
 

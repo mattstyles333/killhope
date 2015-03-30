@@ -2,15 +2,18 @@ package uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments;
 
 import android.content.Intent;
 import android.graphics.Point;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.activities.FloorPlanActivity;
+import uk.ac.durham.ecs.gpttwo.killhopemuseum.activities.HelpActivity;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.activities.HistoryActivity;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.activities.MineralsActivity;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.activities.QuizActivity;
@@ -101,6 +104,51 @@ public class MainFragment extends Fragment{
                 }
             });
         }
+
+        ImageView buttonInfo = (ImageView)rootView.findViewById(R.id.button_main_info);
+        buttonInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), QuizActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        ImageView buttonHelp = (ImageView)rootView.findViewById(R.id.button_main_help);
+        buttonHelp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), HelpActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        ImageView buttonFacebook = (ImageView)rootView.findViewById(R.id.button_main_facebook);
+        buttonFacebook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/Killhope"));
+                startActivity(intent);
+            }
+        });
+
+        ImageView buttonTwitter = (ImageView)rootView.findViewById(R.id.button_main_twitter);
+        buttonTwitter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://twitter.com/killhopemuseum"));
+                startActivity(intent);
+            }
+        });
+
+        ImageView buttonLinkedin = (ImageView)rootView.findViewById(R.id.button_main_linkedin);
+        buttonLinkedin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.killhope.org.uk"));
+                startActivity(intent);
+            }
+        });
 
         return rootView;
     }
