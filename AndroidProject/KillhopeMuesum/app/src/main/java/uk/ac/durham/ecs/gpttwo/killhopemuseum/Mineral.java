@@ -14,6 +14,7 @@ import java.util.ArrayList;
 public class Mineral {
     private String name;
     private String formula;
+    private int lastSearchScore;
     private int img3d;
     private String qrid;
     private ArrayList<Integer> images;
@@ -104,5 +105,13 @@ public class Mineral {
     public MineralSection getMineralSection(int id){
         return mineralSection.get(id);
     }
+
+    public int getCount(){
+        return mineralSection.size();
+    }
+
+    public int getLastSearchScore() {return lastSearchScore;}
+
+    public void setLastSearchScore(int lastSearchScore) {this.lastSearchScore = lastSearchScore;}
 
 }
