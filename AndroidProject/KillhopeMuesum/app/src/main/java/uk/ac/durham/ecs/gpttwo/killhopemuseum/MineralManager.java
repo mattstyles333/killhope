@@ -93,7 +93,7 @@ public class MineralManager {
 
 
     public ArrayList<Mineral> getMineralsFromSearch(String search){
-        if(lastSearchMinerals == null || !lastSearch.equals(search)) {
+        if(!lastSearch.equals(search)) {
             lastSearchMinerals = new ArrayList<Mineral>();
             searchWords = new ArrayList<String>(Arrays.asList(search.split(" ")));
             lastSearch = search;
@@ -126,21 +126,30 @@ public class MineralManager {
                 }
 
 
-
-
+                //sort the minerals based on the score
+                Collections.sort(lastSearchMinerals, new Comparator<Mineral>() {
+                    public int compare(Mineral o1, Mineral o2) {
+                        final int mineral1 = o1.getLastSearchScore();
+                        final int mineral2 = o2.getLastSearchScore();
+                        return mineral1 > mineral2 ? 1
+                                : mineral1 < mineral2 ? -1 : 0;
+                    }
+                });
             }
 
-            //sort the minerals based on the score
-            Collections.sort(lastSearchMinerals,new Comparator<Mineral>(){
-                public int compare(Mineral o1, Mineral o2){
-                    final int mineral1 = o1.getLastSearchScore();
-                    final int mineral2 = o2.getLastSearchScore();
-                    return mineral1 > mineral2? 1
-                            : mineral1 < mineral2? -1:0;
+
+        }
+        else if(lastSearchMinerals == null){
+            for (int i = 0; i < getSize(); i++) {
+                lastSearchMinerals.add(getMineral(i));
+            }
+            Collections.sort(lastSearchMinerals, new Comparator<Mineral>() {
+                public int compare(Mineral o1, Mineral o2) {
+                    final String mineral1 = o1.getName();
+                    final String mineral2 = o2.getName();
+                    return mineral1.compareTo(mineral2);
                 }
             });
-
-
         }
         return lastSearchMinerals;
     }
