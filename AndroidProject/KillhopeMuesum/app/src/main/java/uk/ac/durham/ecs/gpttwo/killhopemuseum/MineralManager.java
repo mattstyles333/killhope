@@ -7,6 +7,7 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 
@@ -86,7 +87,7 @@ public class MineralManager {
 
     private String lastSearch = "";
     private ArrayList<Mineral> lastSearchMinerals = null;
-    private ArrayList<Integer> searchScores = null;
+    private ArrayList<String> searchWords = null;
     private int currentScore = 0;
 
 
@@ -94,35 +95,41 @@ public class MineralManager {
     public ArrayList<Mineral> getMineralsFromSearch(String search){
         if(lastSearchMinerals == null || !lastSearch.equals(search)) {
             lastSearchMinerals = new ArrayList<Mineral>();
-            searchScores = new ArrayList<Integer>();
+            searchWords = new ArrayList<String>(Arrays.asList(search.split(" ")));
             lastSearch = search;
+
 
             //The search function, currently adds if the title contains the query. Lowercase important.
             for (int i = 0; i < getSize(); i++) {
                 currentScore = 0;
-                if (getMineral(i).getName().toLowerCase().contains(search.toLowerCase())) {
-                    currentScore = currentScore + 100;
-                }
-                if (getMineral(i).getFormula().toLowerCase().contains(search.toLowerCase())) {
-                    currentScore = currentScore + 50;
-                }
-                for (int j = 0; j < getMineral(i).getCount(); j++) {
-                    for (int k = 0; k < getMineral(i).getMineralSection(j).getCount(); k++) {
-                        if (getMineral(i).getMineralSection(j).getSub(k).getInfo().toLowerCase().contains(search.toLowerCase())) {
-                            currentScore = currentScore + 10;
+                for (int l = 0; l < searchWords.size(); l++) {
+
+                    if (getMineral(i).getName().toLowerCase().contains(searchWords.get(l).toLowerCase())) {
+                        currentScore = currentScore + 100;
+                    }
+                    if (getMineral(i).getFormula().toLowerCase().contains(searchWords.get(l).toLowerCase().replace("</sub>", "").replace("<sub>", "").replace("</sup>", "").replace("<sup>", ""))) {
+                        currentScore = currentScore + 50;
+                    }
+                    for (int j = 0; j < getMineral(i).getCount(); j++) {
+                        for (int k = 0; k < getMineral(i).getMineralSection(j).getCount(); k++) {
+                            if (getMineral(i).getMineralSection(j).getSub(k).getInfo().toLowerCase().contains(searchWords.get(l).toLowerCase())) {
+                                currentScore = currentScore + 10;
+                            }
                         }
                     }
                 }
                 getMineral(i).setLastSearchScore(currentScore);
-                if (getMineral(i).getLastSearchScore() >10 ) {
+                if (getMineral(i).getLastSearchScore() > 10) {
 
-                            lastSearchMinerals.add(getMineral(i));
+                    lastSearchMinerals.add(getMineral(i));
 
-                    }
+                }
+
 
 
 
             }
+
             //sort the minerals based on the score
             Collections.sort(lastSearchMinerals,new Comparator<Mineral>(){
                 public int compare(Mineral o1, Mineral o2){
@@ -132,6 +139,7 @@ public class MineralManager {
                             : mineral1 < mineral2? -1:0;
                 }
             });
+
 
         }
         return lastSearchMinerals;
