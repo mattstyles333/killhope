@@ -108,7 +108,7 @@ public class MineralsActivity extends ActionBarActivity {
 
             int loadid = ((KillhopeApplication)getApplication()).mineralManager.getMineralIdFromQRId(qrid);
             if(loadid == -1){
-                Toast toast = Toast.makeText(this, "QR Code is not a mineral qr code.", Toast.LENGTH_LONG);
+                Toast toast = Toast.makeText(this, "QR Code Scan Failed.", Toast.LENGTH_LONG);
                 toast.show();
             }else{
                 Intent newintent = new Intent(this, MineralActivity.class);

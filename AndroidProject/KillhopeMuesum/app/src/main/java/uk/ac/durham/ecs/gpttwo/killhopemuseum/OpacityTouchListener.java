@@ -21,7 +21,7 @@ public class OpacityTouchListener implements View.OnTouchListener {
             case(MotionEvent.ACTION_DOWN):
                 v.setAlpha(0.7f);
                 break;
-            case(MotionEvent.ACTION_UP):
+            default:
                 v.setAlpha(1f);
                 break;
         }
