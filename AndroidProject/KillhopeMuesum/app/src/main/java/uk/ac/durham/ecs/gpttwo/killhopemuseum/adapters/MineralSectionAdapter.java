@@ -14,6 +14,7 @@ import java.util.ArrayList;
 
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.Mineral;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.MineralSection;
+import uk.ac.durham.ecs.gpttwo.killhopemuseum.OpacityTouchListener;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.R;
 
 /**
