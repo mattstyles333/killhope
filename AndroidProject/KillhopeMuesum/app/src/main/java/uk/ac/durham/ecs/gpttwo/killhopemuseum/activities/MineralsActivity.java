@@ -1,5 +1,6 @@
 package uk.ac.durham.ecs.gpttwo.killhopemuseum.activities;
 
+import android.app.Dialog;
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
@@ -10,7 +11,11 @@ import android.support.v7.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.GridView;
+import android.widget.LinearLayout;
+import android.widget.ScrollView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.zxing.integration.android.IntentIntegrator;
@@ -88,6 +93,19 @@ public class MineralsActivity extends ActionBarActivity {
         }
         if(id == android.R.id.home){
             onBackPressed();
+        }
+        if(id == R.id.action_glossary){
+            LinearLayout ll = new LinearLayout(this);
+            ll.setOrientation(LinearLayout.VERTICAL);
+            ScrollView sc = new ScrollView(this);
+            final Dialog d = new Dialog(this);
+            d.setContentView(sc);
+            d.setTitle("Glossary");
+            TextView tv = new TextView(this);
+            tv.append("hi");
+            ll.addView(tv);
+            sc.addView(ll);
+            d.show();
         }
         if (id == R.id.action_help) {
             Intent helpIntent = new Intent(this, HelpActivity.class);
