@@ -101,7 +101,6 @@ public class MineralManager {
             if(search.equals("")){
                 for (int i = 0; i < getSize(); i++) {
                     lastSearchMinerals.add(getMineral(i));
-                    lastSearchMinerals.add(getMineral(i));
                 }
                 Collections.sort(lastSearchMinerals, new Comparator<Mineral>() {
                     public int compare(Mineral o1, Mineral o2) {
