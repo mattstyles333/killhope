@@ -54,7 +54,7 @@ public class GlossaryItem {
     }
 
     public boolean search(String query){
-        if(query.contains(name)){
+        if(query.contains(query)){
             return true;
         }
         for(GlossaryItem gi : types){
