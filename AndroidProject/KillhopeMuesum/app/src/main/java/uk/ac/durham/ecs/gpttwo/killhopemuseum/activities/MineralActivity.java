@@ -1,15 +1,11 @@
 package uk.ac.durham.ecs.gpttwo.killhopemuseum.activities;
 
-import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.R;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.MineralFragment;
@@ -118,24 +114,7 @@ public class MineralActivity extends ActionBarActivity {
 
             return true;
         }
-        if(id == R.id.action_glossary){
-            final Dialog d = new Dialog(this);
-            d.setContentView(R.layout.glossary_dialog);
-            d.setTitle("Glossary");
 
-            TextView tv = (TextView) findViewById(R.id.glossaryText);
-            tv.setText("This is a test");
-            Button dialogButton = (Button) d.findViewById(R.id.dialogButtonOK);
-            // if button is clicked, close the custom dialog
-            dialogButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    d.dismiss();
-                }
-            });
-
-            d.show();
-        }
         return super.onOptionsItemSelected(item);
     }
 
