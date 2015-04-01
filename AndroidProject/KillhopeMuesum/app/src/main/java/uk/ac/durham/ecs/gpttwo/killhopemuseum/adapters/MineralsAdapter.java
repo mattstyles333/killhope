@@ -22,6 +22,7 @@ import java.lang.ref.WeakReference;
 
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.KillhopeApplication;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.Mineral;
+import uk.ac.durham.ecs.gpttwo.killhopemuseum.OpacityTouchListener;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.R;
 
 public class MineralsAdapter extends BaseAdapter {
