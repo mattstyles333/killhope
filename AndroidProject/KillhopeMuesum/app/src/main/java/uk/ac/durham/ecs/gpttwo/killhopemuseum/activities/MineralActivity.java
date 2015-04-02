@@ -1,19 +1,29 @@
 package uk.ac.durham.ecs.gpttwo.killhopemuseum.activities;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.ScrollView;
+import android.widget.TextView;
 
+import java.util.ArrayList;
+
+import uk.ac.durham.ecs.gpttwo.killhopemuseum.GlossaryItem;
+import uk.ac.durham.ecs.gpttwo.killhopemuseum.GlossaryManager;
+import uk.ac.durham.ecs.gpttwo.killhopemuseum.MineralManager;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.R;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.MineralFragment;
 
 
 public class MineralActivity extends ActionBarActivity {
 
-    public static final long SPLASH_LENGTH = 2500l;
     private Handler mHandler = new Handler();
 
     @Override
@@ -114,7 +124,27 @@ public class MineralActivity extends ActionBarActivity {
 
             return true;
         }
+        if(id == R.id.action_glossary){
+            LinearLayout ll = new LinearLayout(this);
+            ll.setOrientation(LinearLayout.VERTICAL);
+            ScrollView sc = new ScrollView(this);
+            final Dialog d = new Dialog(this);
+            d.setContentView(sc);
+            d.setTitle("Full Glossary");
+            GlossaryManager gm = new GlossaryManager();
+            gm.loadGlossary(this);
+            ArrayList<GlossaryItem> glist = gm.searchGlossary("");
+            int i=0;
+            while(i<glist.size()) {
 
+                TextView tv = new TextView(this);
+                tv.setText(glist.get(i).getName()+": "+glist.get(i).getInfo()+"\n");
+                ll.addView(tv);
+                i++;
+            }
+            sc.addView(ll);
+            d.show();
+        }
         return super.onOptionsItemSelected(item);
     }
 

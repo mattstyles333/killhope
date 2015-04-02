@@ -95,5 +95,13 @@ public class GlossaryManager {
         }
         return names;
     }
+    public ArrayList<String> getGlossary(){
+        ArrayList<String> g = new ArrayList<String>();
+        for(GlossaryItem gi : glossary){
+            g.add(gi.getName()+": "+gi.getInfo());
+        }
+        return g;
+    }
+
 
 }

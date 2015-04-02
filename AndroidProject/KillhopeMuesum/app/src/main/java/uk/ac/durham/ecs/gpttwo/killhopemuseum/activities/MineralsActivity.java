@@ -1,5 +1,6 @@
 package uk.ac.durham.ecs.gpttwo.killhopemuseum.activities;
 
+import android.app.Dialog;
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
@@ -10,12 +11,20 @@ import android.support.v7.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.GridView;
+import android.widget.LinearLayout;
+import android.widget.ScrollView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
+import java.util.ArrayList;
+
+import uk.ac.durham.ecs.gpttwo.killhopemuseum.GlossaryItem;
+import uk.ac.durham.ecs.gpttwo.killhopemuseum.GlossaryManager;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.KillhopeApplication;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.R;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.adapters.MineralsAdapter;
@@ -88,6 +97,27 @@ public class MineralsActivity extends ActionBarActivity {
         }
         if(id == android.R.id.home){
             onBackPressed();
+        }
+        if(id == R.id.action_glossary){
+            LinearLayout ll = new LinearLayout(this);
+            ll.setOrientation(LinearLayout.VERTICAL);
+            ScrollView sc = new ScrollView(this);
+            final Dialog d = new Dialog(this);
+            d.setContentView(sc);
+            d.setTitle("Full Glossary");
+            GlossaryManager gm = new GlossaryManager();
+            gm.loadGlossary(this);
+            ArrayList<GlossaryItem> glist = gm.searchGlossary("");
+            int i=0;
+            while(i<glist.size()) {
+
+                TextView tv = new TextView(this);
+                tv.setText(glist.get(i).getName()+": "+glist.get(i).getInfo()+"\n");
+                ll.addView(tv);
+                i++;
+            }
+            sc.addView(ll);
+            d.show();
         }
         if (id == R.id.action_help) {
             Intent helpIntent = new Intent(this, HelpActivity.class);
