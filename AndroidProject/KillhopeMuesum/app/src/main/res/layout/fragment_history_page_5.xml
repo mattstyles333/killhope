@@ -10,7 +10,18 @@
         android:text="New Geological Model (Dempsey et al. Unp.)"
         android:id="@+id/textView4"
         android:layout_gravity="center_horizontal" />
-
+    <ImageView
+        android:id="@+id/ImageView_hist6"
+        android:src="@drawable/historypage6pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <ImageView
+        android:id="@+id/ImageView_hist6.1"
+        android:src="@drawable/historypage6table"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
