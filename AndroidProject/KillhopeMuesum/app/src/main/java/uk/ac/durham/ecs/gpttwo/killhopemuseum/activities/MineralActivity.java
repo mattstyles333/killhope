@@ -9,15 +9,21 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
+import uk.ac.durham.ecs.gpttwo.killhopemuseum.GlossaryItem;
+import uk.ac.durham.ecs.gpttwo.killhopemuseum.GlossaryManager;
+import uk.ac.durham.ecs.gpttwo.killhopemuseum.MineralManager;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.R;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.MineralFragment;
 
 
 public class MineralActivity extends ActionBarActivity {
 
-    public static final long SPLASH_LENGTH = 2500l;
     private Handler mHandler = new Handler();
 
     @Override
@@ -119,21 +125,24 @@ public class MineralActivity extends ActionBarActivity {
             return true;
         }
         if(id == R.id.action_glossary){
+            LinearLayout ll = new LinearLayout(this);
+            ll.setOrientation(LinearLayout.VERTICAL);
+            ScrollView sc = new ScrollView(this);
             final Dialog d = new Dialog(this);
-            d.setContentView(R.layout.glossary_dialog);
-            d.setTitle("Glossary");
+            d.setContentView(sc);
+            d.setTitle("Full Glossary");
+            GlossaryManager gm = new GlossaryManager();
+            gm.loadGlossary(this);
+            ArrayList<GlossaryItem> glist = gm.searchGlossary("");
+            int i=0;
+            while(i<glist.size()) {
 
-            TextView tv = (TextView) findViewById(R.id.glossaryText);
-            tv.setText("This is a test");
-            Button dialogButton = (Button) d.findViewById(R.id.dialogButtonOK);
-            // if button is clicked, close the custom dialog
-            dialogButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    d.dismiss();
-                }
-            });
-
+                TextView tv = new TextView(this);
+                tv.setText(glist.get(i).getName()+": "+glist.get(i).getInfo()+"\n");
+                ll.addView(tv);
+                i++;
+            }
+            sc.addView(ll);
             d.show();
         }
         return super.onOptionsItemSelected(item);
