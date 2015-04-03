@@ -28,7 +28,7 @@ public class QuizFragment extends Fragment {
         if(Build.VERSION.SDK_INT >= 16) {
             wv.getSettings().setAllowUniversalAccessFromFileURLs(true);
         }
-        wv.loadUrl("file:///android_asset/Quiz.html");
+        wv.loadUrl("file:///android_asset/quiz.html");
 
         return rootView;
     }

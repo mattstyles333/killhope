@@ -19,6 +19,7 @@
 	var quizLength;
 	var currentAnswer = -1;
 	var count;
+	var answerSubmitted = false;
 
 	function startQuiz(quizName)
 	{	
@@ -39,6 +40,7 @@
 	function displayQuestion()
 	{
 		currentAnswer = -1;
+		answerSubmitted = false;
 		$("#question").empty();
 		console.log("Loading questions");
 		$("#question-title").text("Question " + (currentQuestion + 1));
@@ -58,6 +60,8 @@
 
 	function setAnswer(newAnswer)
 	{
+		if(answerSubmitted) return;
+		
 		if(currentAnswer < 0)
 		{
 			$("#question").append("<input type='submit' class ='button' id='choose' value ='Select Answer' onClick='checkAnswer()'>");
@@ -70,6 +74,7 @@
 		{
 			document.getElementById("answer"+currentAnswer).className = "radioleft";
 			currentAnswer = -1
+			$("#choose").remove();
 			return;
 		}
 		if(currentAnswer != -1) document.getElementById("answer"+currentAnswer).className = "radioleft";
@@ -80,21 +85,19 @@
 	function checkAnswer()
 	{
 		$("#choose").remove();
+		answerSubmitted = true;
 		if(currentAnswer == questions[currentQuestion].correctAnswer)
 		{
-			
-			$("#question").append("<h2 id='response'>Correct!</h2>");
+			document.getElementById("answer"+currentAnswer).className = "correctradio";
 			score = score + 1;
 			currentQuestion = currentQuestion + 1;
 		} else 
 		{
-			$("#question").append("<h2 id='response'>Incorrect!</h2>");
+			document.getElementById("answer"+currentAnswer).className = "falseradio";
+			document.getElementById("answer"+questions[currentQuestion].correctAnswer).className = "correctradio";
 			currentQuestion = currentQuestion + 1;
 		}
-		
-		$("#response").hide();
-		$("#response").fadeIn();
-		
+				
 		if(currentQuestion == quizLength)
 		{
 			$("#question").append("<input type='submit' class ='button' id='next' value ='View results' onClick='showResults()'>");
@@ -102,6 +105,8 @@
 		{
 			$("#question").append("<input type='submit' class ='button' id='next' value ='Next Question' onClick='displayQuestion()'>");
 		}
+		$("#next").hide();
+		$("#next").fadeIn();
 	}
 	
 	function showResults()
@@ -109,9 +114,9 @@
 		$("#question").empty();
 		$("#question-title").text("Results");
 		$("#question").append("<h2>Your score was "+score+"<br>Want to try again?</h2>");
-		$("#question").append("<input type='submit' class ='button' id='starteasy' value ='Play Easy Mineral Quiz!' onClick='startQuiz(\"MineralQuizEasy.json\")'>");
-		$("#question").append("<input type='submit' class ='button' id='startintermediate' value ='Play Intermediate Mineral Quiz!' onClick='startQuiz(\"MineralQuizMedium.json\")'>");
-		$("#question").append("<input type='submit' class ='button' id='startadvanced' value ='Play Hard Mineral Quiz!' onClick='startQuiz(\"MineralQuizHard.json\")'>");
+		$("#question").append("<input type='submit' class ='button' id='starteasy' value ='Play Easy Mineral Quiz!' onClick='startQuiz(\"mineralquizeasy.json\")'>");
+		$("#question").append("<input type='submit' class ='button' id='startintermediate' value ='Play Intermediate Mineral Quiz!' onClick='startQuiz(\"mineralquizmedium.json\")'>");
+		$("#question").append("<input type='submit' class ='button' id='startadvanced' value ='Play Hard Mineral Quiz!' onClick='startQuiz(\"mineralquizhard.json\")'>");
 		$("#question").hide();
 		$("#question").fadeIn();
 	}
@@ -121,9 +126,9 @@
 	<h1 class ='title' id="question-title">Welcome to the Quiz!</h1>
 	<div class="question" id="question">
 	
-	<input type="submit" class ='button' id="starteasy" value ='Play Easy Mineral Quiz!' onClick='startQuiz("MineralQuizEasy.json")'>
-	<input type="submit" class ='button' id="startintermediate" value ='Play Intermediate Mineral Quiz!' onClick='startQuiz("MineralQuizMedium.json")'>
-	<input type="submit" class ='button' id="starthard" value ='Play Hard Mineral Quiz!' onClick='startQuiz("MineralQuizHard.json")'>
+	<input type="submit" class ='button' id="starteasy" value ='Play Easy Mineral Quiz!' onClick='startQuiz("mineralquizeasy.json")'>
+	<input type="submit" class ='button' id="startintermediate" value ='Play Intermediate Mineral Quiz!' onClick='startQuiz("mineralquizmedium.json")'>
+	<input type="submit" class ='button' id="starthard" value ='Play Hard Mineral Quiz!' onClick='startQuiz("mineralquizhard.json")'>
 	
 	</div>
 </div>

@@ -63,11 +63,11 @@ h2
 	margin-left: auto;
 }
 
-.radioleft, .activeradio
+.radioleft, .activeradio, .correctradio, .falseradio
 {
 	font-weight: 900;
-	text-shadow: 2px 2px #000000;
-	font-size: 1.0em;
+	text-shadow: 1px 2px #000000;
+	font-size: 1.1em;
 	cursor: pointer;
 	background: #01a5e5; 
 	color: white;
@@ -83,17 +83,16 @@ h2
 	margin-left: auto;
 }
 
-.radioleft:hover
+.correctradio
 {
-	background-color:#add8e6;
-	opacity:1.0;
+	background-color: green;
+	opacity: 1.0;
 }
 
-.activeradio
+.falseradio
 {
-	background:#add8e6; 
-	color:orange;
-	opacity:1.0;
+	background-color: red;
+	opacity: 1.0;
 }
 
 .question
@@ -135,19 +134,15 @@ h2
     border-radius: 10px;
 	word-wrap:break-word;
 	width:90%;
-	opacity:0.7;
+	opacity:0.8;
 	margin-right: auto;
 	margin-left: auto;
 	margin-top: 10px;
 }
 
-.button:active, .button:hover{
-	background-color: #add8e6;
-	opacity: 1;
-
-}
-
-.button:active
+.button:active, .activeradio
 {
-	color:orange;
+	color:#FFAB50;
+	background-color: #59D1FF;
+	opacity: 1.0;
 }
