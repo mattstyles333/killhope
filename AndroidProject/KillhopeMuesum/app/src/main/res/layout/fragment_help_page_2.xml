@@ -1,9 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="fill_parent">
     <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:text="This is page 2"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Tips for using The Mineral Page"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="\nHow to display more information about a mineral when you are on its Mineral Page.
+"/>
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="When any mineral page for a particular mineral loads, it will display an image of the mineral and the most basic information about it. However, there are 3 further levels of information about the mineral you can access. You can do this by doing the following:
+
+1.  Click on the more information button on the mineral page. The first level of additional information will be displayed The image below shows you how to do this.
+"/>
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/helpsearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="2.  Repeat step 1 to access the second level of additional information.
+3.  Repeat step 1 to access the final level of additional information."/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="How to access more images of a particular mineral from its Mineral Page
+"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="When any mineral page for a particular mineral loads, it will display an image of the mineral and the most basic information about it. You can access images which show how the mineral looks from different angles by doing the following.
+1.  Click on the image of the mineral. This will take you to the Image Gallery where a larger version of the image you clicked on will be displayed. This is shown in the image below.
+"/>
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/helpsearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="2.  You can then see the next image of the mineral in the gallery by swiping to the left or clicking the left arrow on the side of the image.
+3.  You can then see the previous image of the mineral in the gallery by swiping to the left or clicking the left arrow on the side of the image.
+"/>
 </LinearLayout>

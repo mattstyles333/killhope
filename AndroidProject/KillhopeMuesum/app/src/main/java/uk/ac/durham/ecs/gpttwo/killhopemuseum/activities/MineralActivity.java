@@ -136,7 +136,6 @@ public class MineralActivity extends ActionBarActivity {
             ArrayList<GlossaryItem> glist = gm.searchGlossary("");
             int i=0;
             while(i<glist.size()) {
-
                 TextView tv = new TextView(this);
                 tv.setText(glist.get(i).getName()+": "+glist.get(i).getInfo()+"\n");
                 ll.addView(tv);
