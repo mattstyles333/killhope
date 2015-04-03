@@ -1,5 +1,7 @@
 package uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments;
 
+import android.annotation.TargetApi;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -23,7 +25,10 @@ public class QuizFragment extends Fragment {
         wv.getSettings().setJavaScriptEnabled(true);
         wv.setWebViewClient(new WebViewClient());
         wv.getSettings().setDomStorageEnabled(true);
-        wv.loadUrl("http://community.dur.ac.uk/m.p.szuplewski/KillhopeQuiz/index.html");
+        if(Build.VERSION.SDK_INT >= 16) {
+            wv.getSettings().setAllowUniversalAccessFromFileURLs(true);
+        }
+        wv.loadUrl("file:///android_asset/Quiz.html");
 
         return rootView;
     }
