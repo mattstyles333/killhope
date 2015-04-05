@@ -1,0 +1,163 @@
+{
+	"questionList":[
+  {
+    "question": "Which mineral has the chemical formula CaCO<sub>3</sub>?",
+    "answers": [
+      {
+        "answer": "Aragonite"
+      },
+      {
+        "answer": "Ankerite"
+      },
+      {
+        "answer": "Barytocalcite"
+      }
+    ],
+    "correctAnswer": 0,
+    "hint": "Hint"
+  },
+  {
+    "question": "Smithsonite is an ore of which metal?",
+    "answers": [
+      {
+        "answer": "Lead"
+      },
+      {
+        "answer": "Iron"
+      },
+      {
+        "answer": "Zinc"
+      }
+    ],
+    "correctAnswer": 2,
+    "hint": "Hint"
+  },
+  {
+    "question": "How long ago did the Whin Sill Intrusion form?",
+    "answers": [
+      {
+        "answer": "200 Million years ago"
+      },
+      {
+        "answer": "300 Million years ago"
+      },
+      {
+        "answer": "400 Million years ago"
+      }
+    ],
+    "correctAnswer": 1,
+    "hint": "Hint"
+  },
+  {
+    "question": "What do cerussite and galena have in common?",
+    "answers": [
+      {
+        "answer": "Both exhibit a range of colours"
+      },
+      {
+        "answer": "Both are ores of lead"
+      },
+      {
+        "answer": "Both have the same hardness"
+      }
+    ],
+    "correctAnswer": 1,
+    "hint": "Hint"
+  },
+  {
+    "question": "How is flourite deposited?",
+    "answers": [
+      {
+        "answer": "In tropical caves"
+      },
+      {
+        "answer": "In hydrothermal veins"
+      },
+      {
+        "answer": "During evaporation processes"
+      }
+    ],
+    "correctAnswer": 1,
+    "hint": "Hint"
+  },
+  {
+    "question": "What is the most common colour of quartz?",
+    "answers": [
+      {
+        "answer": "Purple"
+      },
+      {
+        "answer": "Colourless"
+      },
+      {
+        "answer": "Green"
+      }
+    ],
+    "correctAnswer": 1,
+    "hint": "Hint"
+  },
+  {
+    "question": "What mineral was once used in the production of rat poison?",
+    "answers": [
+      {
+        "answer": "Limonite"
+      },
+      {
+        "answer": "Witherite"
+      },
+      {
+        "answer": "Siderite"
+      }
+    ],
+    "correctAnswer": 1,
+    "hint": "Hint"
+  },
+  {
+    "question": "What is the large igneous body that underlies the North Pennines called?",
+    "answers": [
+      {
+        "answer": "Alston andesite"
+      },
+      {
+        "answer": "Killhope intrusion"
+      },
+      {
+        "answer": "Weardale granite"
+      }
+    ],
+    "correctAnswer": 1,
+    "hint": "Hint"
+  },
+  {
+    "question": "What is cleavage?",
+    "answers": [
+      {
+        "answer": "An iron ore mineral"
+      },
+      {
+        "answer": "A fold in a rock"
+      },
+      {
+        "answer": "The tendency of crystalline materials to split along definite crystallographic structural planes"
+      }
+    ],
+    "correctAnswer": 2,
+    "hint": "Hint"
+  },
+  {
+    "question": "What is streak?",
+    "answers": [
+      {
+        "answer": "Colour of a mineral when scratched on a white porcelain plate"
+      },
+      {
+        "answer": "The colour of a mineral under ultraviolet light"
+      },
+      {
+        "answer": "The tendency for a mineral to be deposited in veins"
+      }
+    ],
+    "correctAnswer": 0,
+    "hint": "Hint"
+  }
+]}

@@ -1,0 +1,163 @@
+{
+	"questionList":[
+  {
+    "question": "What is the hardest mineral on display at Killhope?",
+    "answers": [
+      {
+        "answer": "Quartz"
+      },
+      {
+        "answer": "Baryte"
+      },
+      {
+        "answer": "Galena"
+      }
+    ],
+    "correctAnswer": 0,
+    "hint": "Hint"
+  },
+  {
+    "question": "Which grey mineral is an ore of lead?",
+    "answers": [
+      {
+        "answer": "Siderite"
+      },
+      {
+        "answer": "Galena"
+      },
+      {
+        "answer": "Sphalerite"
+      }
+    ],
+    "correctAnswer": 1,
+    "hint": "Hint"
+  },
+  {
+    "question": "What mineral was predominantly mined at Killhope?",
+    "answers": [
+      {
+        "answer": "Galena"
+      },
+      {
+        "answer": "Fluorite"
+      },
+      {
+        "answer": "Siderite"
+      }
+    ],
+    "correctAnswer": 0,
+    "hint": "Hint"
+  },
+  {
+    "question": "What is the most common mineral at the Killhope Museum?",
+    "answers": [
+      {
+        "answer": "Quartz"
+      },
+      {
+        "answer": "Fluorite"
+      },
+      {
+        "answer": "Smithsonite"
+      }
+    ],
+    "correctAnswer": 1,
+    "hint": "Hint"
+  },
+  {
+    "question": "What is a Spar Box?",
+    "answers": [
+      {
+        "answer": "A decorative box containing minerals created by miners from the Killhope area"
+      },
+      {
+        "answer": "A miner's lunchbox"
+      },
+      {
+        "answer": "A box for miners cigarettes"
+      }
+    ],
+    "correctAnswer": 0,
+    "hint": "Hint"
+  },
+  {
+    "question": "Is Killhope an active mine?",
+    "answers": [
+      {
+        "answer": "No"
+      },
+      {
+        "answer": "It is sometimes used for the extraction of gold"
+      },
+      {
+        "answer": "Yes it is still fully active"
+      }
+    ],
+    "correctAnswer": 0,
+    "hint": "Hint"
+  },
+  {
+    "question": "Which mineral is used in the production of toothpsate?",
+    "answers": [
+      {
+        "answer": "Limonite"
+      },
+      {
+        "answer": "Witherite"
+      },
+      {
+        "answer": "Fluorite"
+      }
+    ],
+    "correctAnswer": 2,
+    "hint": "Hint"
+  },
+  {
+    "question": "After what mineral is the property fluorescence named?",
+    "answers": [
+      {
+        "answer": "Quartz"
+      },
+      {
+        "answer": "Fluorite"
+      },
+      {
+        "answer": "Smithsonite"
+      }
+    ],
+    "correctAnswer": 1,
+    "hint": "Hint"
+  },
+  {
+    "question": "What's an ore?",
+    "answers": [
+      {
+        "answer": "A mineral which is grey in colour"
+      },
+      {
+        "answer": "A naturally occurring solid material which can be extracted profitably"
+      },
+      {
+        "answer": "A small tool used by miners at Killhope"
+      }
+    ],
+    "correctAnswer": 1,
+    "hint": "Hint"
+  },
+  {
+    "question": "Which mineral at Killhope exhibits the most different colours?",
+    "answers": [
+      {
+        "answer": "Fluorite"
+      },
+      {
+        "answer": "Calcite"
+      },
+      {
+        "answer": "Quartz"
+      }
+    ],
+    "correctAnswer": 0,
+    "hint": "Hint"
+  }
+]}

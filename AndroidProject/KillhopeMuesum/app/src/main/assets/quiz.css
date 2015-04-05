@@ -1,0 +1,148 @@
+body
+{
+
+}
+
+.normer
+{
+	padding: 0px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+@media all and (orientation:portrait) {
+    .normer
+	{
+		max-width: 90%;
+	}
+	
+	body
+	{
+		background-image: url("bg.png");
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+}
+
+@media all and (orientation:landscape) {
+    .normer
+	{
+		max-width: 65%;
+	}
+	
+	body
+	{
+		background-image: url("bg_land.png");
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+}
+
+h1,h2,h3,h4,h5,p,input,.button,.radioleft,.activeradio{
+	font-family: "Verdana";
+}
+
+h2
+{
+	font-size: 1.4em;
+	font-weight: 900;
+	text-shadow: 2px 2px #000000;
+	padding: 10px 15px; 
+	background:#01a5e5; 
+	color: white;
+    border-style: solid;
+    border-color: white;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.radioleft, .activeradio, .correctradio, .falseradio
+{
+	font-weight: 900;
+	text-shadow: 1px 2px #000000;
+	font-size: 1.1em;
+	cursor: pointer;
+	background: #01a5e5; 
+	color: white;
+	padding: 10px 15px; 
+	border-style: solid;
+    border-color: white;
+    -webkit-border-radius: 10px;
+    border-radius: 5px;
+	width: 80%;
+	cursor: pointer;
+	opacity:0.7;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.correctradio
+{
+	background-color: green;
+	opacity: 1.0;
+}
+
+.falseradio
+{
+	background-color: red;
+	opacity: 1.0;
+}
+
+.question
+{
+	width: 100%;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.title
+{
+	font-family: "Verdana";
+	font-size: 2em;
+	font-weight: 900;
+	text-shadow: 2px 2px #000000;
+	text-align: center;
+	padding:10px 15px; 
+	background:#01a5e5; 
+	color: white;
+    border-style: solid;
+    border-color: white;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.button
+{
+	font-size: 1.3em;
+	font-weight: 900;
+	text-shadow: 2px 2px #000000;
+	padding:10px 15px; 
+	background:#01a5e5; 
+	color: white;
+    cursor:pointer;
+    border-style: solid;
+    border-color: white;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+	word-wrap:break-word;
+	width:90%;
+	opacity:0.8;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 10px;
+}
+
+.button:active, .activeradio
+{
+	color:#FFAB50;
+	background-color: #59D1FF;
+	opacity: 1.0;
+}
