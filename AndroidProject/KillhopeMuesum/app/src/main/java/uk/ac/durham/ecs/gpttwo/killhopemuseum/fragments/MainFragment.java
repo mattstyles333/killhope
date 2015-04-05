@@ -15,7 +15,6 @@ import android.widget.RelativeLayout;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.activities.FloorPlanActivity;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.activities.HelpActivity;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.activities.HistoryActivity;
-import uk.ac.durham.ecs.gpttwo.killhopemuseum.activities.InfoActivity;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.activities.MineralsActivity;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.activities.QuizActivity;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.R;
@@ -113,8 +112,11 @@ public class MainFragment extends Fragment{
         buttonInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), InfoActivity.class);
-                startActivity(intent);
+//                Intent intent = new Intent(getActivity(), InfoActivity.class);
+//                startActivity(intent);
+                InfoDialogFragment idf = InfoDialogFragment.newInstance();
+                idf.show(getActivity().getSupportFragmentManager(), "info_fragment");
+
             }
         });
 
