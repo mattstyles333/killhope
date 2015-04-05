@@ -2,6 +2,7 @@ package uk.ac.durham.ecs.gpttwo.killhopemuseum.activities;
 
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -24,6 +25,49 @@ public class HistoryActivity extends ActionBarActivity {
         mPager = (ViewPager)findViewById(R.id.history_pager);
         mPageAdapter = new HistoryPagerAdapter(getSupportFragmentManager());
         mPager.setAdapter(mPageAdapter);
+
+        getSupportActionBar().setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+        android.support.v7.app.ActionBar.TabListener tabListener = new android.support.v7.app.ActionBar.TabListener() {
+
+            @Override
+            public void onTabSelected(ActionBar.Tab tab, android.support.v4.app.FragmentTransaction fragmentTransaction) {
+                mPager.setCurrentItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(ActionBar.Tab tab, android.support.v4.app.FragmentTransaction fragmentTransaction) {
+
+            }
+
+            @Override
+            public void onTabReselected(ActionBar.Tab tab, android.support.v4.app.FragmentTransaction fragmentTransaction) {
+
+            }
+        };
+
+        mPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                getSupportActionBar().setSelectedNavigationItem(position);
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
+
+        String[] tabnames = new String[]{"History Model", "Early Earth", "Wearside Granite", "Carboniferous Sediments", "North Pennine", "New Geological Model", "Untitled"};
+
+        for(int i=0;i<HistoryPagerAdapter.NUM_PAGES;i++){
+            getSupportActionBar().addTab(getSupportActionBar().newTab().setText(tabnames[i]).setTabListener(tabListener));
+        }
+
 
         if(getResources().getConfiguration().orientation != 1){
             mPager.setBackgroundResource(R.drawable.bg_land);
