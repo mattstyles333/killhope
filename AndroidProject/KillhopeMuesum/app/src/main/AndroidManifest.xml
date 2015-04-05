@@ -66,7 +66,9 @@
             android:label="@string/title_floorplan">
 
         </activity>
-
+        <activity android:name="uk.ac.durham.ecs.gpttwo.killhopemuseum.activities.InfoActivity"
+            android:label="@string/title_info"
+            ></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <TextView android:id="@+id/textView_info_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Introducing The Killhope Museum App
+"></TextView>
+    <TextView android:id="@+id/textView_info1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Version: …….
+Developed by: Group Project Team 2, Durham University
+About The App
+This app is the perfect companion to visitors at Killhope museum. It provides supplementary information about each mineral in the museum’s extensive mineral collection, rotating images of each mineral and the chance for visitors to test the knowledge they have gained throughout their experience, with an interactive quiz."></TextView>
+    <TextView android:id="@+id/textView_info2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About Killhope Museum Killhope is the award winning North of England Lead Mining Museum. It is a fully restored nineteenth century Victorian lead mine which gives visitors a unique and unforgettable experience, through giving them the chance to experience the life and work of the lead mining families of the Pennine dales. Background To The Project This project was a joint venture between Earth Sciences and Computer Science students undertaking undergraduate study at Durham University. The information included in the app was compiled by the Earth Sciences students whilst the app was developed by a group of Computer Science students consisting of: Alistair Breeze, Robert Clarke, Aasiya Fazal,Robert Johnson, Matthew Styles and Michael Szuplewski.Attributions Material Design icons by Google, used under CC BY 4.0 A copy of the license can be found here: http://creativecommons.org/licenses/by/4.0/legalcode Apache ZXing Android Minimal Copyright 2015 The Apache Software Foundation This product includes software developed at The Apache Software Foundation (http://www.apache.org/). A copy of the license can be found here: http://www.apache.org/licenses/LICENSE-2.0."></TextView>
+    <TextView android:id="@+id/textView_info3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ZXing (zebra crossing) Copyright 2015 The Apache Software Foundation This product includes software developed at The Apache Software Foundation (http://www.apache.org/). A copy of the license can be found here: http://www.apache.org/licenses/LICENSE-2.0. giflib Copyright 2015 The Apache Software Foundation This product includes software developed at The Apache Software Foundation (http://www.apache.org/). A copy of the license can be found here: http://www.apache.org/licenses/LICENSE-2.0. ImageViewTouch for Android MIT license Copyright (c) 2014 Alessandro Crugnola A copy of the license can be found here: http://opensource.org/licenses/mit-license.php"></TextView>
+</LinearLayout>
