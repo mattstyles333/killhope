@@ -2,6 +2,7 @@
 <resources>
     <color name="navbar_background">#01a5e5</color>
     <color name="opaque_background">#dd01a5e5</color>
+    <color name="dark_blue">#000080</color>
     <color name="transparent_background">#0901a5e5</color>
     <color name="white">#ffffff</color>
     <color name="pressed_blue">#add8e6</color>
