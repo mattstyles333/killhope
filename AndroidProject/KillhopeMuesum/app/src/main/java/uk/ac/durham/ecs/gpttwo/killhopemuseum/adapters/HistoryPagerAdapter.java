@@ -7,7 +7,7 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.HistoryPageFragment;
 
 public class HistoryPagerAdapter extends FragmentStatePagerAdapter {
-    public final int NUM_PAGES=6;
+    public static final int NUM_PAGES=6;
     public HistoryPagerAdapter(FragmentManager fm) {
         super(fm);
     }
