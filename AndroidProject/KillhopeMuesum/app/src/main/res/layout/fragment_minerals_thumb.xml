@@ -11,7 +11,7 @@
         android:padding="5dp"
         android:id="@+id/mineral_thumb_image"
         android:src="@drawable/ic_launcher"
-        android:background="@drawable/mineral_button"
+        android:background="@drawable/blue_button"
         />
 
     <TextView
