@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="fill_parent">
 
     <TextView
         android:background="@drawable/history_format"
@@ -17,39 +17,38 @@
         android:background="@drawable/blue_button"
         android:id="@+id/ImageView_hist2"
         android:src="@drawable/historypage2pic"
-        android:layout_gravity="center"
         android:adjustViewBounds="true"
         android:padding="5dp"
-        android:layout_weight="3"
+        android:layout_weight="1"
         style="@style/history_image"
-        />
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
     <ImageView
         android:background="@drawable/blue_button"
         android:id="@+id/ImageView_hist2.1"
         android:src="@drawable/historypage2table"
-        android:layout_gravity="center"
         android:adjustViewBounds="true"
         android:padding="5dp"
-        android:layout_weight="3"
+        android:layout_weight="1"
         style="@style/history_image"
-        />
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <TextView
         android:background="@drawable/history_format"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="3"
+        android:layout_weight="12.13"
         android:text="About 450 million years ago, during the Ordovician period of Earth history, the area we know as northern England was located 15°S of the equator (Matte, 2001). Here it lay beneath a deep ocean, in which mud and silt were deposited.
 
 As geological time progressed, vast movements of the Earth’s tectonic plates compressed these muds, turning them into slate and forming the Skiddaw Group. (These same movements causes gigantic volcanoes to erupt lava and ash.)
 
 "
         android:id="@+id/textView"
-        android:layout_gravity="top|right"
         style="@style/info_text" />
-
-
 
 
 </LinearLayout>

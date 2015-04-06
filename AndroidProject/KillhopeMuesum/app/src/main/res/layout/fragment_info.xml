@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent" android:background="@color/dark_blue" >
 
     <LinearLayout
         android:id="@+id/actionbar_dialog"
@@ -15,7 +15,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Information"/>
+            android:text="Information"
+            style="@style/info_title"
+            android:layout_gravity="center"/>
     </LinearLayout>
 
     <ScrollView
@@ -30,7 +32,9 @@
             <TextView android:id="@+id/textView_info_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Introducing The Killhope Museum App"></TextView>
+                android:text="Introducing The Killhope Museum App"
+                style="@style/info_title">
+                </TextView>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -38,11 +42,13 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Version:"/>
+                    android:text="Version:"
+                    style="@style/info_title"/>
                 <TextView android:id="@+id/textview_version"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="__"/>
+                    android:text="__"
+                    style="@style/info_title"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -51,48 +57,59 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Developed by:"/>
+                    android:text="Developed by:"
+                    style="@style/info_title"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Group Project Team 2, School of Engineering and Computer Sciences, Durham University"/>
+                    android:text="Group Project Team 2, School of Engineering and Computer Sciences, Durham University"
+                    style="@style/info_title"/>
 
             </LinearLayout>
 
             <ImageView
                 android:layout_width="200dp"
                 android:layout_height="95dp"
-                android:src="@drawable/dulogodark"/>
+                android:src="@drawable/durhamlogo"
+                android:layout_gravity="center"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="About The App"/>
+                android:text="About The App"
+                style="@style/info_title"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="This app is the perfect companion to visitors at Killhope museum. It provides supplementary information about each mineral in the museum’s extensive mineral collection, rotating images of each mineral and the chance for visitors to test the knowledge they have gained throughout their experience, with an interactive quiz."/>
+                android:text="This app is the perfect companion to visitors at Killhope museum. It provides supplementary information about each mineral in the museum’s extensive mineral collection, rotating images of each mineral and the chance for visitors to test the knowledge they have gained throughout their experience, with an interactive quiz."
+                style="@style/info_text"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="About Killhope Museum"/>
+                android:text="About Killhope Museum"
+                style="@style/info_title"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Killhope is the award winning North of England Lead Mining Museum. It is a fully restored nineteenth century Victorian lead mine which gives visitors a unique and unforgettable experience, through giving them the chance to experience the life and work of the lead mining families of the Pennine dales."></TextView>
+                android:text="Killhope is the award winning North of England Lead Mining Museum. It is a fully restored nineteenth century Victorian lead mine which gives visitors a unique and unforgettable experience, through giving them the chance to experience the life and work of the lead mining families of the Pennine dales."
+                style="@style/info_text">
+                </TextView>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Background To The Project"/>
+                android:text="Background To The Project"
+                style="@style/info_title"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="This project was a joint venture between Earth Sciences and Computer Science students undertaking undergraduate study at Durham University. The information included in the app was compiled by the Earth Sciences students whilst the app was developed by a group of Computer Science students consisting of: Alastair Breeze, Robert Clarke, Aasiya Fazal,Robert Johnson, Matthew Styles and Michael Szuplewski."/>
+                android:text="This project was a joint venture between Earth Sciences and Computer Science students undertaking undergraduate study at Durham University. The information included in the app was compiled by the Earth Sciences students whilst the app was developed by a group of Computer Science students consisting of: Alastair Breeze, Robert Clarke, Aasiya Fazal,Robert Johnson, Matthew Styles and Michael Szuplewski."
+                style="@style/info_text"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Attributions"/>
+                android:text="Attributions"
+                style="@style/info_title"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -100,11 +117,13 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Material Design icons by Google"/>
+                    android:text="Material Design icons by Google"
+                    style="@style/info_title"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Used under CC BY 4.0 A copy of the license can be found here: http://creativecommons.org/licenses/by/4.0/legalcode Apache"/>
+                    android:text="Used under CC BY 4.0 A copy of the license can be found here: http://creativecommons.org/licenses/by/4.0/legalcode Apache"
+                    style="@style/info_text"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -113,11 +132,13 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="ZXing (zebra crossing)"/>
+                    android:text="ZXing (zebra crossing)"
+                    style="@style/info_title"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Copyright 2015 The Apache Software Foundation This product includes software developed at The Apache Software Foundation (http://www.apache.org/). A copy of the license can be found here: http://www.apache.org/licenses/LICENSE-2.0."/>
+                    android:text="Copyright 2015 The Apache Software Foundation This product includes software developed at The Apache Software Foundation (http://www.apache.org/). A copy of the license can be found here: http://www.apache.org/licenses/LICENSE-2.0."
+                    style="@style/info_text"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -126,11 +147,13 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="ZXing Android Minimal"/>
+                    android:text="ZXing Android Minimal"
+                    style="@style/info_title"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Copyright 2015 The Apache Software Foundation This product includes software developed at The Apache Software Foundation (http://www.apache.org/). A copy of the license can be found here: http://www.apache.org/licenses/LICENSE-2.0."/>
+                    android:text="Copyright 2015 The Apache Software Foundation This product includes software developed at The Apache Software Foundation (http://www.apache.org/). A copy of the license can be found here: http://www.apache.org/licenses/LICENSE-2.0."
+                    style="@style/info_text"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -139,11 +162,13 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="giflib"/>
+                    android:text="giflib"
+                    style="@style/info_title"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Copyright 2015 The Apache Software Foundation This product includes software developed at The Apache Software Foundation (http://www.apache.org/). A copy of the license can be found here: http://www.apache.org/licenses/LICENSE-2.0."/>
+                    android:text="Copyright 2015 The Apache Software Foundation This product includes software developed at The Apache Software Foundation (http://www.apache.org/). A copy of the license can be found here: http://www.apache.org/licenses/LICENSE-2.0."
+                    style="@style/info_text"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -152,11 +177,13 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="ImageViewTouch for Android"/>
+                    android:text="ImageViewTouch for Android"
+                    style="@style/info_title"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="MIT license Copyright (c) 2014 Alessandro Crugnola A copy of the license can be found here: http://opensource.org/licenses/mit-license.php"/>
+                    android:text="MIT license Copyright (c) 2014 Alessandro Crugnola A copy of the license can be found here: http://opensource.org/licenses/mit-license.php"
+                    style="@style/info_text"/>
             </LinearLayout>
 
         </LinearLayout>
@@ -166,6 +193,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="OK"
-        android:background="@color/transparent_background"/>
+        android:background="@color/navbar_background"
+        android:gravity="center"
+        style="@style/info_title"/>
 
 </LinearLayout>
