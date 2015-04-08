@@ -13,28 +13,32 @@ public class GlossaryItem {
 
     private String name;
     private String info;
-    private ArrayList<GlossaryItem> types;
+    private ArrayList<GlossaryItem> subs;
 
     public GlossaryItem(String name, String info){
         this.name = name;
         this.info = info;
-        types = new ArrayList<GlossaryItem>();
+        subs = new ArrayList<GlossaryItem>();
     }
 
     public GlossaryItem(JSONObject data){
         try {
             name = data.getString("word");
             info = data.getString("definition");
-            types = new ArrayList<GlossaryItem>();
-            if(data.has("type")){
+            subs = new ArrayList<GlossaryItem>();
+            if(data.has("Types")){
                 JSONArray tps = data.getJSONArray("Types");
                 for(int i=0;i<tps.length();i++){
-                    types.add(new GlossaryItem(tps.getJSONObject(i)));
+                    subs.add(new GlossaryItem(tps.getJSONObject(i)));
                 }
             }
         } catch (JSONException e) {
             e.printStackTrace();
         }
+    }
+
+    public ArrayList<GlossaryItem> getSubs(){
+        return subs;
     }
 
     public String getName(){
@@ -54,10 +58,10 @@ public class GlossaryItem {
     }
 
     public boolean search(String query){
-        if(query.contains(query)){
+        if(name.toLowerCase().contains(query.toLowerCase()) || info.toLowerCase().contains(query.toLowerCase())){
             return true;
         }
-        for(GlossaryItem gi : types){
+        for(GlossaryItem gi : subs){
             if(gi.search(query)){
                 return true;
             }
@@ -68,7 +72,7 @@ public class GlossaryItem {
     public ArrayList<String> getNames(){
         ArrayList<String> names = new ArrayList<String>();
         names.add(name);
-        for(GlossaryItem gi : types) {
+        for(GlossaryItem gi : subs) {
             names.addAll(gi.getNames());
         }
         return names;

@@ -17,6 +17,9 @@ import uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.GlossaryDialogFragment;
  */
 public class GlossaryManager {
 
+    private String lastSearch = "";
+    private ArrayList<GlossaryItem> lastSearchResults = null;
+
     private ArrayList<GlossaryItem> glossary = new ArrayList<GlossaryItem>();
 
     public void loadGlossary(Context context){
@@ -79,6 +82,10 @@ public class GlossaryManager {
     }
 
     public ArrayList<GlossaryItem> searchGlossary(String query){
+        if(query.equals(lastSearch) && lastSearchResults != null){
+            return lastSearchResults;
+        }
+        lastSearch = query;
         ArrayList<GlossaryItem> list = new ArrayList<GlossaryItem>();
 
         for(GlossaryItem gi : glossary){
@@ -86,7 +93,7 @@ public class GlossaryManager {
                 list.add(gi);
             }
         }
-
+        lastSearchResults = list;
         return list;
     }
 

@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.lang.ref.WeakReference;
@@ -29,22 +30,29 @@ import uk.ac.durham.ecs.gpttwo.killhopemuseum.R;
 
 public class GlossaryAdapter extends BaseAdapter {
     private Context mContext;
-    private ArrayList<GlossaryItem> g;
-    private String query;
-    public GlossaryManager gm;
+    private String query = "";
 
     // Constructor
-    public GlossaryAdapter(Context c,ArrayList<GlossaryItem> glossary) {
-    g=glossary;
+    public GlossaryAdapter(Context c) {
         mContext = c;
     }
+
     public int getCount(){
-        return g.size();
-}
+        return ((KillhopeApplication)mContext.getApplicationContext()).glossaryManager.searchGlossary(query).size();
+    }
+
+    public void search(String s){
+
+        if(!query.equals(s)){
+            query = s;
+            notifyDataSetChanged();
+
+        }
+    }
 
     @Override
     public Object getItem(int position) {
-        return g.get(position);
+        return null;
     }
 
     @Override
@@ -54,11 +62,29 @@ public class GlossaryAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        GlossaryItem gi = g.get(position);
+        GlossaryItem gi = ((KillhopeApplication)mContext.getApplicationContext()).glossaryManager.searchGlossary(query).get(position);
         LayoutInflater inflator = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         convertView = inflator.inflate(R.layout.fragment_glossary_item, parent, false);
-        TextView tv = (TextView) convertView.findViewById(R.id.glossary_item_textview);
-        tv.setText(gi.getName()+": "+gi.getInfo());
+
+
+        TextView tv = (TextView) convertView.findViewById(R.id.glossary_item_textview_name);
+        tv.setText(Html.fromHtml(gi.getName()));
+
+        tv = (TextView) convertView.findViewById(R.id.glossary_item_textview_description);
+        tv.setText(Html.fromHtml(gi.getInfo()));
+
+        LinearLayout ll = (LinearLayout)convertView.findViewById(R.id.glossary_subitems);
+        for(GlossaryItem sub : gi.getSubs()){
+            LinearLayout subView = (LinearLayout)inflator.inflate(R.layout.fragment_glossary_item,null,false);
+
+            TextView tvsub = (TextView) subView.findViewById(R.id.glossary_item_textview_name);
+            tvsub.setText(Html.fromHtml(sub.getName()));
+
+            tvsub = (TextView) subView.findViewById(R.id.glossary_item_textview_description);
+            tvsub.setText(Html.fromHtml(sub.getInfo()));
+
+            ll.addView(subView);
+        }
         return convertView;
     }
 
