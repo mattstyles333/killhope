@@ -24,22 +24,22 @@ public class HistoryPageFragment extends Fragment {
         Bundle args = new Bundle();
         int layID = -1;
         switch(pos){
+//            case(0):
+//                layID = R.layout.fragment_history_page_0;
+//                break;
             case(0):
-                layID = R.layout.fragment_history_page_0;
-                break;
-            case(1):
                 layID=R.layout.fragment_history_page_1;
                 break;
-            case(2):
+            case(1):
                 layID=R.layout.fragment_history_page_2;
                 break;
-            case(3):
+            case(2):
                 layID=R.layout.fragment_history_page_3;
                 break;
-            case(4):
+            case(3):
                 layID=R.layout.fragment_history_page_4;
                 break;
-            case(5):
+            case(4):
                 layID=R.layout.fragment_history_page_5;
                 break;
             default:

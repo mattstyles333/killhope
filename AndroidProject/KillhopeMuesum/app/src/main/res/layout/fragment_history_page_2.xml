@@ -1,45 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
-    <TextView
-        android:background="@drawable/history_format"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="The Weardale Granite"
-        android:layout_gravity="center_horizontal"
-        style="@style/info_title"/>
-    <ImageView
-        android:background="@drawable/blue_button"
-        android:id="@+id/ImageView_hist3"
-        android:src="@drawable/historypage3pic"
-        android:adjustViewBounds="true"
-        android:padding="5dp"
-        android:layout_weight="1"
-        style="@style/history_image"
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        />
-    <ImageView
-        android:background="@drawable/blue_button"
-        android:id="@+id/ImageView_hist3.1"
-        android:src="@drawable/historypage3table"
-        android:adjustViewBounds="true"
-        android:padding="5dp"
-        android:layout_weight="1"
-        style="@style/history_image"
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        />
-    <TextView
-        android:background="@drawable/history_format"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Movement of the Earths plates caused compression in the North East of England, beginning at around 490 million years ago.  Approximately 400 million years ago a large mass of magma (molten rock) was injected into the Ordovician slates and volcanic rocks. This cooled and crystallised, forming the Weardale Granite.  An unconformity lies above the granite, a time gap in the rock record caused by millions of years of erosion of the overlying rocks. After this significant ‘time gap’ the Carboniferous rocks that make up most of the Northern Pennines were deposited on top of the granite. "
-        android:layout_gravity="center_horizontal"
-        style="@style/info_text"/>
-</LinearLayout>
+        android:orientation="vertical">
+
+        <TextView
+            android:background="@drawable/history_format"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="The Weardale Granite"
+            android:layout_gravity="center_horizontal"
+            style="@style/info_title"/>
+
+        <TextView
+            android:background="@drawable/history_format"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Movement of the Earths plates caused compression in the North East of England, beginning at around 490 million years ago. "
+            style="@style/info_text"/>
+        <TextView
+            android:background="@drawable/history_format"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Approximately 400 million years ago a large mass of magma (molten rock) was injected into the Ordovician slates and volcanic rocks. This cooled and crystallised, forming the Weardale Granite."
+            style="@style/info_text"/>
+        <TextView
+            android:background="@drawable/history_format"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="An unconformity lies above the granite, a time gap in the rock record caused by millions of years of erosion of the overlying rocks. After this significant ‘time gap’ the Carboniferous rocks that make up most of the Northern Pennines were deposited on top of the granite. "
+            style="@style/info_text"/>
+
+        <ImageView
+            android:background="@drawable/blue_button"
+            android:id="@+id/ImageView_hist3"
+            android:src="@drawable/historypage3pic"
+            android:adjustViewBounds="true"
+            android:padding="5dp"
+            android:layout_weight="1"
+            style="@style/history_image"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+        <ImageView
+            android:background="@drawable/blue_button"
+            android:id="@+id/ImageView_hist3.1"
+            android:src="@drawable/historypage3table"
+            android:adjustViewBounds="true"
+            android:padding="5dp"
+            android:layout_weight="1"
+            style="@style/history_image"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+
+</ScrollView>
