@@ -103,7 +103,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="This project was a joint venture between Earth Sciences and Computer Science students undertaking undergraduate study at Durham University. The information included in the app was compiled by the Earth Sciences students whilst the app was developed by a group of Computer Science students consisting of: Alastair Breeze, Robert Clarke, Aasiya Fazal,Robert Johnson, Matthew Styles and Michael Szuplewski."
+                android:text="This project was a joint venture between Earth Sciences and Computer Science students undertaking undergraduate study at Durham University. The information included in the app was compiled by the Earth Sciences students whilst the app was developed by a group of Computer Science students consisting of: Alastair Breeze, Robert Clarke, Aasiya Fazal, Robert Johnson, Matthew Styles and Michael Szuplewski."
                 style="@style/info_text"/>
             <TextView
                 android:layout_width="match_parent"
