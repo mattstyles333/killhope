@@ -4,34 +4,56 @@
     android:layout_height="match_parent">
 
     <TextView
+        android:background="@drawable/history_format"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Carboniferous Sediments "
         android:id="@+id/textView2"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        style="@style/info_title"/>
     <ImageView
+        android:background="@drawable/blue_button"
         android:id="@+id/ImageView_hist4"
         android:src="@drawable/historypage4pic"
+        android:adjustViewBounds="true"
+        android:padding="5dp"
+        android:layout_weight="1"
+        style="@style/history_image"
+        android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         />
     <ImageView
+        android:background="@drawable/blue_button"
         android:id="@+id/ImageView_hist4.2"
         android:src="@drawable/historypage4pic2"
+        android:adjustViewBounds="true"
+        android:padding="5dp"
+        android:layout_weight="1"
+        style="@style/history_image"
+        android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         />
     <ImageView
+        android:background="@drawable/blue_button"
         android:id="@+id/ImageView_hist4.1"
         android:src="@drawable/historypage4table"
+        android:adjustViewBounds="true"
+        android:padding="5dp"
+        android:layout_weight="1"
+        style="@style/history_image"
+        android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         />
 
-    <TextView   
+    <TextView
+        android:background="@drawable/history_format"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="In the Early Carboniferous movement of the Earths tectonic plates  opened up sedimentary basins in Northumberland and Yorkshire. This allowed the deposition of the Carboniferous sedimentary rocks we observe today during the period from 354-300 million years ago.  During this time, the North Pennines was drifting north across the equator and was episodically submerged beneath shallow tropical seas, similar to that around the present day Bahamas.  Skeletons of sea creatures accumulated a...(line truncated)..."
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        style="@style/info_text"/>
 </LinearLayout>
