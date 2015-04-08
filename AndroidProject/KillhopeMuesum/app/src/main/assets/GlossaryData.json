@@ -1,104 +1,104 @@
 {
-  "glossary" : [
+  "glossary": [
     {
       "word": "Basalt",
-      "definition": "Basala dark fine-grained volcanic rock that sometimes displays a columnar structure, typically composed largely of plagioclase with pyroxene and olivine."
+      "definition": "dark fine-grained volcanic rock that sometimes displays a columnar structure, typically composed largely of plagioclase with pyroxene and olivine."
     },
     {
       "word": "Biaxal",
-      "definition": "having two optic axes, as in the orthorhombic, monoclinic, and triclinic systems."
+      "definition": "Having two optic axes, as in the orthorhombic, monoclinic, and triclinic systems."
     },
     {
       "word": "Birefringence",
-      "definition": " is the optical property of a material having a refractive index that depends on the polarization and propagation direction of light."
+      "definition": "The optical property of a material having a refractive index that depends on the polarization and propagation direction of light."
     },
     {
       "word": "Cabochons",
-      "definition": "a gem that has been polished but not faceted."
+      "definition": "A gem that has been polished but not faceted."
     },
     {
       "word": "Cleavage",
-      "definition": "the tendency of crystalline materials to split along definite crystallographic structural planes.",
+      "definition": "The tendency of crystalline materials to split along definite crystallographic structural planes.",
       "Types": [
         {
           "word": "Basal",
-          "definition": "minerals with basal cleavage can sometimes be peeled. A good example of basal cleavage is seen on the minerals of the mica group."
+          "definition": "Minerals with basal cleavage can sometimes be peeled. A good example of basal cleavage is seen on the minerals of the mica group."
         },
         {
           "word": "Prismatic",
-          "definition": "the mineral cleaves by breaking off thin, vertical, prismatic crystals off of the original prism."
+          "definition": "The mineral cleaves by breaking off thin, vertical, prismatic crystals off of the original prism."
         },
         {
           "word": "Rhombohedral",
-          "definition": " exhibited on minerals that crystallize in the hexagonal crystal system (trigonal), specifically as rhombohedrons, in which small rhombohedrons cleave off of the existing crystal."
+          "definition": "Exhibited on minerals that crystallize in the hexagonal crystal system (trigonal), specifically as rhombohedrons, in which small rhombohedrons cleave off of the existing crystal."
         },
         {
           "word": "Octahedral",
-          "definition": "the method of cleavage is that flat, triangular \"wedges\" peel off of the existing octahedron."
+          "definition": "The method of cleavage is that flat, triangular \"wedges\" peel off of the existing octahedron."
         }
       ]
     },
     {
       "word": "Coxcomb",
-      "definition": " Aggregate composed of flaky or tabular crystals that are joined from a base with grooves between long, slender, arc-like crystals. The name is derived from a red comb of a rooster (\"cock\")."
+      "definition": "Aggregate composed of flaky or tabular crystals that are joined from a base with grooves between long, slender, arc-like crystals. The name is derived from a red comb of a rooster (\"cock\")."
     },
     {
       "word": "Crystal Habit",
-      "definition": " the most commonly found shape or form that a mineral adopts.",
+      "definition": "The most commonly found shape or form that a mineral adopts.",
       "Types": [
         {
           "word": "Botryoidal",
-          "definition": "having a shape reminiscent of a cluster of grapes."
+          "definition": "Having a shape reminiscent of a cluster of grapes."
         },
         {
           "word": "Fibrous",
-          "definition": "fibre-like."
+          "definition": "Fibre-like."
         },
         {
           "word": "Granular",
-          "definition": "composed of mineral grains."
+          "definition": "Composed of mineral grains."
         },
         {
           "word": "Massive",
-          "definition": "with no distinguishing crystal form."
+          "definition": "With no distinguishing crystal form."
         },
         {
           "word": "Microcrystalline",
-          "definition": "composed of tiny crystals that cannot be seen with an unaided eye. Microcrystalline minerals may appear massive or amorphous since no apparent crystal shape can be detected."
+          "definition": "Composed of tiny crystals that cannot be seen with an unaided eye. Microcrystalline minerals may appear massive or amorphous since no apparent crystal shape can be detected."
         },
         {
           "word": "Prismatic",
-          "definition": "forming prismatic crystals, equant to elongated."
+          "definition": "Forming prismatic crystals, equant to elongated."
         },
         {
           "word": "Reticulated",
-          "definition": "long crystals in a netting-like form, where all the crystals crisscross each other."
+          "definition": "Long crystals in a netting-like form, where all the crystals crisscross each other."
         },
         {
           "word": "Rhombohedral",
-          "definition": "six sided polyhedron with each side shaped as a rhombus, which have different angles to each other."
+          "definition": "Six sided polyhedron with each side shaped as a rhombus, which have different angles to each other."
         },
         {
           "word": "Stalactic",
-          "definition": "a tapering structure hanging like an icicle from the roof of a cave."
+          "definition": "A tapering structure hanging like an icicle from the roof of a cave."
         },
         {
           "word": "Tabular",
-          "definition": "plate-like."
+          "definition": "Plate-like."
         },
         {
           "word": "Tetrahedral",
-          "definition": "is a polyhedron composed of four triangular faces forming a 3D triangle."
+          "definition": "Is a polyhedron composed of four triangular faces forming a 3D triangle."
         }
       ]
     },
     {
       "word": "Crystal Structure",
-      "definition": " a unique arrangement of atoms, ions or molecules in a crystal.",
+      "definition": "A unique arrangement of atoms, ions or molecules in a crystal.",
       "Types": [
         {
           "word": "Cubic",
-          "definition": "quadrilateral shape of a cube."
+          "definition": "Quadrilateral shape of a cube."
         },
         {
           "word": "Hexagonal",
@@ -106,39 +106,39 @@
         },
         {
           "word": "Octahedral",
-          "definition": " eight sided (two pyramids base to base)."
+          "definition": "Eight sided (two pyramids base to base)."
         },
         {
           "word": "Orthorhombic",
-          "definition": "of or denoting a crystal system or three-dimensional geometrical arrangement having three unequal axes at right angles."
+          "definition": "Of or denoting a crystal system or three-dimensional geometrical arrangement having three unequal axes at right angles."
         },
         {
           "word": " Trigonal",
-          "definition": "three-dimensional geometrical arrangement having three equal axes separated by equal angles that are not right angles."
+          "definition": "Three-dimensional geometrical arrangement having three equal axes separated by equal angles that are not right angles."
         }
       ]
     },
     {
       "word": "Diabase",
-      "definition": " another term for dolerite: a dark, medium-grained igneous rock, typically with ophitic texture, containing plagioclase, pyroxene, and olivine. It typically occurs in dykes and sills."
+      "definition": "Another term for dolerite: a dark, medium-grained igneous rock, typically with ophitic texture, containing plagioclase, pyroxene, and olivine. It typically occurs in dykes and sills."
     },
     {
       "word": "Druzy",
-      "definition": "a coating of fine crystals on a rock fracture surface, vein or within a vug or geode."
+      "definition": "A coating of fine crystals on a rock fracture surface, vein or within a vug or geode."
     },
     {
       "word": "Extinction",
-      "definition": "optical property of a mineral in thin section, which under cross polarised light does not transmit light (i.e. it goes black) at certain angles.",
+      "definition": "Optical property of a mineral in thin section, which under cross polarised light does not transmit light (i.e. it goes black) at certain angles.",
       "Types": [
         {
           "word": " Undulose extinction",
-          "definition": " if a mineral is deformed, strain builds up within the crystal lattice causing it to warp. Different parts of a crystal reach extinction at slightly different angles, giving the crystal an irregular, mottled look."
+          "definition": "If a mineral is deformed, strain builds up within the crystal lattice causing it to warp. Different parts of a crystal reach extinction at slightly different angles, giving the crystal an irregular, mottled look."
         }
       ]
     },
     {
       "word": "Fracture",
-      "definition": "the way a mineral breaks other than along a cleavage plane (random orientations).",
+      "definition": "The way a mineral breaks other than along a cleavage plane (random orientations).",
       "Types": [
         {
           "word": " Conchoidal",
@@ -156,69 +156,69 @@
     },
     {
       "word": "Flux",
-      "definition": "chemical cleaning agent, flowing agent, or purifying agent."
+      "definition": "Chemical cleaning agent, flowing agent, or purifying agent."
     },
     {
       "word": "Gangue mineral",
-      "definition": "the commercially worthless material that surrounds, or is closely mixed with, a wanted mineral in an ore deposit."
+      "definition": "The commercially worthless material that surrounds, or is closely mixed with, a wanted mineral in an ore deposit."
     },
     {
       "word": "Hydrothermal veins",
-      "definition": " distinct sheet like body of crystallised minerals in a rock, precipitated from a hot aqueous fluid."
+      "definition": "Distinct sheet like body of crystallised minerals in a rock, precipitated from a hot aqueous fluid."
     },
     {
       "word": "Isotropic",
-      "definition": "uniformity in all orientations; a grain will appear opaque under a microscope as the light cannot pass through it."
+      "definition": "Uniformity in all orientations; a grain will appear opaque under a microscope as the light cannot pass through it."
     },
     {
       "word": "Lattice",
-      "definition": "a crystal lattice can be thought of as an array of 'small boxes' infinitely repeating in all three spatial directions."
+      "definition": "A crystal lattice can be thought of as an array of 'small boxes' infinitely repeating in all three spatial directions."
     },
     {
       "word": "Lustre",
-      "definition": "he quality and intensity of light reflected from the surface of a mineral.",
+      "definition": "The quality and intensity of light reflected from the surface of a mineral.",
       "Types": [
         {
           "word": " Adamantine",
-          "definition": "a brilliant lustre such as that of diamond."
+          "definition": "A brilliant lustre such as that of diamond."
         },
         {
           "word": " Resinous",
-          "definition": "a resin-like shine (resembling amber for example)."
+          "definition": "A resin-like shine (resembling amber for example)."
         },
         {
           "word": "Vitreous",
-          "definition": "glassy, bright (shines like glass)."
+          "definition": "Glassy, bright (shines like glass)."
         }
       ]
     },
     {
       "word": "Metasomatism",
-      "definition": "the chemical alteration of a rock by hydrothermal and other fluids."
+      "definition": "The chemical alteration of a rock by hydrothermal and other fluids."
     },
     {
       "word": "Ore",
-      "definition": "a naturally occurring solid material from which a metal or valuable mineral can be extracted profitably."
+      "definition": "A naturally occurring solid material from which a metal or valuable mineral can be extracted profitably."
     },
     {
       "word": "Oxidation zone",
-      "definition": "a zone found near the earth’s surface that forms as a result of chemical decomposition of unstable minerals under the action of oxygenated surface waters and groundwater. The oxidation zone extends down to the level of the groundwater and usually ranges from a few meters to a few hundred meters thick. In the oxidation process part of the mineral material of a deposit may be dissolved by the groundwater, percolate downward, and be redeposited below the groundwater level, forming a zone of secondary mineral enrichment."
+      "definition": "A zone found near the earth’s surface that forms as a result of chemical decomposition of unstable minerals under the action of oxygenated surface waters and groundwater. The oxidation zone extends down to the level of the groundwater and usually ranges from a few meters to a few hundred meters thick. In the oxidation process part of the mineral material of a deposit may be dissolved by the groundwater, percolate downward, and be redeposited below the groundwater level, forming a zone of secondary mineral enrichment."
     },
     {
       "word": "Pegmatite",
-      "definition": " a coarsely crystalline igneous rock with crystals several centimetres in length."
+      "definition": "A coarsely crystalline igneous rock with crystals several centimetres in length."
     },
     {
       "word": "Pseudomorphs",
-      "definition": "a mineral that chemically replaces another mineral without changing the external form of the original mineral."
+      "definition": "A mineral that chemically replaces another mineral without changing the external form of the original mineral."
     },
     {
       "word": "Pyromorphite",
-      "definition": "mineral species composed of lead chlorophosphate, typically occurring as green, yellow, or brown crystals in the oxidized zones of lead deposits."
+      "definition": "Mineral species composed of lead chlorophosphate, typically occurring as green, yellow, or brown crystals in the oxidized zones of lead deposits."
     },
     {
       "word": "Specific Gravity",
-      "definition": "he ratio of a mineral’s mass to the mass of an equal volume of water. E.g. galena has a specific gravity of ~7.4, meaning 1cm<sup>3</sup> of galena will be 7.4 times as heavy as 1cm<sup>3</sup> of water."
+      "definition": "The ratio of a mineral’s mass to the mass of an equal volume of water. E.g. galena has a specific gravity of ~7.4, meaning 1cm<sup>3</sup> of galena will be 7.4 times as heavy as 1cm<sup>3</sup> of water."
     },
     {
       "word": "Streak",
@@ -226,29 +226,29 @@
     },
     {
       "word": "Syenitic",
-      "definition": "a coarse-grained grey igneous rock composed mainly of alkali feldspar and ferromagnesian minerals such as hornblende."
+      "definition": "A coarse-grained grey igneous rock composed mainly of alkali feldspar and ferromagnesian minerals such as hornblende."
     },
     {
       "word": "Twinning",
-      "definition": "occurs when two separate crystals share some of the same crystal lattice points in a symmetrical manner. Results in a mineral showing several different colours, when in fact you are seeing an intergrowth of two crystals joined together in a mutual orientation.",
+      "definition": "Occurs when two separate crystals share some of the same crystal lattice points in a symmetrical manner. Results in a mineral showing several different colours, when in fact you are seeing an intergrowth of two crystals joined together in a mutual orientation.",
       "Types": [
         {
           "word": " Contact twins",
-          "definition": "share a single composition surface often appearing as mirror images across the boundary. "
+          "definition": "Share a single composition surface often appearing as mirror images across the boundary. "
         },
         {
           "word": " Lamellar twins",
-          "definition": "many parallel twin individuals, each one having a tabular or plate-like appearance."
+          "definition": "Many parallel twin individuals, each one having a tabular or plate-like appearance."
         },
         {
           "word": "Penetration twins",
-          "definition": "the individual crystals have the appearance of passing through each other in a symmetrical manner."
+          "definition": "The individual crystals have the appearance of passing through each other in a symmetrical manner."
         }
       ]
     },
     {
       "word": "Uniaxial",
-      "definition": "having one optical axis, as in the hexagonal, trigonal, and tetragonal systems."
+      "definition": "Having one optical axis, as in the hexagonal, trigonal, and tetragonal systems."
     }
   ]
 }
