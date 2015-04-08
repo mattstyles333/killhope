@@ -27,6 +27,8 @@ import com.abhi.gif.lib.AnimatedGifImageView;
 
 import java.util.ArrayList;
 
+import it.sephiroth.android.library.imagezoom.ImageViewTouch;
+import it.sephiroth.android.library.imagezoom.ImageViewTouchBase;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.KillhopeApplication;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.Mineral;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.MineralSection;
@@ -55,22 +57,22 @@ public class MineralFragment extends Fragment {
         final Mineral mineral = ((KillhopeApplication)getActivity().getApplication()).mineralManager.getMineral(mineralID);
 
         TextView name = (TextView)rootView.findViewById(R.id.mineral_name);
-        final AnimatedGifImageView image = (AnimatedGifImageView)rootView.findViewById(R.id.mineral_image);
-        image.setAnimatedGif(mineral.getImg3d(), AnimatedGifImageView.TYPE.FIT_CENTER);
+        final AnimatedGifImageView animage = (AnimatedGifImageView)rootView.findViewById(R.id.mineral_image);
+        animage.setAnimatedGif(mineral.getImg3d(), AnimatedGifImageView.TYPE.FIT_CENTER);
 
-        image.setOnTouchListener(new View.OnTouchListener() {
+        animage.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 float f = (float)event.getX() / (float)v.getWidth();
                 switch(event.getAction()){
                     case(MotionEvent.ACTION_DOWN):
-                        image.touchDown(f);
+                        animage.touchDown(f);
                         break;
                     case(MotionEvent.ACTION_UP):
-                        image.touchUp(f);
+                        animage.touchUp(f);
                         break;
                     case(MotionEvent.ACTION_MOVE):
-                        image.touchMove(f);
+                        animage.touchMove(f);
                         break;
                 }
 //                System.out.println("Touch:" + event.getX() + "," + event.getY());
@@ -82,7 +84,7 @@ public class MineralFragment extends Fragment {
 
         ((ActionBarActivity)getActivity()).getSupportActionBar().setTitle(Html.fromHtml(mineral.getName() /*+ ": <small style=\"font-size:60%;\">" + mineral.getFormula() + "</small>"*/));
 
-        image.setOnClickListener(new View.OnClickListener() {
+        animage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), GalleryActivity.class);
@@ -95,6 +97,25 @@ public class MineralFragment extends Fragment {
 
         LinearLayout list = (LinearLayout) rootView.findViewById(R.id.mineral_list);
         list.addView(getNextView(0, null, null));
+
+        ImageViewTouch mainImage= (ImageViewTouch) rootView.findViewById(R.id.mineral_image_basic);
+        mainImage.setDisplayType(ImageViewTouchBase.DisplayType.FIT_IF_BIGGER);
+
+        Bitmap bmp = BitmapFactory.decodeResource(getResources(), mineral.getImage(0));
+        mainImage.setImageBitmap(bmp, null, -1, 8f);
+
+        ((ImageButton)rootView.findViewById(R.id.imgbutton_nextimage)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+        ((ImageButton)rootView.findViewById(R.id.imgbutton_previmage)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
         return rootView;
     }

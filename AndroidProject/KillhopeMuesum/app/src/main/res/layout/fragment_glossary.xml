@@ -1,10 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout
-
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/actionbar_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/navbar_background">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_glossary"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Glossary"
+            style="@style/info_title"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/glossary_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:lines="1"
+        android:scrollHorizontally="true"
+        android:hint="Search..."
+        android:ellipsize="end"/>
 
     <GridView xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/glossary_gridview"
