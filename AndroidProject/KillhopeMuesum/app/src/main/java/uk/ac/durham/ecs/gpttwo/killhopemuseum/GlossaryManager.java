@@ -10,6 +10,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 
+import uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.GlossaryDialogFragment;
+
 /**
  * Created by Ally on 21/03/15.
  */
@@ -95,10 +97,10 @@ public class GlossaryManager {
         }
         return names;
     }
-    public ArrayList<String> getGlossary(){
-        ArrayList<String> g = new ArrayList<String>();
+    public ArrayList<GlossaryItem> getGlossary(){
+        ArrayList<GlossaryItem> g = new ArrayList<GlossaryItem>();
         for(GlossaryItem gi : glossary){
-            g.add(gi.getName()+": "+gi.getInfo());
+            g.add(gi);
         }
         return g;
     }

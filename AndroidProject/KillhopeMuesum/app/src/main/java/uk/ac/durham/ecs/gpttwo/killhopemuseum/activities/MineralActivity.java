@@ -19,6 +19,7 @@ import uk.ac.durham.ecs.gpttwo.killhopemuseum.GlossaryItem;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.GlossaryManager;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.MineralManager;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.R;
+import uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.GlossaryDialogFragment;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.MineralFragment;
 
 
@@ -125,24 +126,8 @@ public class MineralActivity extends ActionBarActivity {
             return true;
         }
         if(id == R.id.action_glossary){
-            LinearLayout ll = new LinearLayout(this);
-            ll.setOrientation(LinearLayout.VERTICAL);
-            ScrollView sc = new ScrollView(this);
-            final Dialog d = new Dialog(this);
-            d.setContentView(sc);
-            d.setTitle("Full Glossary");
-            GlossaryManager gm = new GlossaryManager();
-            gm.loadGlossary(this);
-            ArrayList<GlossaryItem> glist = gm.searchGlossary("");
-            int i=0;
-            while(i<glist.size()) {
-                TextView tv = new TextView(this);
-                tv.setText(glist.get(i).getName()+": "+glist.get(i).getInfo()+"\n");
-                ll.addView(tv);
-                i++;
-            }
-            sc.addView(ll);
-            d.show();
+            GlossaryDialogFragment gdf = new GlossaryDialogFragment().newInstance();
+            gdf.show(this.getSupportFragmentManager(), "glossary_fragment");
         }
         return super.onOptionsItemSelected(item);
     }
