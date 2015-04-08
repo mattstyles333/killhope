@@ -28,6 +28,7 @@ import uk.ac.durham.ecs.gpttwo.killhopemuseum.GlossaryManager;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.KillhopeApplication;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.R;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.adapters.MineralsAdapter;
+import uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.GlossaryDialogFragment;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.MineralsFragment;
 
 public class MineralsActivity extends ActionBarActivity {
@@ -99,25 +100,9 @@ public class MineralsActivity extends ActionBarActivity {
             onBackPressed();
         }
         if(id == R.id.action_glossary){
-            LinearLayout ll = new LinearLayout(this);
-            ll.setOrientation(LinearLayout.VERTICAL);
-            ScrollView sc = new ScrollView(this);
-            final Dialog d = new Dialog(this);
-            d.setContentView(sc);
-            d.setTitle("Full Glossary");
-            GlossaryManager gm = new GlossaryManager();
-            gm.loadGlossary(this);
-            ArrayList<GlossaryItem> glist = gm.searchGlossary("");
-            int i=0;
-            while(i<glist.size()) {
 
-                TextView tv = new TextView(this);
-                tv.setText(glist.get(i).getName()+": "+glist.get(i).getInfo()+"\n");
-                ll.addView(tv);
-                i++;
-            }
-            sc.addView(ll);
-            d.show();
+            GlossaryDialogFragment gdf = new GlossaryDialogFragment().newInstance();
+            gdf.show(this.getSupportFragmentManager(), "glossary_fragment");
         }
         if (id == R.id.action_help) {
             Intent helpIntent = new Intent(this, HelpActivity.class);
