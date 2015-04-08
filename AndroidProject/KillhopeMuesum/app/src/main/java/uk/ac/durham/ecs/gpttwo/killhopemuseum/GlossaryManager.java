@@ -97,10 +97,10 @@ public class GlossaryManager {
         }
         return names;
     }
-    public ArrayList<String> getGlossary(){
-        ArrayList<String> g = new ArrayList<String>();
+    public ArrayList<GlossaryItem> getGlossary(){
+        ArrayList<GlossaryItem> g = new ArrayList<GlossaryItem>();
         for(GlossaryItem gi : glossary){
-            g.add(gi.getName()+": "+gi.getInfo());
+            g.add(gi);
         }
         return g;
     }

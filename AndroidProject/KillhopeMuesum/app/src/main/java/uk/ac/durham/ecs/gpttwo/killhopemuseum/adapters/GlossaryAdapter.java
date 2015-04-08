@@ -29,13 +29,13 @@ import uk.ac.durham.ecs.gpttwo.killhopemuseum.R;
 
 public class GlossaryAdapter extends BaseAdapter {
     private Context mContext;
-    private ArrayList<String> g;
+    private ArrayList<GlossaryItem> g;
     private String query;
     public GlossaryManager gm;
 
     // Constructor
-    public GlossaryAdapter(Context c,ArrayList<String> glossary) {
-g=glossary;
+    public GlossaryAdapter(Context c,ArrayList<GlossaryItem> glossary) {
+    g=glossary;
         mContext = c;
     }
     public int getCount(){
@@ -54,11 +54,11 @@ g=glossary;
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        String gi = g.get(position);
+        GlossaryItem gi = g.get(position);
         LayoutInflater inflator = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         convertView = inflator.inflate(R.layout.fragment_glossary_item, parent, false);
         TextView tv = (TextView) convertView.findViewById(R.id.glossary_item_textview);
-        tv.setText(gi);
+        tv.setText(gi.getName()+": "+gi.getInfo());
         return convertView;
     }
 
