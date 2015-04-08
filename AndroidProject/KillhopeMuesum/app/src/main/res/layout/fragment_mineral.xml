@@ -10,11 +10,36 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:id="@+id/mineral_paneleft">
-        <com.abhi.gif.lib.AnimatedGifImageView
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/mineral_image"
-            android:src="@drawable/ic_launcher" />
+            android:layout_height="wrap_content">
+            <com.abhi.gif.lib.AnimatedGifImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/mineral_image"
+                android:src="@drawable/ic_launcher"
+                android:visibility="invisible"/>
+            <it.sephiroth.android.library.imagezoom.ImageViewTouch
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/mineral_image_basic"
+                android:src="@drawable/mineral_baryte_image_1"
+                android:visibility="visible"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_chev_right"
+                android:id="@+id/imgbutton_nextimage"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/ic_chev_left"
+                android:id="@+id/imgbutton_previmage"/>
+        </RelativeLayout>
 
         <TextView
             android:layout_width="match_parent"

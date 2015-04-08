@@ -4,6 +4,8 @@ import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -30,31 +32,46 @@ import uk.ac.durham.ecs.gpttwo.killhopemuseum.adapters.MineralsAdapter;
  */
 public class GlossaryDialogFragment extends DialogFragment {
     public String search;
-    public GlossaryManager gm;
     public GridView gridView;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         final View rootView = inflater.inflate(R.layout.fragment_glossary, container, false);
         gridView = (GridView) rootView.findViewById(R.id.glossary_gridview);
-        gm = new GlossaryManager();
-        gm.loadGlossary(this.getActivity());
-        getDialog().setTitle("Glossary");
         getDialog().setCanceledOnTouchOutside(true);
+        getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         final EditText et = (EditText) rootView.findViewById(R.id.glossary_search);
-        et.setOnKeyListener(new View.OnKeyListener() {
+        et.addTextChangedListener(new TextWatcher() {
             @Override
-            public boolean onKey(View v, int keyCode, KeyEvent event) {
-                if(event.getAction()==KeyEvent.ACTION_DOWN && keyCode == KeyEvent.KEYCODE_ENTER){
-                    search(et.getText().toString());
-                    return true;
-                }
-                return false;
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                search(et.getText().toString());
             }
         });
 
-        search("");
+//                ;addTextChangedListener(new View.OnKeyListener() {
+//            @Override
+//            public boolean onKey(View v, int keyCode, KeyEvent event) {
+//                if (event.getAction() == KeyEvent.ACTION_DOWN && keyCode == KeyEvent.KEYCODE_ENTER) {
+//
+//                    System.out.println("query");
+//                    return true;
+//                }
+//                return false;
+//            }
+//        });
 
+        GlossaryAdapter adapter = new GlossaryAdapter(this.getActivity());
+        gridView.setAdapter(adapter);
 
         return rootView;
     }
@@ -67,9 +84,7 @@ public class GlossaryDialogFragment extends DialogFragment {
         super.onResume();
     }
     public void search(String s){
-        ArrayList<GlossaryItem> g = gm.getGlossary();
-        GlossaryAdapter adapter = new GlossaryAdapter(this.getActivity(),g);
-        gridView.setAdapter(adapter);
+        ((GlossaryAdapter)gridView.getAdapter()).search(s);
     }
 
     public static GlossaryDialogFragment newInstance(){
