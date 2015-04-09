@@ -1,59 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:background="@drawable/history_format"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Carboniferous Sediments"
+            android:id="@+id/textView2"
+            android:layout_gravity="center_horizontal"
+            style="@style/info_title"/>
 
-    <TextView
-        android:background="@drawable/history_format"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Carboniferous Sediments "
-        android:id="@+id/textView2"
-        android:layout_gravity="center_horizontal"
-        style="@style/info_title"/>
-    <ImageView
-        android:background="@drawable/blue_button"
-        android:id="@+id/ImageView_hist4"
-        android:src="@drawable/historypage4pic"
-        android:adjustViewBounds="true"
-        android:padding="5dp"
-        android:layout_weight="1"
-        style="@style/history_image"
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        />
-    <ImageView
-        android:background="@drawable/blue_button"
-        android:id="@+id/ImageView_hist4.2"
-        android:src="@drawable/historypage4pic2"
-        android:adjustViewBounds="true"
-        android:padding="5dp"
-        android:layout_weight="1"
-        style="@style/history_image"
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        />
-    <ImageView
-        android:background="@drawable/blue_button"
-        android:id="@+id/ImageView_hist4.1"
-        android:src="@drawable/historypage4table"
-        android:adjustViewBounds="true"
-        android:padding="5dp"
-        android:layout_weight="1"
-        style="@style/history_image"
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        />
 
-    <TextView
-        android:background="@drawable/history_format"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="In the Early Carboniferous movement of the Earths tectonic plates  opened up sedimentary basins in Northumberland and Yorkshire. This allowed the deposition of the Carboniferous sedimentary rocks we observe today during the period from 354-300 million years ago.  During this time, the North Pennines was drifting north across the equator and was episodically submerged beneath shallow tropical seas, similar to that around the present day Bahamas.  Skeletons of sea creatures accumulated a...(line truncated)..."
-        android:layout_gravity="center_horizontal"
-        style="@style/info_text"/>
-</LinearLayout>
+        <TextView
+            android:background="@drawable/history_format"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="In the Early Carboniferous movement of the Earths tectonic plates opened up sedimentary basins in Northumberland and Yorkshire. This allowed the deposition of the Carboniferous sedimentary rocks we observe today during the period from 354-300 million years ago."
+            android:layout_gravity="center_horizontal"
+            style="@style/info_text"/>
+        <TextView
+            android:background="@drawable/history_format"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="During this time, the North Pennines was drifting north across the equator and was episodically submerged beneath shallow tropical seas, similar to that around the present day Bahamas."
+            android:layout_gravity="center_horizontal"
+            style="@style/info_text"/>
+        <TextView
+            android:background="@drawable/history_format"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Skeletons of sea creatures accumulated as calcitic ooze on the seafloor, whilst rivers fed mud and sand particles into the sea, building up vast deltas on which swampy forests grew. Over millions of years, the calcitic ooze, mud, sand and wood rich swamps compacted into layers of limestone, shale, sandstone and coal."
+            android:layout_gravity="center_horizontal"
+            style="@style/info_text"/>
+        <TextView
+            android:background="@drawable/history_format"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fluctuating sea levels covered and exposed the deltas, allowing for a cyclic pattern of sedimentary rock to form. Each cycle of limestone, shale, sandstone and coal is referred to as a cyclothem."
+            android:layout_gravity="center_horizontal"
+            style="@style/info_text"/>
+
+
+        <ImageView
+            android:background="@drawable/blue_button"
+            android:id="@+id/historypage4table"
+            android:src="@drawable/historypage4table"
+            android:adjustViewBounds="true"
+            android:padding="5dp"
+            android:layout_weight="1"
+            style="@style/history_image"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <TextView
+                    android:background="@drawable/history_format"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Mississippian"
+                    android:layout_gravity="center_horizontal"
+                    style="@style/info_title"/>
+                <ImageView
+                    android:background="@drawable/blue_button"
+                    android:id="@+id/historypage4pic"
+                    android:src="@drawable/historypage4pic"
+                    android:adjustViewBounds="true"
+                    android:padding="5dp"
+                    android:layout_weight="1"
+                    style="@style/history_image"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <TextView
+                    android:background="@drawable/history_format"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Pennsylvanian"
+                    android:layout_gravity="center_horizontal"
+                    style="@style/info_title"/>
+                <ImageView
+                    android:background="@drawable/blue_button"
+                    android:id="@+id/historypage4pic2"
+                    android:src="@drawable/historypage4pic2"
+                    android:adjustViewBounds="true"
+                    android:padding="5dp"
+                    android:layout_weight="1"
+                    style="@style/history_image"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

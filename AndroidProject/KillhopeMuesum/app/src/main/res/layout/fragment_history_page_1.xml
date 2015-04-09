@@ -1,63 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-
-    <TextView
-        android:background="@drawable/history_format"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Early Earth"
-        android:id="@+id/historyHeader2"
-        android:layout_gravity="center_horizontal"
-        style="@style/info_title"/>
- 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical">
+        <TextView
+            android:background="@drawable/history_format"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Early Earth"
+            android:id="@+id/historyHeader2"
+            android:layout_gravity="center_horizontal"
+            style="@style/info_title"/>
 
-    <ImageView
-        android:background="@drawable/blue_button"
-        android:id="@+id/ImageView_hist2"
-        android:src="@drawable/historypage2pic"
-        android:adjustViewBounds="true"
-        android:padding="5dp"
-        android:layout_weight="1"
-        style="@style/history_image"
-        android:layout_gravity="left"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        <TextView
+            android:background="@drawable/history_format"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="12.13"
+            android:text="As geological time progressed, vast movements of the Earth’s tectonic plates compressed these muds, turning them into slate and forming the Skiddaw Group. (These same movements causes gigantic volcanoes to erupt lava and ash.)"
+            style="@style/info_text" />
+        <TextView
+            android:background="@drawable/history_format"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="12.13"
+            android:text="About 450 million years ago, during the Ordovician period of Earth history, the area we know as northern England was located 15°S of the equator (Matte, 2001). Here it lay beneath a deep ocean, in which mud and silt were deposited."
+            style="@style/info_text" />
 
-    <ImageView
-        android:background="@drawable/blue_button"
-        android:id="@+id/ImageView_hist2.1"
-        android:src="@drawable/historypage2table"
-        android:adjustViewBounds="true"
-        android:padding="5dp"
-        android:layout_weight="1"
-        style="@style/history_image"
-        android:layout_gravity="right"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <ImageView
+            android:background="@drawable/blue_button"
+            android:id="@+id/historypage2pic"
+            android:src="@drawable/historypage2pic"
+            android:adjustViewBounds="true"
+            android:padding="5dp"
+            style="@style/history_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
-        </LinearLayout>
+        <ImageView
+            android:background="@drawable/blue_button"
+            android:id="@+id/historypage2table"
+            android:src="@drawable/historypage2table"
+            android:adjustViewBounds="true"
+            android:padding="5dp"
+            style="@style/history_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
-    <TextView
-        android:background="@drawable/history_format"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="12.13"
-        android:text="About 450 million years ago, during the Ordovician period of Earth history, the area we know as northern England was located 15°S of the equator (Matte, 2001). Here it lay beneath a deep ocean, in which mud and silt were deposited.
+    </LinearLayout>
 
-As geological time progressed, vast movements of the Earth’s tectonic plates compressed these muds, turning them into slate and forming the Skiddaw Group. (These same movements causes gigantic volcanoes to erupt lava and ash.)
-
-"
-        android:id="@+id/textView"
-        style="@style/info_text" />
-
-
-</LinearLayout>
+</ScrollView>
