@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.R;
+import uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.GlossaryDialogFragment;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.QuizFragment;
 
 
@@ -54,6 +55,11 @@ public class QuizActivity extends ActionBarActivity {
             startActivity(helpIntent);
 
             return true;
+        }
+
+        if(id == R.id.action_glossary){
+            GlossaryDialogFragment gdf = new GlossaryDialogFragment().newInstance();
+            gdf.show(this.getSupportFragmentManager(), "glossary_fragment");
         }
 
         return super.onOptionsItemSelected(item);

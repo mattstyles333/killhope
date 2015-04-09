@@ -9,6 +9,7 @@ import android.view.MenuItem;
 
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.adapters.HelpPagerAdapter;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.R;
+import uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.GlossaryDialogFragment;
 
 
 public class HelpActivity extends ActionBarActivity {
@@ -77,6 +78,11 @@ public class HelpActivity extends ActionBarActivity {
         }else if (id == android.R.id.home) {
             onBackPressed();
             return true;
+        }
+
+        if(id == R.id.action_glossary){
+            GlossaryDialogFragment gdf = new GlossaryDialogFragment().newInstance();
+            gdf.show(this.getSupportFragmentManager(), "glossary_fragment");
         }
 
         return super.onOptionsItemSelected(item);

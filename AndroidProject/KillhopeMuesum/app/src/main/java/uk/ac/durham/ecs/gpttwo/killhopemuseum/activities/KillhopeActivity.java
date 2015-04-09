@@ -14,6 +14,7 @@ import com.google.android.gms.analytics.GoogleAnalytics;
 
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.KillhopeApplication;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.R;
+import uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.GlossaryDialogFragment;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.MainFragment;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.SplashFragment;
 
@@ -89,6 +90,11 @@ public class KillhopeActivity extends FragmentActivity {
             startActivity(helpIntent);
 
             return true;
+        }
+
+        if(id == R.id.action_glossary){
+            GlossaryDialogFragment gdf = new GlossaryDialogFragment().newInstance();
+            gdf.show(this.getSupportFragmentManager(), "glossary_fragment");
         }
 
         return super.onOptionsItemSelected(item);

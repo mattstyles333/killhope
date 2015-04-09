@@ -1,10 +1,12 @@
 package uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments;
 
+import android.graphics.Point;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.R;
 
@@ -20,6 +22,15 @@ public class SplashFragment extends Fragment {
 
         if(getResources().getConfiguration().orientation != 1){
             rootView.setBackgroundResource(R.drawable.bg_land);
+        }
+
+        if(getResources().getConfiguration().orientation == 1){
+
+        }else{
+            Point size = new Point();
+            getActivity().getWindowManager().getDefaultDisplay().getSize(size);
+            int quarter = size.x/4;
+            ((RelativeLayout)rootView).setPadding(quarter,16,quarter,16);
         }
 
         return rootView;

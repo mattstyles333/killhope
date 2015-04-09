@@ -19,6 +19,7 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridView;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -50,10 +51,10 @@ public class ImageZoomDialogFragment extends DialogFragment {
         getDialog().getWindow().setBackgroundDrawable(new ColorDrawable(0));
         getDialog().setCanceledOnTouchOutside(true);
 
-        ImageViewTouch mainImage= (ImageViewTouch) rootView.findViewById(R.id.main_image);
+        final ImageViewTouch mainImage= (ImageViewTouch) rootView.findViewById(R.id.main_image);
         mainImage.setDisplayType(ImageViewTouchBase.DisplayType.FIT_IF_BIGGER);
 
-        Bitmap bmp = BitmapFactory.decodeResource(getResources(), getArguments().getInt("resid"));
+        Bitmap bmp = BitmapFactory.decodeResource(getResources(), getRes(getCurrentResIndex()));
         mainImage.setImageBitmap(bmp, null, -1, 8f);
 
         ((Button)rootView.findViewById(R.id.button_info_close)).setOnClickListener(new View.OnClickListener() {
@@ -71,25 +72,78 @@ public class ImageZoomDialogFragment extends DialogFragment {
 //            }
 //        });
 
+        if(getResLength()==1){
+            ((ImageButton)rootView.findViewById(R.id.imgbutton_nextimage)).setVisibility(ImageButton.GONE);
+            ((ImageButton)rootView.findViewById(R.id.imgbutton_previmage)).setVisibility(ImageButton.GONE);
+        }else {
+
+            ((ImageButton) rootView.findViewById(R.id.imgbutton_nextimage)).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Bitmap bmp = BitmapFactory.decodeResource(getResources(), getRes(changeCurrentResIndex(1)));
+                    mainImage.setImageBitmap(bmp, null, -1, 8f);
+                }
+            });
+            ((ImageButton) rootView.findViewById(R.id.imgbutton_previmage)).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Bitmap bmp = BitmapFactory.decodeResource(getResources(), getRes(changeCurrentResIndex(-1)));
+                    mainImage.setImageBitmap(bmp, null, -1, 8f);
+                }
+            });
+        }
+
         Toast.makeText(getActivity().getApplicationContext(), "Pinch to zoom!", Toast.LENGTH_SHORT).show();
 
         return rootView;
+    }
+
+    public int getCurrentResIndex(){
+        System.out.println(getArguments().getInt("curres"));
+        return getArguments().getInt("curres");
+    }
+
+    public int changeCurrentResIndex(int increment){
+        int curres = getArguments().getInt("curres");
+        curres += increment;
+        if(curres<0){
+            curres += getResLength();
+        }
+        curres %= getResLength();
+        getArguments().putInt("curres", curres);
+        return getCurrentResIndex();
+    }
+
+    public int getRes(int id){
+        int[] bmpids = getArguments().getIntArray("resid");
+        System.out.println(bmpids[id]);
+        return bmpids[id];
+//        return R.drawable.historypage2pic;
+    }
+
+    public int getResLength(){
+        return getArguments().getIntArray("resid").length;
     }
 
 
     public void onResume() {
         int width = getResources().getDisplayMetrics().widthPixels;
         int height = getResources().getDisplayMetrics().heightPixels;
-        height = (6*height) / 7;
+//        height = (6*height) / 7;
         getDialog().getWindow().setLayout(width, height);
         getDialog().getWindow().setGravity(Gravity.CENTER);
         super.onResume();
     }
 
     public static ImageZoomDialogFragment newInstance(int resid){
+        return newInstance(new int[]{resid});
+    }
+
+    public static ImageZoomDialogFragment newInstance(int[] resids){
         ImageZoomDialogFragment izf = new ImageZoomDialogFragment();
         Bundle bundle = new Bundle();
-        bundle.putInt("resid", resid);
+        bundle.putIntArray("resid", resids);
+        bundle.putInt("curres",0);
         izf.setArguments(bundle);
         return izf;
     }
