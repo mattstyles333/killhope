@@ -34,7 +34,7 @@
 
         <ImageView
             android:background="@drawable/blue_button"
-            android:id="@+id/ImageView_hist2"
+            android:id="@+id/historypage2pic"
             android:src="@drawable/historypage2pic"
             android:adjustViewBounds="true"
             android:padding="5dp"
@@ -44,7 +44,7 @@
 
         <ImageView
             android:background="@drawable/blue_button"
-            android:id="@+id/ImageView_hist2.1"
+            android:id="@+id/historypage2table"
             android:src="@drawable/historypage2table"
             android:adjustViewBounds="true"
             android:padding="5dp"
