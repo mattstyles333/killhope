@@ -71,7 +71,7 @@
                 android:layout_weight="1">
                 <TextView
                     android:background="@drawable/history_format"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="Mississippian"

@@ -1,41 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="How to Use the QR Code Interface."
-        android:layout_gravity="center_horizontal"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="If you are looking at any mineral sample in the museum and you want to find out more information about it, the QR interface on this app is a quick and easy way for you to do so. This is how you use it:
-1.  Choose the Minerals Menu option from the Main Menu.
-2.  When you are on the Minerals menu, click on the QR button (shown in the image below)  in the top right corner.
-"
-        android:layout_gravity="center_horizontal"
-        />
-    <ImageView
-        android:id="@+id/imageView_help1"
-        android:src="@drawable/helpqr"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="3.  This will take you to your camera interface and all you need to do is take a picture of the QR code of the mineral sample you are looking at. This will look like the image below."
-        />
-    <ImageView
-        android:id="@+id/imageView_help1.1"
-        android:src="@drawable/helpqrcode"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="4.  The app will then automatically open the mineral information page corresponding to that particular mineral sample."
-        />
-</LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:background="@drawable/history_format"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="How to Use the QR Code Interface"
+            android:layout_gravity="center_horizontal"
+            style="@style/info_title"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="If you are looking at any mineral sample in the museum and you want to find out more information about it, the QR interface on this app is a quick and easy way for you to do so. This is how you use it:
+    \n\n1.  Choose the Minerals Menu option from the Main Menu.
+    \n\n2.  When you are on the Minerals menu, click on the QR button (shown in the image below)  in the top right corner.
+    "
+            android:layout_gravity="center_horizontal"
+            style="@style/info_text"
+            />
+        <ImageView
+            android:background="@drawable/blue_button"
+            android:id="@+id/imageView_help1"
+            android:src="@drawable/helpqr"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:padding="5dp"
+            style="@style/history_image"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3.  This will take you to your camera interface and all you need to do is take a picture of the QR code of the mineral sample you are looking at. This will look like the image below."
+            style="@style/info_text"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4.  The app will then automatically open the mineral information page corresponding to that particular mineral sample."
+            style="@style/info_text"
+            />
+        <ImageView
+            android:id="@+id/imageView_help1.1"
+            android:src="@drawable/helpqrcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"/>
+
+    </LinearLayout>
+</ScrollView>

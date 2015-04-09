@@ -9,7 +9,7 @@
         android:orientation="vertical">
         <TextView
             android:background="@drawable/history_format"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="New Geological Model (Dempsey et al. Unp.)"
