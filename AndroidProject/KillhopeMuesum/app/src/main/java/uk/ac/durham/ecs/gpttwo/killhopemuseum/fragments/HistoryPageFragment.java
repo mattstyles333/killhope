@@ -41,15 +41,22 @@ public class HistoryPageFragment extends Fragment {
     private void doImage(View v, int layid, final int resid){
         ImageView image1 = (ImageView)v.findViewById(layid);
         if(image1!=null) {
-            image1.setOnTouchListener(new View.OnTouchListener() {
+//            image1.setOnTouchListener(new View.OnTouchListener() {
+//                @Override
+//                public boolean onTouch(View v, MotionEvent event) {
+//                    if (event.getAction() == MotionEvent.ACTION_DOWN) {
+//                        ImageZoomDialogFragment gdf = new ImageZoomDialogFragment().newInstance(resid);
+//                        gdf.show(getActivity().getSupportFragmentManager(), "imagezoom_fragment");
+//                        return true;
+//                    }
+//                    return false;
+//                }
+//            });
+            image1.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public boolean onTouch(View v, MotionEvent event) {
-                    if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                        ImageZoomDialogFragment gdf = new ImageZoomDialogFragment().newInstance(resid);
-                        gdf.show(getActivity().getSupportFragmentManager(), "imagezoom_fragment");
-                        return true;
-                    }
-                    return false;
+                public void onClick(View v) {
+                    ImageZoomDialogFragment gdf = new ImageZoomDialogFragment().newInstance(resid);
+                    gdf.show(getActivity().getSupportFragmentManager(), "imagezoom_fragment");
                 }
             });
         }
