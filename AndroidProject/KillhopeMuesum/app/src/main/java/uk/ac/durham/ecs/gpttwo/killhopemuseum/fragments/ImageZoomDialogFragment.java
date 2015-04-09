@@ -12,6 +12,7 @@ import android.text.TextWatcher;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -47,6 +48,7 @@ public class ImageZoomDialogFragment extends DialogFragment {
         getDialog().setCanceledOnTouchOutside(true);
         getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         getDialog().getWindow().setBackgroundDrawable(new ColorDrawable(0));
+        getDialog().setCanceledOnTouchOutside(true);
 
         ImageViewTouch mainImage= (ImageViewTouch) rootView.findViewById(R.id.main_image);
         mainImage.setDisplayType(ImageViewTouchBase.DisplayType.FIT_IF_BIGGER);
@@ -60,6 +62,16 @@ public class ImageZoomDialogFragment extends DialogFragment {
                 dismiss();
             }
         });
+
+//        rootView.setOnTouchListener(new View.OnTouchListener() {
+//            @Override
+//            public boolean onTouch(View v, MotionEvent event) {
+//                dismiss();
+//                return true;
+//            }
+//        });
+
+        Toast.makeText(getActivity().getApplicationContext(), "Pinch to zoom!", Toast.LENGTH_SHORT).show();
 
         return rootView;
     }
