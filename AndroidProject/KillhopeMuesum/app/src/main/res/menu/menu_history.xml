@@ -1,6 +1,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" tools:context=".KillhopeActivity">
+    <item android:id="@+id/action_glossary" android:title="@string/menu_glossary"
+        android:orderInCategory="10" app:showAsAction="always"
+        android:icon="@drawable/ic_glossary"/>
     <item android:id="@+id/action_prevpage" android:title="@string/help_previous"
         android:orderInCategory="100" app:showAsAction="always"
         android:icon="@drawable/ic_chev_left_small"/>

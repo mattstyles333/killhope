@@ -8,6 +8,7 @@ import android.view.MenuItem;
 
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.R;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.FloorPlanFragment;
+import uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.GlossaryDialogFragment;
 
 
 public class FloorPlanActivity extends ActionBarActivity {
@@ -53,6 +54,11 @@ public class FloorPlanActivity extends ActionBarActivity {
             startActivity(helpIntent);
 
             return true;
+        }
+
+        if(id == R.id.action_glossary){
+            GlossaryDialogFragment gdf = new GlossaryDialogFragment().newInstance();
+            gdf.show(this.getSupportFragmentManager(), "glossary_fragment");
         }
 
         return super.onOptionsItemSelected(item);

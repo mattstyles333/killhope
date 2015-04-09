@@ -40,6 +40,11 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:src="@drawable/ic_glossary_large"
+                    android:id="@+id/button_main_glossary"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:src="@drawable/ic_help"
                     android:id="@+id/button_main_help"/>
             </LinearLayout>

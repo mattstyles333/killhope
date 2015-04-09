@@ -1,24 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/transparent_background">
+
+    <it.sephiroth.android.library.imagezoom.ImageViewTouch
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/main_image"
+        android:src="@drawable/bg"
+        android:layout_gravity="center_horizontal"/>
+
     <Button
         android:id="@+id/button_info_close"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Back to content"
+        android:text="Back to Content"
         android:background="@color/navbar_background"
         android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
         style="@style/info_title"/>
 
-    <it.sephiroth.android.library.imagezoom.ImageViewTouch
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:id="@+id/main_image"
-        android:src="@drawable/bg"
-        android:layout_weight="1"
-        android:layout_gravity="center_horizontal"/>
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_chev_right"
+        android:id="@+id/imgbutton_nextimage"/>
 
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/ic_chev_left"
+        android:id="@+id/imgbutton_previmage"/>
 
-</LinearLayout>
+</RelativeLayout>
