@@ -110,6 +110,14 @@ public class Mineral {
         return mineralSection.size();
     }
 
+    public int[] getImages(){
+        int[] l = new int[images.size()];
+        for(int i=0;i<l.length;i++){
+            l[i] = images.get(i);
+        }
+        return l;
+    }
+
     public int getLastSearchScore() {return lastSearchScore;}
 
     public void setLastSearchScore(int lastSearchScore) {this.lastSearchScore = lastSearchScore;}

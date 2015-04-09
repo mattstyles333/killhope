@@ -120,6 +120,15 @@ public class MainFragment extends Fragment{
             }
         });
 
+        ImageView buttonGlossary = (ImageView)rootView.findViewById(R.id.button_main_glossary);
+        buttonGlossary.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GlossaryDialogFragment gdf = new GlossaryDialogFragment().newInstance();
+                gdf.show(getActivity().getSupportFragmentManager(), "glossary_fragment");
+            }
+        });
+
         ImageView buttonHelp = (ImageView)rootView.findViewById(R.id.button_main_help);
         buttonHelp.setOnClickListener(new View.OnClickListener() {
             @Override
