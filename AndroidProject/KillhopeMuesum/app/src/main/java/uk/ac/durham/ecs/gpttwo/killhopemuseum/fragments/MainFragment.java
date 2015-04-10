@@ -80,14 +80,15 @@ public class MainFragment extends Fragment{
             v3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v3) {
-
-                    Intent intent = new Intent(getActivity(), FloorPlanActivity.class);
-                    startActivity(intent);
-//                                getSupportFragmentManager()
-//                                        .beginTransaction()
-//                                        .add(R.id.container, HistoryFragment.newInstance())
-//                                        .addToBackStack(null)
-//                                        .commit();
+                    ImageZoomDialogFragment gdf = new ImageZoomDialogFragment().newInstance(R.drawable.floor_plan);
+                    gdf.show(getActivity().getSupportFragmentManager(), "floorplan_fragment");
+//                    Intent intent = new Intent(getActivity(), FloorPlanActivity.class);
+//                    startActivity(intent);
+////                                getSupportFragmentManager()
+////                                        .beginTransaction()
+////                                        .add(R.id.container, HistoryFragment.newInstance())
+////                                        .addToBackStack(null)
+////                                        .commit();
                 }
             });
         }
