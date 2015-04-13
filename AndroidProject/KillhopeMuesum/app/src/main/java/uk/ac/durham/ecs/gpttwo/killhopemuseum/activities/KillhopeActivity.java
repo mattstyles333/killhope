@@ -2,6 +2,7 @@ package uk.ac.durham.ecs.gpttwo.killhopemuseum.activities;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Handler;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
@@ -39,7 +40,7 @@ public class KillhopeActivity extends FragmentActivity {
                     .add(R.id.container, SplashFragment.newInstance())
                     .commit();
 //            getSupportActionBar().hide();
-
+            final KillhopeActivity ka = this;
             Handler handler = new Handler();
             handler.postDelayed(new Runnable(){
                 @Override
@@ -48,6 +49,20 @@ public class KillhopeActivity extends FragmentActivity {
                     getSupportFragmentManager().beginTransaction()
                             .add(R.id.container, MainFragment.newInstance())
                             .commit();
+
+                    SharedPreferences pref = ka.getApplicationContext().getSharedPreferences("killhope", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = pref.edit();
+
+                    boolean firstLaunch = pref.getBoolean("firstlaunch", true);
+                    if(firstLaunch) {
+                        Intent helpIntent = new Intent(ka, HelpActivity.class);
+                        Bundle b = new Bundle();
+                        b.putInt("helppage", 0);
+                        helpIntent.putExtras(b);
+                        startActivity(helpIntent);
+                        editor.putBoolean("firstlaunch",false);
+                        editor.commit();
+                    }
 //                    getSupportActionBar().show();
                 }
             }, SPLASH_LENGTH);
