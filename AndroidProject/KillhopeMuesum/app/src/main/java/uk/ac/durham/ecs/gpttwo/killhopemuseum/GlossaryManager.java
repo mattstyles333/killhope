@@ -105,6 +105,20 @@ public class GlossaryManager {
             if (getGlossary(i).getInfo().toLowerCase().contains(query.toLowerCase())) {
                 currentScore = currentScore + 50;
             }
+            if (getGlossary(i).getInfo().toLowerCase().contains(query.toLowerCase())) {
+                currentScore = currentScore + 50;
+            }
+            for (int j = 0; j < getGlossary(i).getSubs().size(); j++){
+                if (getGlossary(i).getSubs().get(j).getName().toLowerCase().contains(query.toLowerCase())) {
+                        currentScore = currentScore + 100;}
+                if (getGlossary(i).getSubs().get(j).getName().toLowerCase().contains(" "+query.toLowerCase())) {
+                        currentScore = currentScore + 100;}
+                if (getGlossary(i).getSubs().get(j).getName().toLowerCase().equals(query.toLowerCase())) {
+                        currentScore = currentScore + 100;}
+                if (getGlossary(i).getSubs().get(j).getInfo().toLowerCase().contains(query.toLowerCase())) {
+                        currentScore = currentScore + 50;}
+
+            }
             getGlossary(i).setSearchScore(currentScore);
             if (getGlossary(i).getSearchScore() > 10) {
 

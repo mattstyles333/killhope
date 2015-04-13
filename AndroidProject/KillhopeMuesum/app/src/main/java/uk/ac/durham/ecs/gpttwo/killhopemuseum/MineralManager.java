@@ -128,6 +128,7 @@ public class MineralManager {
                         if (getMineral(i).getName().toLowerCase().equals(searchWords.get(l).toLowerCase())) {
                             currentScore = currentScore + 100;
                         }
+
                         if (getMineral(i).getFormula().toLowerCase().contains(searchWords.get(l).toLowerCase().replace("</sub>", "").replace("<sub>", "").replace("</sup>", "").replace("<sup>", ""))) {
                             currentScore = currentScore + 50;
                         }
