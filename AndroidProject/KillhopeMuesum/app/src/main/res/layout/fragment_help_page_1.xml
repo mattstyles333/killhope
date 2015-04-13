@@ -19,9 +19,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="If you are looking at any mineral sample in the museum and you want to find out more information about it, the QR interface on this app is a quick and easy way for you to do so. This is how you use it:
-    \n\n1.  Choose the Minerals Menu option from the Main Menu.
-    \n\n2.  When you are on the Minerals menu, click on the QR button (shown in the image below)  in the top right corner.
-    "
+    \n\n1.  Choose the Minerals Menu option from the Main Menu."
+            android:layout_gravity="left"
+            style="@style/info_text"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2.  When you are on the Minerals menu, click on the QR button (shown in the image below)  in the top right corner."
             android:layout_gravity="left"
             style="@style/info_text"
             />

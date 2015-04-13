@@ -32,8 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
-            android:text="2.  Repeat step 1 to access the second level of additional information.
-    \n\n3.  Repeat step 1 to access the final level of additional information.\n"
+            android:text="2.  Repeat step 1 to access the second level of additional information."
             style="@style/info_text"/>
         <TextView
             android:layout_width="wrap_content"
@@ -70,8 +69,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
-            android:text="2.  You can then see the next image of the mineral in the gallery by swiping to the left or clicking the left arrow on the side of the image.
-   \n\n3.  You can then see the previous image of the mineral in the gallery by swiping to the left or clicking the left arrow on the side of the image.\n"
+            android:text="2.  You can then see the next image of the mineral in the gallery by swiping to the left or clicking the left arrow on the side of the image."
             style="@style/info_text"/>
 
         <TextView
