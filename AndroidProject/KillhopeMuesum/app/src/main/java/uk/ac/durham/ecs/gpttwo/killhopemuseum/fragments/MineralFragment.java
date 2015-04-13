@@ -22,6 +22,7 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.abhi.gif.lib.AnimatedGifImageView;
@@ -185,7 +186,7 @@ public class MineralFragment extends Fragment {
         reduceButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((LinearLayout)v.getParent().getParent()).removeView(view);
+                ((LinearLayout)v.getParent().getParent().getParent()).removeView(view);
                 if(prevReduceButton!=null && position > 1){
                     prevReduceButton.setVisibility(View.VISIBLE);
                 }
@@ -203,6 +204,7 @@ public class MineralFragment extends Fragment {
             public void onClick(View v) {
                 LinearLayout nextLevel = (LinearLayout)getView().findViewById(R.id.mineral_list);
                 nextLevel.addView(getNextView(position + 1,reduceButton,expandButton));
+                ((ScrollView)nextLevel.getParent()).fullScroll(View.FOCUS_DOWN);
                 reduceButton.setVisibility(View.GONE);
                 expandButton.setVisibility(View.GONE);
             }
