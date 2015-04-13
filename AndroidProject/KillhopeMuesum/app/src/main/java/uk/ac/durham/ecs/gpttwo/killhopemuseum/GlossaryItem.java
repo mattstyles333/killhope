@@ -5,6 +5,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 /**
  * Created by Ally on 21/03/15.
@@ -49,6 +51,18 @@ public class GlossaryItem {
 
     public String getInfo(){
         return info;
+    }
+
+    public void sortSubs()
+    {
+        ArrayList<GlossaryItem> listToSort = (ArrayList<GlossaryItem>) subs.clone();
+        Collections.sort(listToSort, new Comparator<GlossaryItem>() {
+            public int compare(GlossaryItem o1, GlossaryItem o2) {
+                final String glossary1 = o1.getName();
+                final String glossary2 = o2.getName();
+                return glossary1.compareTo(glossary2);
+            }
+        });
     }
 
     public void setName(String s){
