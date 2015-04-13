@@ -5,4 +5,5 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="menu_padding">11dp</dimen>
     <dimen name="home_logo_rl_padding">7dp</dimen>
+    <dimen name="minerals_thumb_padding">3dp</dimen>
 </resources>
