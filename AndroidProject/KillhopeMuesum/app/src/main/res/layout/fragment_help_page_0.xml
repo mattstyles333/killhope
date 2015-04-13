@@ -18,9 +18,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="If you want to find out more information about a particular mineral in the museum, you can do this by using the search bar on the Minerals Menu. You can do this by doing the following:
-    \n\n1.  Choose the Minerals Menu option on the Main Menu.
-    \n\n2.  Click on the search button (as shown in the image below) in the top right hand corner of the Minerals Menu.
-    "
+    \n\n1.  Choose the Minerals Menu option on the Main Menu."
+            android:layout_gravity="center_horizontal"
+            style="@style/info_text"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2.  Click on the search button (as shown in the image below) in the top right hand corner of the Minerals Menu."
             android:layout_gravity="center_horizontal"
             style="@style/info_text"/>
         <ImageView
@@ -29,7 +33,7 @@
             android:src="@drawable/helpsearchicon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
+            android:layout_gravity="left"
             android:adjustViewBounds="true"
             android:padding="5dp"
             style="@style/history_image"
