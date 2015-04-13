@@ -33,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Introducing The Killhope Museum App"
-                style="@style/info_title">
+                style="@style/info_header">
                 </TextView>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -108,8 +108,8 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Attributions"
-                style="@style/info_title"/>
+                android:text="\n\nAttributions"
+                style="@style/info_header"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

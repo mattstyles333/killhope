@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="How To Share Your Experiences Of The App With Your Friends"
+        android:text="How to share your experiences of the App with your Friends"
         style="@style/info_title"/>
     <TextView
         android:layout_width="wrap_content"

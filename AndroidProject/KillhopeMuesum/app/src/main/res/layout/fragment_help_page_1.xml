@@ -11,7 +11,7 @@
             android:background="@drawable/history_format"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="How to Use the QR Code Interface"
+            android:text="How to use the QR Code Interface"
             android:layout_gravity="center_horizontal"
             style="@style/info_title"
             />
@@ -22,7 +22,7 @@
     \n\n1.  Choose the Minerals Menu option from the Main Menu.
     \n\n2.  When you are on the Minerals menu, click on the QR button (shown in the image below)  in the top right corner.
     "
-            android:layout_gravity="center_horizontal"
+            android:layout_gravity="left"
             style="@style/info_text"
             />
         <ImageView
@@ -39,6 +39,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="3.  This will take you to your camera interface and all you need to do is take a picture of the QR code of the mineral sample you are looking at. This will look like the image below."
+            android:layout_gravity="left"
             style="@style/info_text"
             />
         <TextView

@@ -36,16 +36,20 @@
             android:text="An unconformity lies above the granite, a time gap in the rock record caused by millions of years of erosion of the overlying rocks. After this significant ‘time gap’ the Carboniferous rocks that make up most of the Northern Pennines were deposited on top of the granite. "
             style="@style/info_text"/>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
         <ImageView
             android:background="@drawable/blue_button"
             android:id="@+id/historypage3pic"
             android:src="@drawable/historypage3pic"
             android:adjustViewBounds="true"
             android:padding="5dp"
-            android:layout_weight="1"
+            android:layout_weight="1.25"
             style="@style/history_image"
             android:layout_gravity="center"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             />
         <ImageView
@@ -54,12 +58,13 @@
             android:src="@drawable/historypage3table"
             android:adjustViewBounds="true"
             android:padding="5dp"
-            android:layout_weight="1"
+            android:layout_weight="0.75"
             style="@style/history_image"
             android:layout_gravity="center"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             />
+        </LinearLayout>
     </LinearLayout>
 
 </ScrollView>

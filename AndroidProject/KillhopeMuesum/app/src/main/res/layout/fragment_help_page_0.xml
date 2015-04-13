@@ -37,14 +37,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="3.  A search bar will show up.Type in the name of the mineral you want to find out more information about and its icon will show up, as shown in the image below."
+            android:text="3.  A search bar will show up. Type in the name of the mineral you want to find out more information about and its icon will show up, as shown in the image below."
             android:layout_gravity="center_horizontal"
             style="@style/info_text"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="4.  Click on this mineral icon and the mineral’s information page will display.\n"
-            android:layout_gravity="center_horizontal"
+            android:layout_gravity="left"
             style="@style/info_text"/>
         <ImageView
             android:background="@drawable/blue_button"
@@ -52,6 +52,7 @@
             android:src="@drawable/helpsearch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:adjustViewBounds="true"
             android:padding="5dp"
             style="@style/history_image"
