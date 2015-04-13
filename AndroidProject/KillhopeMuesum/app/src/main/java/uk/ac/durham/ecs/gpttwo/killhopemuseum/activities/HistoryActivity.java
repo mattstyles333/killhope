@@ -74,23 +74,6 @@ public class HistoryActivity extends ActionBarActivity {
             mPager.setBackgroundResource(R.drawable.bg_land);
         }
 
-        mPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-            }
-
-            @Override
-            public void onPageSelected(int position) {
-                supportInvalidateOptionsMenu();
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-
-            }
-        });
-
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
@@ -98,27 +81,6 @@ public class HistoryActivity extends ActionBarActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_history, menu);
         return true;
-    }
-
-    @Override
-    public boolean onPrepareOptionsMenu(Menu menu){
-        MenuItem leftButton = menu.findItem(R.id.action_prevpage);
-        MenuItem rightButton = menu.findItem(R.id.action_nextpage);
-        if(mPager.getCurrentItem() == 0){
-            leftButton.setIcon(R.drawable.ic_chev_left_small_dark);
-            leftButton.setEnabled(false);
-        }else{
-            leftButton.setIcon(R.drawable.ic_chev_left_small);
-            leftButton.setEnabled(true);
-        }
-        if(mPager.getCurrentItem() == mPageAdapter.getCount() - 1){
-            rightButton.setIcon(R.drawable.ic_chev_right_small_dark);
-            rightButton.setEnabled(false);
-        }else{
-            rightButton.setIcon(R.drawable.ic_chev_right_small);
-            rightButton.setEnabled(true);
-        }
-        return super.onPrepareOptionsMenu(menu);
     }
 
     @Override

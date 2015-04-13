@@ -63,13 +63,13 @@ public class ImageZoomDialogFragment extends DialogFragment {
             }
         });
 
-        rootView.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                dismiss();
-                return true;
-            }
-        });
+//        rootView.setOnTouchListener(new View.OnTouchListener() {
+//            @Override
+//            public boolean onTouch(View v, MotionEvent event) {
+//                dismiss();
+//                return true;
+//            }
+//        });
 
         if(getResLength()==1){
             ((ImageButton)rootView.findViewById(R.id.imgbutton_nextimage)).setVisibility(ImageButton.GONE);
