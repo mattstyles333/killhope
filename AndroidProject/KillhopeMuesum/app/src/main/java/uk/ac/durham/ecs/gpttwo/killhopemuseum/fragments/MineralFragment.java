@@ -204,7 +204,12 @@ public class MineralFragment extends Fragment {
             public void onClick(View v) {
                 LinearLayout nextLevel = (LinearLayout)getView().findViewById(R.id.mineral_list);
                 nextLevel.addView(getNextView(position + 1,reduceButton,expandButton));
-                ((ScrollView)nextLevel.getParent()).fullScroll(View.FOCUS_DOWN);
+                ((ScrollView)getView().findViewById(R.id.mineral_paneright)).post(new Runnable() {
+                    @Override
+                    public void run() {
+                        ((ScrollView)getView().findViewById(R.id.mineral_paneright)).fullScroll(View.FOCUS_DOWN);
+                    }
+                });
                 reduceButton.setVisibility(View.GONE);
                 expandButton.setVisibility(View.GONE);
             }
