@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="navbar_background">#01a5e5</color>
+    <color name="statusbar_background">#ff018ec7</color>
     <color name="opaque_background">#dd01a5e5</color>
     <color name="dark_blue">#7788af</color>
     <color name="transparent_background">#0901a5e5</color>

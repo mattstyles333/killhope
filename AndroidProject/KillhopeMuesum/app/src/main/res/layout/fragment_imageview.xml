@@ -11,15 +11,23 @@
         android:src="@drawable/bg"
         android:layout_gravity="center_horizontal"/>
 
-    <Button
+    <!--<Button-->
+        <!--android:id="@+id/button_info_close"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Back to Content"-->
+        <!--android:background="@color/navbar_background"-->
+        <!--android:gravity="center"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--style="@style/info_title"/>-->
+    <ImageView
         android:id="@+id/button_info_close"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Back to Content"
-        android:background="@color/navbar_background"
-        android:gravity="center"
+        android:src="@drawable/ic_cross"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
+        android:layout_centerHorizontal="false"
         style="@style/info_title"/>
 
     <ImageButton
