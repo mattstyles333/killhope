@@ -38,8 +38,8 @@ public class MainFragment extends Fragment{
         }else{
             Point size = new Point();
             getActivity().getWindowManager().getDefaultDisplay().getSize(size);
-            int quarter = size.x/4;
-            ((RelativeLayout)rootView).setPadding(quarter,16,quarter,16);
+            int centre = (int)((float)size.x*0.45f);
+            ((RelativeLayout)rootView).setPadding((size.x - centre)/2,16,(size.x - centre)/2,16);
         }
 
         Button v = (Button)rootView.findViewById(R.id.button_menu_history);

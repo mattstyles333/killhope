@@ -3,7 +3,7 @@
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/no_margin"
     tools:context=".KillhopeActivity$PlaceholderFragment"
     android:background="@drawable/bg">
 
@@ -13,7 +13,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/image_menu_logo"
         android:src="@drawable/killhopelogo"
-        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/no_margin"
+        android:paddingRight="@dimen/home_logo_rl_padding"
+        android:paddingLeft="@dimen/home_logo_rl_padding"
         android:scaleType="fitXY"
         android:adjustViewBounds="true" />
     <ScrollView

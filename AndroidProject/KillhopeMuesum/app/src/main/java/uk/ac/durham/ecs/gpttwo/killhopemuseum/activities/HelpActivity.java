@@ -41,6 +41,23 @@ public class HelpActivity extends ActionBarActivity {
             mPager.setBackgroundResource(R.drawable.bg_land);
         }
 
+        mPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                supportInvalidateOptionsMenu();
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
     }
@@ -51,6 +68,23 @@ public class HelpActivity extends ActionBarActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_help, menu);
         return true;
+    }
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu){
+        MenuItem leftButton = menu.findItem(R.id.action_prevpage);
+        MenuItem rightButton = menu.findItem(R.id.action_nextpage);
+        if(mPager.getCurrentItem() == 0){
+            leftButton.setVisible(false);
+        }else{
+            leftButton.setVisible(true);
+        }
+        if(mPager.getCurrentItem() == mPageAdapter.getCount() - 1){
+            rightButton.setVisible(false);
+        }else{
+            rightButton.setVisible(true);
+        }
+        return super.onPrepareOptionsMenu(menu);
     }
 
     @Override
