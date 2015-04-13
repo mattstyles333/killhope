@@ -85,7 +85,6 @@ public class GlossaryManager {
         return jsonObject;
     }
 
-    private int currentScore = 0;
     public ArrayList<GlossaryItem> searchGlossary(String query) {
         if (query.equals(lastSearch) && lastSearchResults != null) {
             return lastSearchResults;
@@ -94,9 +93,10 @@ public class GlossaryManager {
         searchWords = new ArrayList<String>(Arrays.asList(query.split(" ")));
         ArrayList<GlossaryItem> list = new ArrayList<GlossaryItem>();
 
+        int currentScore = 0;
         for (int i = 0; i < glossary.size(); i++) {
-            for(int l = 0; i < searchWords.size(); l++) {
-                currentScore = 0;
+            currentScore = 0;
+            for(int l = 0; l < searchWords.size(); l++) {
                 if (getGlossary(i).getName().toLowerCase().contains(searchWords.get(l).toLowerCase())) {
                     currentScore = currentScore + 100;
                 }
@@ -125,7 +125,6 @@ public class GlossaryManager {
                     if (getGlossary(i).getSubs().get(j).getInfo().toLowerCase().contains(searchWords.get(l).toLowerCase())) {
                         currentScore = currentScore + 50;
                     }
-
                 }
             }
             getGlossary(i).setSearchScore(currentScore);
