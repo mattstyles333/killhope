@@ -14,11 +14,13 @@ public class GlossaryItem {
     private String name;
     private String info;
     private ArrayList<GlossaryItem> subs;
+    private int searchScore;
 
     public GlossaryItem(String name, String info){
         this.name = name;
         this.info = info;
         subs = new ArrayList<GlossaryItem>();
+        searchScore = 0;
     }
 
     public GlossaryItem(JSONObject data){
@@ -55,6 +57,13 @@ public class GlossaryItem {
 
     public void setInfo(String s){
         info = s;
+    }
+    public int getSearchScore() {
+        return searchScore;
+    }
+
+    public void setSearchScore(int searchScore) {
+        this.searchScore = searchScore;
     }
 
     public boolean search(String query){

@@ -9,6 +9,8 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.GlossaryDialogFragment;
 
@@ -19,8 +21,8 @@ public class GlossaryManager {
 
     private String lastSearch = "";
     private ArrayList<GlossaryItem> lastSearchResults = null;
-
     private ArrayList<GlossaryItem> glossary = new ArrayList<GlossaryItem>();
+
 
     public void loadGlossary(Context context){
         JSONObject glossaryData = parseJSONData(context);
@@ -81,21 +83,49 @@ public class GlossaryManager {
         return jsonObject;
     }
 
-    public ArrayList<GlossaryItem> searchGlossary(String query){
-        if(query.equals(lastSearch) && lastSearchResults != null){
+    private int currentScore = 0;
+    public ArrayList<GlossaryItem> searchGlossary(String query) {
+        if (query.equals(lastSearch) && lastSearchResults != null) {
             return lastSearchResults;
         }
         lastSearch = query;
         ArrayList<GlossaryItem> list = new ArrayList<GlossaryItem>();
 
-        for(GlossaryItem gi : glossary){
-            if(gi.search(query)){
-                list.add(gi);
+        for (int i = 0; i < glossary.size(); i++) {
+            currentScore = 0;
+            if (getGlossary(i).getName().toLowerCase().contains(query.toLowerCase())) {
+                currentScore = currentScore + 100;
+            }
+            if (getGlossary(i).getName().toLowerCase().contains(" " + query.toLowerCase())) {
+                currentScore = currentScore + 100;
+            }
+            if (getGlossary(i).getName().toLowerCase().equals(query.toLowerCase())) {
+                currentScore = currentScore + 100;
+            }
+            if (getGlossary(i).getInfo().toLowerCase().contains(query.toLowerCase())) {
+                currentScore = currentScore + 50;
+            }
+            getGlossary(i).setSearchScore(currentScore);
+            if (getGlossary(i).getSearchScore() > 10) {
+
+                list.add(getGlossary(i));
+
             }
         }
+        Collections.sort(list, new Comparator<GlossaryItem>() {
+            public int compare(GlossaryItem o1, GlossaryItem o2) {
+                final int glossary1 = o1.getSearchScore();
+                final int glossary2 = o2.getSearchScore();
+                return glossary2 > glossary1 ? 1
+                        : glossary2 < glossary1 ? -1 : 0;
+            }
+        });
+
+
         lastSearchResults = list;
         return list;
-    }
+        }
+
 
     public ArrayList<String> getNames(){
         ArrayList<String> names = new ArrayList<String>();
