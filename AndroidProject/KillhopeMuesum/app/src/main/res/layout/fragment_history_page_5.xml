@@ -27,7 +27,7 @@
             android:background="@drawable/history_format"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=" The Variscan Orogeny refers to a great movement of tectonic plates that eventually led to the amalgamation of continents to make the supercontinent Pangea. The after effect of the Variscan event led to extension across England, giving the opportunity for the Whin Sill to intrude, and supply the mineralising fluids for the North Pennine ore field."
+            android:text="The Variscan Orogeny refers to a great movement of tectonic plates that eventually led to the amalgamation of continents to make the supercontinent Pangea. The after effect of the Variscan event led to extension across England, giving the opportunity for the Whin Sill to intrude, and supply the mineralising fluids for the North Pennine ore field."
             style="@style/info_text"/>
         <TextView
             android:background="@drawable/history_format"

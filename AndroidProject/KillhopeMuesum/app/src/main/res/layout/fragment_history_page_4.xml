@@ -27,7 +27,7 @@
             android:background="@drawable/history_format"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="The Weardale granite has been a powerful heat source since it was first deposited 400 Million years ago, and is still appreciably hotter than the surrounding rocks"
+            android:text="The Weardale granite has been a powerful heat source since it was first deposited 400 Million years ago, and is still appreciably hotter than the surrounding rocks."
             android:layout_gravity="center_horizontal"
             style="@style/info_text"/>
 
@@ -48,9 +48,14 @@
             android:background="@drawable/history_format"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="The original geological model for the North Pennine ore field hypothesised that residual heat from the Weardale granite caused heating of groundwater within the overlying carboniferous sediments, as shown in the diagram above. Heating remobilised the fluids, causing them to circulate upwards through cracks in the overlying rocks. This process created a vacuum effect, in turn sourcing fluids from the surrounding Ordovician sediments.These fluids carried dissolved minerals, which were ev...(line truncated)..."
+            android:text="The original geological model for the North Pennine ore field hypothesised that residual heat from the Weardale granite caused heating of groundwater within the overlying carboniferous sediments, as shown in the diagram above. Heating remobilised the fluids, causing them to circulate upwards through cracks in the overlying rocks. This process created a vacuum effect, in turn sourcing fluids from the surrounding Ordovician sediments. These fluids carried dissolved minerals, which were eventually precipitated as the fluids cooled and produced the mineral deposits that we see in the Killhope area today."
             android:layout_gravity="center_horizontal"
             style="@style/info_text"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <ImageView
             android:background="@drawable/blue_button"
@@ -60,8 +65,9 @@
             android:padding="5dp"
             style="@style/history_image"
             android:layout_gravity="center"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             />
         <ImageView
             android:background="@drawable/blue_button"
@@ -71,8 +77,10 @@
             android:padding="5dp"
             style="@style/history_image"
             android:layout_gravity="center"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             />
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>

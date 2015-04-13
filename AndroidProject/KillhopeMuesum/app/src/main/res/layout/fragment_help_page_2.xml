@@ -11,7 +11,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="Tips for using The Mineral Page"
+            android:text="Tips for using the Mineral Page"
             style="@style/info_title"/>
         <TextView
             android:layout_width="wrap_content"
@@ -20,7 +20,7 @@
             android:text="How to display more information about a mineral when you are on its Mineral Page:"
             style="@style/info_title"/>
         <TextView
-            android:layout_gravity="center_horizontal"
+            android:layout_gravity="left"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="When any mineral page for a particular mineral loads, it will display an image of the mineral and the most basic information about it. However, there are 3 further levels of information about the mineral you can access. You can do this by doing the following:
@@ -31,15 +31,22 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
+            android:layout_gravity="left"
             android:text="2.  Repeat step 1 to access the second level of additional information.
     \n\n3.  Repeat step 1 to access the final level of additional information.\n"
             style="@style/info_text"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="3.  Repeat step 1 to access the final level of additional information.\n"
+            style="@style/info_text"/>
+
         <ImageView
             android:background="@drawable/blue_button"
             android:layout_gravity="center_horizontal"
             android:src="@drawable/helpsearch"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
             android:padding="5dp"
@@ -62,10 +69,18 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
+            android:layout_gravity="left"
             android:text="2.  You can then see the next image of the mineral in the gallery by swiping to the left or clicking the left arrow on the side of the image.
    \n\n3.  You can then see the previous image of the mineral in the gallery by swiping to the left or clicking the left arrow on the side of the image.\n"
             style="@style/info_text"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="3.  You can then see the previous image of the mineral in the gallery by swiping to the left or clicking the left arrow on the side of the image.\n"
+            style="@style/info_text"/>
+
         <ImageView
             android:background="@drawable/blue_button"
             android:layout_gravity="center_horizontal"
