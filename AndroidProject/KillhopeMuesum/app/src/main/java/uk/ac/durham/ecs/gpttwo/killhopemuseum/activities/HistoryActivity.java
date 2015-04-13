@@ -63,7 +63,7 @@ public class HistoryActivity extends ActionBarActivity {
             }
         });
 
-        String[] tabnames = new String[]{"History Model", "Early Earth", "Wearside Granite", "Carboniferous Sediments", "North Pennine", "New Geological Model", "Untitled"};
+        String[] tabnames = new String[]{"Early Earth", "Weardale Granite", "Carboniferous Sediments", "North Pennine", "New Geological Model"};
 
         for(int i=0;i<HistoryPagerAdapter.NUM_PAGES;i++){
             getSupportActionBar().addTab(getSupportActionBar().newTab().setText(tabnames[i]).setTabListener(tabListener));

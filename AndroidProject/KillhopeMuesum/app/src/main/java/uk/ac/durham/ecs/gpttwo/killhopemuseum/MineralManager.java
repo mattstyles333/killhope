@@ -43,6 +43,10 @@ public class MineralManager {
         return mineral.get(mineralID);
     }
 
+    public int getMineralIndex(Mineral mineralToFind){
+        return mineral.indexOf(mineralToFind);
+    }
+
     public JSONObject parseJSONData(Context context) {
         String JSONString = null;
         JSONObject jsonObject = null;

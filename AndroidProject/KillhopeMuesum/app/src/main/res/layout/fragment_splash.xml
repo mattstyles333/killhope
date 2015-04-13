@@ -11,6 +11,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/image_menu_logo"
         android:src="@drawable/killhopelogo"
+        android:paddingRight="@dimen/home_logo_rl_padding"
+        android:paddingLeft="@dimen/home_logo_rl_padding"
         android:scaleType="fitXY"
         android:adjustViewBounds="true" />
 
