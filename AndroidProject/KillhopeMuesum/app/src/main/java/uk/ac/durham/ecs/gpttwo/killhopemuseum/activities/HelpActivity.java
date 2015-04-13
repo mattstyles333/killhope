@@ -75,14 +75,18 @@ public class HelpActivity extends ActionBarActivity {
         MenuItem leftButton = menu.findItem(R.id.action_prevpage);
         MenuItem rightButton = menu.findItem(R.id.action_nextpage);
         if(mPager.getCurrentItem() == 0){
-            leftButton.setVisible(false);
+            leftButton.setIcon(R.drawable.ic_chev_left_small_dark);
+            leftButton.setEnabled(false);
         }else{
-            leftButton.setVisible(true);
+            leftButton.setIcon(R.drawable.ic_chev_left_small);
+            leftButton.setEnabled(true);
         }
         if(mPager.getCurrentItem() == mPageAdapter.getCount() - 1){
-            rightButton.setVisible(false);
+            rightButton.setIcon(R.drawable.ic_chev_right_small_dark);
+            rightButton.setEnabled(false);
         }else{
-            rightButton.setVisible(true);
+            rightButton.setIcon(R.drawable.ic_chev_right_small);
+            rightButton.setEnabled(true);
         }
         return super.onPrepareOptionsMenu(menu);
     }
