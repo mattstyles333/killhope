@@ -19,6 +19,7 @@
         style="@style/info_text"/>
     <ImageView
         android:src="@drawable/helpmainmenu"
+        android:id="@+id/helpmainmenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"/>
@@ -47,6 +48,7 @@
         style="@style/info_text"/>
     <ImageView
         android:src="@drawable/helpminerals"
+        android:id="@+id/helpminerals"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"/>
@@ -78,6 +80,7 @@
         style="@style/info_text"/>
     <ImageView
         android:src="@drawable/helpquiz"
+        android:id="@+id/helpquiz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"/>
