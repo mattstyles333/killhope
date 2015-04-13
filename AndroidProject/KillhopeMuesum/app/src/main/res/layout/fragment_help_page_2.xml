@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
+<<<<<<< HEAD
+    <TextView
+        android:background="@drawable/history_format"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="How to share your experiences of the App with your Friends"
+        style="@style/info_title"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You can share your experiences of using this app at any time during your museum visit, through pressing on the facebook or twitter icons (as shown in the image below) on the bottom right corner of any app page you are on.
+"
+        style="@style/info_text"/>
+    <ImageView
+        android:src="@drawable/helpshare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+</LinearLayout>
+=======
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:orientation="vertical" android:layout_width="match_parent"
@@ -94,4 +118,5 @@
             />
 
     </LinearLayout>
+>>>>>>> alastairs-branch
 </ScrollView>
