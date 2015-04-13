@@ -17,6 +17,7 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -98,22 +99,23 @@ public class MineralFragment extends Fragment {
         LinearLayout list = (LinearLayout) rootView.findViewById(R.id.mineral_list);
         list.addView(getNextView(0, null, null));
 
-        ImageViewTouch mainImage= (ImageViewTouch) rootView.findViewById(R.id.mineral_image_basic);
-        mainImage.setDisplayType(ImageViewTouchBase.DisplayType.FIT_IF_BIGGER);
-
-        Bitmap bmp = BitmapFactory.decodeResource(getResources(), mineral.getImage(0));
-        mainImage.setImageBitmap(bmp, null, -1, 8f);
-
-        ((ImageButton)rootView.findViewById(R.id.imgbutton_nextimage)).setOnClickListener(new View.OnClickListener() {
+//        ((ImageButton)rootView.findViewById(R.id.imgbutton_nextimage)).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//            }
+//        });
+//        ((ImageButton)rootView.findViewById(R.id.imgbutton_previmage)).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//            }
+//        });
+        ((Button)rootView.findViewById(R.id.button_more_images)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-            }
-        });
-        ((ImageButton)rootView.findViewById(R.id.imgbutton_previmage)).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
+                ImageZoomDialogFragment gdf = new ImageZoomDialogFragment().newInstance(mineral.getImages());
+                gdf.show(((ActionBarActivity) getActivity()).getSupportFragmentManager(), "imagezoom_fragment");
             }
         });
 
@@ -164,7 +166,7 @@ public class MineralFragment extends Fragment {
 
                 descText.replace(nocaps, "<b>" + nocaps + "</b>");
                 descText.replace(term, "<b>" + term + "</b>");
-                System.out.println(term);
+//                System.out.println(term);
             }
 
             //placeholder, soon to be the whole glossary

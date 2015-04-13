@@ -33,6 +33,12 @@ public class HelpPageFragment extends Fragment {
             case(2):
                 layID=R.layout.fragment_help_page_2;
                 break;
+            case(3):
+                layID=R.layout.fragment_help_page_3;
+                break;
+            case(4):
+                layID=R.layout.fragment_help_page_4;
+                break;
             default:
                 layID = R.layout.fragment_help_page;
                 break;

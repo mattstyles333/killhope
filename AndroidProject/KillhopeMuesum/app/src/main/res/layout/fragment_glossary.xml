@@ -3,7 +3,7 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent" android:background="@color/dark_blue">
 
     <LinearLayout
         android:id="@+id/actionbar_dialog"
@@ -13,7 +13,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_glossary"/>
+            android:src="@drawable/ic_glossary_large"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -31,6 +31,7 @@
         android:lines="1"
         android:scrollHorizontally="true"
         android:hint="Search..."
+        style="@style/info_title"
         android:ellipsize="end"/>
 
     <GridView xmlns:android="http://schemas.android.com/apk/res/android"
@@ -42,6 +43,15 @@
         android:stretchMode="columnWidth"
         android:gravity="center"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         />
+    <Button
+        android:id="@+id/button_info_close"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Done"
+        android:background="@color/navbar_background"
+        android:gravity="center"
+        style="@style/info_title"/>
 </LinearLayout>

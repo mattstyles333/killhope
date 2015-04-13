@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
 
+import uk.ac.durham.ecs.gpttwo.killhopemuseum.KillhopeApplication;
+import uk.ac.durham.ecs.gpttwo.killhopemuseum.Mineral;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.activities.MineralActivity;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.adapters.MineralsAdapter;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.R;
@@ -50,7 +52,8 @@ public class MineralsFragment extends Fragment implements AdapterView.OnItemClic
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Intent intent = new Intent(getActivity(), MineralActivity.class);
         Bundle b = new Bundle();
-        b.putInt("mineralID", position);
+        Mineral mineral = ((KillhopeApplication) getActivity().getApplicationContext()).mineralManager.getMineralsFromSearch(((KillhopeApplication) getActivity().getApplicationContext()).getCurrentSearch()).get(position);
+        b.putInt("mineralID", ((KillhopeApplication) getActivity().getApplicationContext()).mineralManager.getMineralIndex(mineral));
         intent.putExtras(b);
         startActivity(intent);
     }

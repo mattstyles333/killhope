@@ -38,8 +38,8 @@ public class MainFragment extends Fragment{
         }else{
             Point size = new Point();
             getActivity().getWindowManager().getDefaultDisplay().getSize(size);
-            int quarter = size.x/4;
-            ((RelativeLayout)rootView).setPadding(quarter,16,quarter,16);
+            int centre = (int)((float)size.x*0.45f);
+            ((RelativeLayout)rootView).setPadding((size.x - centre)/2,16,(size.x - centre)/2,16);
         }
 
         Button v = (Button)rootView.findViewById(R.id.button_menu_history);
@@ -80,14 +80,15 @@ public class MainFragment extends Fragment{
             v3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v3) {
-
-                    Intent intent = new Intent(getActivity(), FloorPlanActivity.class);
-                    startActivity(intent);
-//                                getSupportFragmentManager()
-//                                        .beginTransaction()
-//                                        .add(R.id.container, HistoryFragment.newInstance())
-//                                        .addToBackStack(null)
-//                                        .commit();
+                    ImageZoomDialogFragment gdf = new ImageZoomDialogFragment().newInstance(R.drawable.floor_plan);
+                    gdf.show(getActivity().getSupportFragmentManager(), "floorplan_fragment");
+//                    Intent intent = new Intent(getActivity(), FloorPlanActivity.class);
+//                    startActivity(intent);
+////                                getSupportFragmentManager()
+////                                        .beginTransaction()
+////                                        .add(R.id.container, HistoryFragment.newInstance())
+////                                        .addToBackStack(null)
+////                                        .commit();
                 }
             });
         }
@@ -117,6 +118,15 @@ public class MainFragment extends Fragment{
                 InfoDialogFragment idf = InfoDialogFragment.newInstance();
                 idf.show(getActivity().getSupportFragmentManager(), "info_fragment");
 
+            }
+        });
+
+        ImageView buttonGlossary = (ImageView)rootView.findViewById(R.id.button_main_glossary);
+        buttonGlossary.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GlossaryDialogFragment gdf = new GlossaryDialogFragment().newInstance();
+                gdf.show(getActivity().getSupportFragmentManager(), "glossary_fragment");
             }
         });
 

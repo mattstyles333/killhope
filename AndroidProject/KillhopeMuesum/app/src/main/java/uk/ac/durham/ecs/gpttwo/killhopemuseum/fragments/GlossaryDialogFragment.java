@@ -70,6 +70,13 @@ public class GlossaryDialogFragment extends DialogFragment {
 //            }
 //        });
 
+        ((Button)rootView.findViewById(R.id.button_info_close)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dismiss();
+            }
+        });
+
         GlossaryAdapter adapter = new GlossaryAdapter(this.getActivity());
         gridView.setAdapter(adapter);
 

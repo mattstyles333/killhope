@@ -1,38 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="wrap_content" android:background="@drawable/cleartext"
-    style="@style/button_text">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Section"
-        android:id="@+id/section_name"
-        style="@style/button_text"/>
+    android:layout_height="wrap_content">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/mineral_sublist"
         android:orientation="vertical"
-        />
+        android:background="@drawable/cleartext"
+        style="@style/button_text">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Section"
+            android:id="@+id/section_name"
+            style="@style/button_text"/>
 
-    <ImageButton
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mineral_sublist"
+            android:orientation="vertical"
+            />
+
+    </LinearLayout>
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button_reduce"
-        android:src="@drawable/ic_chev_up"/>
-
-    <ImageButton
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/button_expand"
-        android:src="@drawable/ic_chev_down"/>
-
-    <!--<LinearLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:orientation="vertical"-->
-        <!--android:id="@+id/mineral_list"/>-->
+        android:orientation="horizontal">
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_reduce"
+            android:src="@drawable/ic_chev_up"
+            android:layout_weight="1"/>
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_expand"
+            android:src="@drawable/ic_chev_down"
+            android:layout_weight="1"/>
+    </LinearLayout>
 </LinearLayout>

@@ -14,8 +14,9 @@
 <style name="MyActionBar"
     parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
     <item name="android:background">@color/navbar_background</item>
-
+    <item name="android:actionBarTabBarStyle">@style/MyActionBarTabs</item>
     <!-- Support library compatibility -->
+    <item name="actionBarTabStyle">@style/MyActionBarTabs</item>
     <item name="background">@color/navbar_background</item>
 </style>
 
@@ -33,8 +34,8 @@
         <item name="android:textSize" >12sp</item>
         <item name="android:textStyle" >normal</item>
         <item name="android:shadowColor" >@color/black</item>
-        <item name="android:shadowDx" >0.5</item>
-        <item name="android:shadowDy" >0.5</item>
+        <item name="android:shadowDx" >1</item>
+        <item name="android:shadowDy" >1</item>
         <item name="android:shadowRadius" >2</item>
     </style>
 
@@ -49,6 +50,20 @@
         <item name="android:shadowColor" >@color/black</item>
         <item name="android:shadowDx" >0.5</item>
         <item name="android:shadowDy" >0.5</item>
+        <item name="android:shadowRadius" >2</item>
+    </style>
+
+    <style name="info_header" >
+        <item name="android:layout_width" >fill_parent</item>
+        <item name="android:layout_height" >wrap_content</item>
+        <item name="android:textColor" >@color/white</item>
+        <item name="android:gravity" >left</item>
+        <item name="android:layout_margin" >3dp</item>
+        <item name="android:textSize" >18sp</item>
+        <item name="android:textStyle" >normal</item>
+        <item name="android:shadowColor" >@color/black</item>
+        <item name="android:shadowDx" >1</item>
+        <item name="android:shadowDy" >1</item>
         <item name="android:shadowRadius" >2</item>
     </style>
 
@@ -74,6 +89,16 @@
         <item name="android:shadowDx" >1</item>
         <item name="android:shadowDy" >1</item>
         <item name="android:shadowRadius" >2</item>
+    </style>
+
+    <!-- ActionBar tabs styles -->
+    <style name="MyActionBarTabs"
+        parent="@style/Widget.AppCompat.ActionBar.TabView">
+        <!-- tab indicator -->
+        <item name="android:background">@drawable/action_bar_tab_indicator</item>
+
+        <!-- Support library compatibility -->
+        <item name="background">@drawable/action_bar_tab_indicator</item>
     </style>
 
 

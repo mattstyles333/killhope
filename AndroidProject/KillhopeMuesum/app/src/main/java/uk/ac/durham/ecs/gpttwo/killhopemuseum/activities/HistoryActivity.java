@@ -10,6 +10,7 @@ import android.view.MenuItem;
 
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.adapters.HistoryPagerAdapter;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.R;
+import uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.GlossaryDialogFragment;
 
 public class HistoryActivity extends ActionBarActivity {
 
@@ -62,7 +63,7 @@ public class HistoryActivity extends ActionBarActivity {
             }
         });
 
-        String[] tabnames = new String[]{"History Model", "Early Earth", "Wearside Granite", "Carboniferous Sediments", "North Pennine", "New Geological Model", "Untitled"};
+        String[] tabnames = new String[]{"Early Earth", "Weardale Granite", "Carboniferous Sediments", "North Pennine", "New Geological Model"};
 
         for(int i=0;i<HistoryPagerAdapter.NUM_PAGES;i++){
             getSupportActionBar().addTab(getSupportActionBar().newTab().setText(tabnames[i]).setTabListener(tabListener));
@@ -99,6 +100,11 @@ public class HistoryActivity extends ActionBarActivity {
         }else if (id == android.R.id.home) {
             onBackPressed();
             return true;
+        }
+
+        if(id == R.id.action_glossary){
+            GlossaryDialogFragment gdf = new GlossaryDialogFragment().newInstance();
+            gdf.show(this.getSupportFragmentManager(), "glossary_fragment");
         }
 
         return super.onOptionsItemSelected(item);
