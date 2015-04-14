@@ -33,8 +33,10 @@
         android:text="If you press the history option, this will take you to the geological history page as shown to the right."
         style="@style/info_text"/>
     <ImageView
+        android:src="@drawable/helphistory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -62,15 +64,17 @@
         android:text="If you press the Floor Plan option, you will be taken to a page where you will be able to see a floor plan of the whole museum, as shown to the right.
 "
         style="@style/info_text"/>
+    <ImageView
+        android:src="@drawable/helpfloorplan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="How To Start The Minerals Quiz"
         style="@style/info_title"/>
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -47,19 +47,19 @@ public class HelpPageFragment extends Fragment {
         int layID = -1;
         switch(pos){
             case(0):
-                layID = R.layout.fragment_help_page_0;
+                layID = R.layout.fragment_help_page_4;
                 break;
             case(1):
-                layID=R.layout.fragment_help_page_1;
+                layID=R.layout.fragment_help_page_0;
                 break;
             case(2):
-                layID=R.layout.fragment_help_page_2;
+                layID=R.layout.fragment_help_page_1;
                 break;
             case(3):
-                layID=R.layout.fragment_help_page_3;
+                layID=R.layout.fragment_help_page_2;
                 break;
             case(4):
-                layID=R.layout.fragment_help_page_4;
+                layID=R.layout.fragment_help_page_3;
                 break;
             default:
                 layID = R.layout.fragment_help_page;
