@@ -20,18 +20,23 @@
 	var currentAnswer = -1;
 	var count;
 	var answerSubmitted = false;
-
+	
+	$(document).ready(function(){ $("#questionbar").hide(); })
+	
 	function startQuiz(quizName)
 	{	
+		$("#questionbar").hide();
 		$("#starteasy").remove();
 		$("#startintermediate").remove();
 		$("#starthard").remove();
 		currentQuestion = 0;
 		score = 0;
 		$.getJSON(quizName, function(data){
+			
 			console.log("JSON loaded");
 			questions = data.questionList;
 			quizLength = questions.length;
+			$("#questionbar").fadeIn();
 			displayQuestion();
 		});
 		
@@ -43,13 +48,15 @@
 		answerSubmitted = false;
 		$("#question").empty();
 		console.log("Loading questions");
-		$("#question-title").text("Question " + (currentQuestion + 1));
+		$("#question-title").text("Question " + (currentQuestion + 1) +"/"+quizLength);
+		$("#questionbar").append("<div class='bar' id='bar"+currentQuestion+"'></br></div>")
+		document.getElementById("bar"+currentQuestion).style.width = 100/(quizLength)+"%";
 		$("#question").append("<h2>"+questions[currentQuestion].question+"</h2>");
 		console.log(questions[currentQuestion].question);
 		count = 0;
 		$.each(questions[currentQuestion].answers, function(k, answer)
 		{
-			$("#question").append("<a name='guess' onClick='setAnswer("+count+")'><p class='radioleft' id='answer"+count+"'>"+answer.answer+"</p></a>");
+			$("#question").append("<a name='guess' onClick='checkAnswer("+count+")'><p class='radioleft' id='answer"+count+"'>"+answer.answer+"</p></a>");
 			count = count + 1;
 		});
 		
@@ -58,42 +65,21 @@
 		
 	}
 
-	function setAnswer(newAnswer)
-	{
-		if(answerSubmitted) return;
-		
-		if(currentAnswer < 0)
-		{
-			$("#question").append("<input type='submit' class ='button' id='choose' value ='Select Answer' onClick='checkAnswer()'>");
-			$("#choose").hide();
-			$("#choose").fadeIn();
-		}
-		
-		console.log("Set answer " + newAnswer);
-		if(currentAnswer == newAnswer)
-		{
-			document.getElementById("answer"+currentAnswer).className = "radioleft";
-			currentAnswer = -1
-			$("#choose").remove();
-			return;
-		}
-		if(currentAnswer != -1) document.getElementById("answer"+currentAnswer).className = "radioleft";
-		document.getElementById("answer"+newAnswer).className = "activeradio";
-		currentAnswer = newAnswer;
-	}
-
-	function checkAnswer()
+	function checkAnswer(selectedAnswer)
 	{
 		$("#choose").remove();
+		if(answerSubmitted) return;
 		answerSubmitted = true;
-		if(currentAnswer == questions[currentQuestion].correctAnswer)
+		if(selectedAnswer == questions[currentQuestion].correctAnswer)
 		{
-			document.getElementById("answer"+currentAnswer).className = "correctradio";
+			document.getElementById("answer"+selectedAnswer).className = "correctradio";
+			document.getElementById("bar"+currentQuestion).className = "barcorrect";
 			score = score + 1;
 			currentQuestion = currentQuestion + 1;
 		} else 
 		{
-			document.getElementById("answer"+currentAnswer).className = "falseradio";
+			document.getElementById("answer"+selectedAnswer).className = "falseradio";
+			document.getElementById("bar"+currentQuestion).className= "barfalse";
 			document.getElementById("answer"+questions[currentQuestion].correctAnswer).className = "correctradio";
 			currentQuestion = currentQuestion + 1;
 		}
@@ -112,6 +98,8 @@
 	function showResults()
 	{
 		$("#question").empty();
+		$("#questionbar").empty();
+		$("#questionbar").hide();
 		$("#question-title").text("Results");
 		$("#question").append("<h2>Your score was "+score+"<br>Want to try again?</h2>");
 		$("#question").append("<input type='submit' class ='button' id='starteasy' value ='Play Easy Mineral Quiz!' onClick='startQuiz(\"mineralquizeasy.json\")'>");
@@ -124,13 +112,19 @@
 	</script>
 
 	<h1 class ='title' id="question-title">Welcome to the Quiz!</h1>
+	
+	<div class="questionbar" id="questionbar">
+	</div>
+	
 	<div class="question" id="question">
 	
-	<input type="submit" class ='button' id="starteasy" value ='Play Easy Mineral Quiz!' onClick='startQuiz("mineralquizeasy.json")'>
-	<input type="submit" class ='button' id="startintermediate" value ='Play Intermediate Mineral Quiz!' onClick='startQuiz("mineralquizmedium.json")'>
-	<input type="submit" class ='button' id="starthard" value ='Play Hard Mineral Quiz!' onClick='startQuiz("mineralquizhard.json")'>
+		<input type="submit" class ='button' id="starteasy" value ='Play Easy Mineral Quiz!' onClick='startQuiz("mineralquizeasy.json")'>
+		<input type="submit" class ='button' id="startintermediate" value ='Play Intermediate Mineral Quiz!' onClick='startQuiz("mineralquizmedium.json")'>
+		<input type="submit" class ='button' id="starthard" value ='Play Hard Mineral Quiz!' onClick='startQuiz("mineralquizhard.json")'>
 	
 	</div>
+	
+	
 </div>
 
 </body>
