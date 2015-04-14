@@ -35,7 +35,7 @@
             style="@style/info_text"/>
         <ImageView
             android:background="@drawable/blue_button"
-            android:id="@+id/ImageView_help0"
+            android:id="@+id/helpsearchicon"
             android:src="@drawable/helpsearchicon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -53,7 +53,7 @@
 
         <ImageView
             android:background="@drawable/blue_button"
-            android:id="@+id/ImageView_help0.1"
+            android:id="@+id/helpsearch"
             android:src="@drawable/helpsearch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -16,15 +16,18 @@ public class HelpPageFragment extends Fragment {
                              Bundle savedInstanceState) {
         int layID = getArguments().getInt("layID");
         View rootView = inflater.inflate(layID, container, false);
-//        doImage(rootView, R.id.helpsearch, R.drawable.helpsearch);
-//        doImage(rootView, R.id.helpsearchicon, R.drawable.helpsearchicon);
-//        doImage(rootView, R.id.helpqr, R.drawable.helpqr);
-//        doImage(rootView, R.id.helpqrcode, R.drawable.helpqrcode);
-//        doImage(rootView, R.id.helpsearch_1, R.drawable.helpsearch);
-//        doImage(rootView, R.id.helpsearch_2, R.drawable.helpsearch);
-//        doImage(rootView, R.id.helpmainmenu, R.drawable.helpmainmenu);
-//        doImage(rootView, R.id.helpminerals, R.drawable.helpminerals);
-//        doImage(rootView, R.id.helpquiz, R.drawable.helpquiz);
+        doImage(rootView, R.id.helpsearch, R.drawable.helpsearch);
+        doImage(rootView, R.id.helpsearchicon, R.drawable.helpsearchicon);
+        doImage(rootView, R.id.helpqr, R.drawable.helpqr);
+        doImage(rootView, R.id.helpqrcode, R.drawable.helpqrcode);
+        doImage(rootView, R.id.helpmoreimages1, R.drawable.helpmoreimages1);
+        doImage(rootView, R.id.helpmoreimages2, R.drawable.helpmoreimages2);
+        doImage(rootView, R.id.helpshare, R.drawable.helpshare);
+        doImage(rootView, R.id.helphistory, R.drawable.helphistory);
+        doImage(rootView, R.id.helpfloorplan, R.drawable.helpfloorplan);
+        doImage(rootView, R.id.helpmainmenu, R.drawable.helpmainmenu);
+        doImage(rootView, R.id.helpminerals, R.drawable.helpminerals);
+        doImage(rootView, R.id.helpquiz, R.drawable.helpquiz);
         return rootView;
     }
 

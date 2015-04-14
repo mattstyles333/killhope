@@ -23,6 +23,7 @@
    \n\n"
             style="@style/info_text"/>
         <ImageView
+            android:id="@+id/helpsearch"
             android:background="@drawable/blue_button"
             android:layout_gravity="center_horizontal"
             android:src="@drawable/helpsearch"
@@ -75,6 +76,7 @@
 "
             style="@style/info_text"/>
         <ImageView
+            android:id="@+id/helpmoreimages1"
             android:background="@drawable/blue_button"
             android:layout_gravity="center_horizontal"
             android:src="@drawable/helpmoreimages1"
@@ -92,6 +94,7 @@
 
 
         <ImageView
+            android:id="@+id/helpmoreimages2"
             android:background="@drawable/blue_button"
             android:layout_gravity="center_horizontal"
             android:src="@drawable/helpmoreimages2"
