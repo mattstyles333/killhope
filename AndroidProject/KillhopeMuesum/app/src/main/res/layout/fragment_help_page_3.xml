@@ -18,6 +18,7 @@
         android:text="You can share your experiences of using this app at any time during your museum visit, through pressing on the facebook or twitter icons (as shown in the image below) at the bottom of the main menu."
         style="@style/info_text"/>
     <ImageView
+        android:id="@+id/helpshare"
         android:src="@drawable/helpshare"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
