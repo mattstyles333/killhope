@@ -19,6 +19,7 @@
             android:layout_height="wrap_content"
             android:text="1. The Search Bar"
             android:layout_gravity="center_horizontal"
+            style="@style/info_header"
             />
         <TextView
             android:layout_width="wrap_content"
