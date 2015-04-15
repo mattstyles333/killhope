@@ -11,9 +11,16 @@
             android:background="@drawable/history_format"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="How to search for Minerals"
+            android:text="Two Ways To Search For Minerals"
             android:layout_gravity="center_horizontal"
             style="@style/info_title"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. The Search Bar"
+            android:layout_gravity="center_horizontal"
+            style="@style/info_header"
+            />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -29,7 +36,7 @@
             style="@style/info_text"/>
         <ImageView
             android:background="@drawable/blue_button"
-            android:id="@+id/ImageView_help0"
+            android:id="@+id/helpsearchicon"
             android:src="@drawable/helpsearchicon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -44,15 +51,10 @@
             android:text="3.  A search bar will show up. Type in the name of the mineral you want to find out more information about and its icon will show up, as shown in the image below."
             android:layout_gravity="center_horizontal"
             style="@style/info_text"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="4.  Click on this mineral icon and the mineral’s information page will display.\n"
-            android:layout_gravity="left"
-            style="@style/info_text"/>
+
         <ImageView
             android:background="@drawable/blue_button"
-            android:id="@+id/ImageView_help0.1"
+            android:id="@+id/helpsearch"
             android:src="@drawable/helpsearch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -61,6 +63,11 @@
             android:padding="5dp"
             style="@style/history_image"
             />
-
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4.  Click on this mineral icon and the mineral’s information page will display.\n"
+            android:layout_gravity="left"
+            style="@style/info_text"/>
     </LinearLayout>
 </ScrollView>

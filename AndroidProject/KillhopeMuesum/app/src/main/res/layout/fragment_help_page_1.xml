@@ -11,7 +11,7 @@
             android:background="@drawable/history_format"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="How to use the QR Code Interface"
+            android:text="2. The QR Code Interface"
             android:layout_gravity="center_horizontal"
             style="@style/info_title"
             />
@@ -32,7 +32,7 @@
             />
         <ImageView
             android:background="@drawable/blue_button"
-            android:id="@+id/imageView_help1"
+            android:id="@+id/helpqr"
             android:src="@drawable/helpqr"
             android:layout_gravity="center_horizontal"
             android:layout_width="wrap_content"
@@ -47,18 +47,18 @@
             android:layout_gravity="left"
             style="@style/info_text"
             />
+
+        <ImageView
+            android:id="@+id/helpqrcode"
+            android:src="@drawable/helpqrcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="4.  The app will then automatically open the mineral information page corresponding to that particular mineral sample."
             style="@style/info_text"
             />
-        <ImageView
-            android:id="@+id/imageView_help1.1"
-            android:src="@drawable/helpqrcode"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"/>
-
     </LinearLayout>
 </ScrollView>

@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.R;
 
@@ -15,8 +16,32 @@ public class HelpPageFragment extends Fragment {
                              Bundle savedInstanceState) {
         int layID = getArguments().getInt("layID");
         View rootView = inflater.inflate(layID, container, false);
-
+        doImage(rootView, R.id.helpsearch, R.drawable.helpsearch);
+        doImage(rootView, R.id.helpsearchicon, R.drawable.helpsearchicon);
+        doImage(rootView, R.id.helpqr, R.drawable.helpqr);
+        doImage(rootView, R.id.helpqrcode, R.drawable.helpqrcode);
+        doImage(rootView, R.id.helpmoreimages1, R.drawable.helpmoreimages1);
+        doImage(rootView, R.id.helpmoreimages2, R.drawable.helpmoreimages2);
+        doImage(rootView, R.id.helpshare, R.drawable.helpshare);
+        doImage(rootView, R.id.helphistory, R.drawable.helphistory);
+        doImage(rootView, R.id.helpfloorplan, R.drawable.helpfloorplan);
+        doImage(rootView, R.id.helpmainmenu, R.drawable.helpmainmenu);
+        doImage(rootView, R.id.helpminerals, R.drawable.helpminerals);
+        doImage(rootView, R.id.helpquiz, R.drawable.helpquiz);
         return rootView;
+    }
+
+    private void doImage(View v, int layid, final int resid){
+        ImageView image1 = (ImageView)v.findViewById(layid);
+        if(image1!=null) {
+            image1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    ImageZoomDialogFragment gdf = new ImageZoomDialogFragment().newInstance(resid);
+                    gdf.show(getActivity().getSupportFragmentManager(), "imagezoom_fragment");
+                }
+            });
+        }
     }
 
     public static HelpPageFragment newInstance(int pos){
@@ -25,19 +50,19 @@ public class HelpPageFragment extends Fragment {
         int layID = -1;
         switch(pos){
             case(0):
-                layID = R.layout.fragment_help_page_0;
+                layID = R.layout.fragment_help_page_4;
                 break;
             case(1):
-                layID=R.layout.fragment_help_page_1;
+                layID=R.layout.fragment_help_page_0;
                 break;
             case(2):
-                layID=R.layout.fragment_help_page_2;
+                layID=R.layout.fragment_help_page_1;
                 break;
             case(3):
-                layID=R.layout.fragment_help_page_3;
+                layID=R.layout.fragment_help_page_2;
                 break;
             case(4):
-                layID=R.layout.fragment_help_page_4;
+                layID=R.layout.fragment_help_page_3;
                 break;
             default:
                 layID = R.layout.fragment_help_page;

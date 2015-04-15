@@ -11,7 +11,7 @@
         android:id="@+id/minerals_gridview"
         android:columnWidth="90dp"
         android:numColumns="2"
-        android:verticalSpacing="20dp"
+        android:verticalSpacing="10dp"
         android:horizontalSpacing="20dp"
         android:stretchMode="columnWidth"
         android:gravity="center"

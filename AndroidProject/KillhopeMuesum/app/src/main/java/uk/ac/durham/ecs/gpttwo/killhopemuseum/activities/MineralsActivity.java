@@ -107,7 +107,7 @@ public class MineralsActivity extends ActionBarActivity {
         if (id == R.id.action_help) {
             Intent helpIntent = new Intent(this, HelpActivity.class);
             Bundle b = new Bundle();
-            b.putInt("helppage", 0);
+            b.putInt("helppage", 1);
             helpIntent.putExtras(b);
             startActivity(helpIntent);
             return true;
