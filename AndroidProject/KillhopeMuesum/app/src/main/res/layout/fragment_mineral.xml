@@ -4,7 +4,6 @@
     android:layout_height="match_parent" android:background="@drawable/bg_minerals_trim"
     android:id="@+id/mineral_parent">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,20 +17,6 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/mineral_image"
                 android:src="@drawable/ic_launcher"/>
-
-            <!--<ImageButton-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_alignParentRight="true"-->
-                <!--android:src="@drawable/ic_chev_right"-->
-                <!--android:id="@+id/imgbutton_nextimage"/>-->
-
-            <!--<ImageButton-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_alignParentLeft="true"-->
-                <!--android:src="@drawable/ic_chev_left"-->
-                <!--android:id="@+id/imgbutton_previmage"/>-->
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

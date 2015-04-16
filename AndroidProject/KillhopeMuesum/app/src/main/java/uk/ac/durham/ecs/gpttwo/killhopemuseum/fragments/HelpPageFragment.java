@@ -55,13 +55,13 @@ public class HelpPageFragment extends Fragment {
             case(1):
                 layID=R.layout.fragment_help_page_0;
                 break;
+//            case(2):
+//                layID=R.layout.fragment_help_page_1;
+//                break;
             case(2):
-                layID=R.layout.fragment_help_page_1;
-                break;
-            case(3):
                 layID=R.layout.fragment_help_page_2;
                 break;
-            case(4):
+            case(3):
                 layID=R.layout.fragment_help_page_3;
                 break;
             default:

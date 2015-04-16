@@ -6,6 +6,10 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.google.android.gms.analytics.GoogleAnalytics;
+import com.google.android.gms.analytics.HitBuilders;
+
+import uk.ac.durham.ecs.gpttwo.killhopemuseum.KillhopeApplication;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.R;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.GlossaryDialogFragment;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.QuizFragment;
@@ -27,6 +31,12 @@ public class QuizActivity extends ActionBarActivity {
                     .commit();
         }
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        try{
+            ((KillhopeApplication)(getApplication())).getTracker(KillhopeApplication.TrackerName.APP_TRACKER).setScreenName("Quiz");
+            ((KillhopeApplication)(getApplication())).getTracker(KillhopeApplication.TrackerName.APP_TRACKER).send(new HitBuilders.ScreenViewBuilder().build());
+            GoogleAnalytics.getInstance(getBaseContext()).dispatchLocalHits();
+        }catch(Exception e){
+        }
     }
 
 

@@ -85,13 +85,13 @@ h2
 
 .correctradio
 {
-	background-color: green;
+	background-color: #14CE00;
 	opacity: 1.0;
 }
 
 .falseradio
 {
-	background-color: red;
+	background-color: #e50505;
 	opacity: 1.0;
 }
 
@@ -101,6 +101,42 @@ h2
 	text-align: center;
 	margin-right: auto;
 	margin-left: auto;
+}
+
+.questionbar
+{
+	width: 95%;
+	background: url("bar-background.png"); 
+	background-repeat: repeat-x;
+	color: white;
+    border-style: solid;
+    border-color: white;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+	margin: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	opacity: 0.8;
+}
+
+.bar, .barcorrect, .barfalse
+{
+	background: #01a5e5; 
+	background-repeat: repeat-x;
+	width: 10%;
+	font-size: 3em;
+	#float: left;
+	display: inline-block;
+}
+
+.barcorrect
+{
+	background: #14CE00; 
+}
+
+.barfalse
+{
+	background: #e50505; 
 }
 
 .title

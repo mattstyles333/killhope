@@ -15,6 +15,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
+import android.view.VelocityTracker;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -26,6 +27,8 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.abhi.gif.lib.AnimatedGifImageView;
+import com.google.android.gms.analytics.GoogleAnalytics;
+import com.google.android.gms.analytics.HitBuilders;
 
 import java.util.ArrayList;
 
@@ -61,6 +64,8 @@ public class MineralFragment extends Fragment {
         TextView name = (TextView)rootView.findViewById(R.id.mineral_name);
         final AnimatedGifImageView animage = (AnimatedGifImageView)rootView.findViewById(R.id.mineral_image);
         animage.setAnimatedGif(mineral.getImg3d(), AnimatedGifImageView.TYPE.FIT_CENTER);
+//        System.out.println(mineral.getImg3d());
+        final VelocityTracker velocityTracker = VelocityTracker.obtain();
 
         animage.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -71,9 +76,11 @@ public class MineralFragment extends Fragment {
                         animage.touchDown(f);
                         break;
                     case(MotionEvent.ACTION_UP):
-                        animage.touchUp(f);
+                        velocityTracker.computeCurrentVelocity(1000,600f);
+                        animage.touchUp(f, velocityTracker.getXVelocity());
                         break;
                     case(MotionEvent.ACTION_MOVE):
+                        velocityTracker.addMovement(event);
                         animage.touchMove(f);
                         break;
                 }
@@ -119,6 +126,13 @@ public class MineralFragment extends Fragment {
                 gdf.show(((ActionBarActivity) getActivity()).getSupportFragmentManager(), "imagezoom_fragment");
             }
         });
+
+        try{
+            ((KillhopeApplication)(getActivity().getApplication())).getTracker(KillhopeApplication.TrackerName.APP_TRACKER).setScreenName("Mineral:" + mineral.getName());
+            ((KillhopeApplication)(getActivity().getApplication())).getTracker(KillhopeApplication.TrackerName.APP_TRACKER).send(new HitBuilders.ScreenViewBuilder().build());
+            GoogleAnalytics.getInstance(getActivity().getBaseContext()).dispatchLocalHits();
+        }catch(Exception e){
+        }
 
         return rootView;
     }
@@ -207,7 +221,7 @@ public class MineralFragment extends Fragment {
                 ((ScrollView)getView().findViewById(R.id.mineral_paneright)).post(new Runnable() {
                     @Override
                     public void run() {
-                        ((ScrollView)getView().findViewById(R.id.mineral_paneright)).fullScroll(View.FOCUS_DOWN);
+                        ((ScrollView) getView().findViewById(R.id.mineral_paneright)).fullScroll(View.FOCUS_DOWN);
                     }
                 });
                 reduceButton.setVisibility(View.GONE);
