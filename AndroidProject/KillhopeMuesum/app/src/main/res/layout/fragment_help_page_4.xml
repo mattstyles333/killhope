@@ -18,11 +18,15 @@
         android:text="The main menu is shown in the image below and has 4 options for you to choose from."
         style="@style/info_text"/>
     <ImageView
+        android:background="@drawable/blue_button"
         android:id="@+id/helpmainmenu"
         android:src="@drawable/helpmainmenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"/>
+        android:layout_gravity="center_horizontal"
+        android:adjustViewBounds="true"
+        android:padding="5dp"
+        style="@style/history_image"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -34,10 +38,15 @@
         android:text="If you press the history option, this will take you to the geological history page as shown to the right."
         style="@style/info_text"/>
     <ImageView
+        android:background="@drawable/blue_button"
         android:id="@+id/helphistory"
         android:src="@drawable/helphistory"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:adjustViewBounds="true"
+        android:padding="5dp"
+        style="@style/history_image"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -50,11 +59,15 @@
         android:text="If you press the minerals option, this will take you to the minerals menu, which is shown below, where you can choose a mineral to find out more information about."
         style="@style/info_text"/>
     <ImageView
+        android:background="@drawable/blue_button"
         android:id="@+id/helpminerals"
         android:src="@drawable/helpminerals"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"/>
+        android:layout_gravity="center_horizontal"
+        android:adjustViewBounds="true"
+        android:padding="5dp"
+        style="@style/history_image"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -68,11 +81,15 @@
 "
         style="@style/info_text"/>
     <ImageView
+        android:background="@drawable/blue_button"
         android:id="@+id/helpfloorplan"
         android:src="@drawable/helpfloorplan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"/>
+        android:layout_gravity="center_horizontal"
+        android:adjustViewBounds="true"
+        android:padding="5dp"
+        style="@style/history_image"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -85,10 +102,14 @@
         android:text="If you press the Quiz option, you will be taken to the quiz page (as shown to the right) which gives you the option of choosing between 3 mineral quizzes with differing difficulty: easy, intermediate and hard."
         style="@style/info_text"/>
     <ImageView
+        android:background="@drawable/blue_button"
         android:id="@+id/helpquiz"
         android:src="@drawable/helpquiz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"/>
+        android:layout_gravity="center_horizontal"
+        android:adjustViewBounds="true"
+        android:padding="5dp"
+        style="@style/history_image"/>
 </LinearLayout>
 </ScrollView>

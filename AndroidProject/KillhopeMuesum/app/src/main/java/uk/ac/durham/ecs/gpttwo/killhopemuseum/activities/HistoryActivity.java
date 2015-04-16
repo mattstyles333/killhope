@@ -8,6 +8,10 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.google.android.gms.analytics.GoogleAnalytics;
+import com.google.android.gms.analytics.HitBuilders;
+
+import uk.ac.durham.ecs.gpttwo.killhopemuseum.KillhopeApplication;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.adapters.HistoryPagerAdapter;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.R;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.GlossaryDialogFragment;
@@ -55,6 +59,7 @@ public class HistoryActivity extends ActionBarActivity {
             @Override
             public void onPageSelected(int position) {
                 getSupportActionBar().setSelectedNavigationItem(position);
+                supportInvalidateOptionsMenu();
             }
 
             @Override
@@ -73,25 +78,14 @@ public class HistoryActivity extends ActionBarActivity {
         if(getResources().getConfiguration().orientation != 1){
             mPager.setBackgroundResource(R.drawable.bg_land);
         }
-        mPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-            }
-
-            @Override
-            public void onPageSelected(int position) {
-                supportInvalidateOptionsMenu();
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-
-            }
-        });
-
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        try{
+            ((KillhopeApplication)(getApplication())).getTracker(KillhopeApplication.TrackerName.APP_TRACKER).setScreenName("History");
+            ((KillhopeApplication)(getApplication())).getTracker(KillhopeApplication.TrackerName.APP_TRACKER).send(new HitBuilders.ScreenViewBuilder().build());
+            GoogleAnalytics.getInstance(getBaseContext()).dispatchLocalHits();
+        }catch(Exception e){
+        }
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {

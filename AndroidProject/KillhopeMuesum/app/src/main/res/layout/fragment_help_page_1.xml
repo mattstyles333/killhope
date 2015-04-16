@@ -5,7 +5,7 @@
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:orientation="vertical" android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <TextView
             android:background="@drawable/history_format"
@@ -60,5 +60,109 @@
             android:text="4.  The app will then automatically open the mineral information page corresponding to that particular mineral sample."
             style="@style/info_text"
             />
-    </LinearLayout>
+
+            <TextView
+                android:background="@drawable/history_format"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Tips for using the Mineral Page"
+                style="@style/info_title"/>
+
+            <TextView
+                android:layout_gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="When any mineral page for a particular mineral loads, it will display an image of the mineral and the most basic information about it. However, there are 3 further levels of information about the mineral you can access. You can do this by doing the following:
+
+   \n\n"
+                style="@style/info_text"/>
+            <ImageView
+                android:id="@+id/helpsearch"
+                android:background="@drawable/blue_button"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/helpsearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:padding="5dp"
+                style="@style/history_image"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="\nTip Number 1"
+                style="@style/info_header"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="How to display more information about a mineral when you are on its Mineral Page:"
+                style="@style/info_title"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="You can do this by following these steps:
+            \n\n 1.  Click on the more information button on the mineral page. The first level of additional information will be displayed. The image below shows you how to do this.
+           \n\n 2.  If there are additional images of the mineral, you will see left and right hand arrows at the top of the page (as shown in the image below). Click on the left or right hand arrow to see the other images of the mineral. Alternatively, you can swipe to the right or left."
+                style="@style/info_text"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="\n Tip Number 2"
+                style="@style/info_header"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="\nHow to access more images of a particular mineral from its Mineral Page:"
+                style="@style/info_title"/>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="You can do this by following these steps:
+\n1. Click on the image of the mineral on its mineral page. The page will display as shown in the image below.
+"
+                style="@style/info_text"/>
+            <ImageView
+                android:id="@+id/helpmoreimages1"
+                android:background="@drawable/blue_button"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/helpmoreimages1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:padding="5dp"
+                style="@style/history_image"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="2. If there are additional images of the mineral, you will see left and right hand arrows at the top of the page (as shown in the image below). Click on the left or right hand arrow to see the other images of the mineral. Alternatively, you can swipe to the right or left."
+                style="@style/info_text"/>
+
+
+            <ImageView
+                android:id="@+id/helpmoreimages2"
+                android:background="@drawable/blue_button"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/helpmoreimages2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:padding="5dp"
+                android:layout_weight="0.5"
+                style="@style/history_image"
+                />
+
+        </LinearLayout>
+
 </ScrollView>

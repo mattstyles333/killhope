@@ -235,7 +235,13 @@ public class AnimatedGifImageView extends ImageView {
             }
             return time % dur;
         }else {
-            return (int) ((now - mMovieStart) % dur);
+            mMovieStart += (long)(upVelocity*0.7f);
+            upVelocity*=0.93f;
+            int time = (int) ((now - mMovieStart));
+            while(time < 0){
+                time+=dur;
+            }
+            return time % dur;
         }
     }
 
@@ -245,7 +251,10 @@ public class AnimatedGifImageView extends ImageView {
     private float pausePos;
     private float lastPos;
 
-    public void touchUp(float f){
+    private float upVelocity = 0f;
+
+    public void touchUp(float f, float vel){
+        upVelocity = vel;
         int dur = mMovie.duration();
         if (dur == 0) {
             dur = 1000;

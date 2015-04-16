@@ -8,8 +8,8 @@ android {
         applicationId "uk.ac.durham.ecs.gpttwo.killhopemuseum"
         minSdkVersion 14
         targetSdkVersion 21
-        versionCode 4
-        versionName "0.4"
+        versionCode 5
+        versionName "0.5"
     }
     buildTypes {
         release {

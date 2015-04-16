@@ -7,6 +7,10 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.google.android.gms.analytics.GoogleAnalytics;
+import com.google.android.gms.analytics.HitBuilders;
+
+import uk.ac.durham.ecs.gpttwo.killhopemuseum.KillhopeApplication;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.adapters.HelpPagerAdapter;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.R;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments.GlossaryDialogFragment;
@@ -59,7 +63,12 @@ public class HelpActivity extends ActionBarActivity {
         });
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
+        try{
+            ((KillhopeApplication)(getApplication())).getTracker(KillhopeApplication.TrackerName.APP_TRACKER).setScreenName("Help");
+            ((KillhopeApplication)(getApplication())).getTracker(KillhopeApplication.TrackerName.APP_TRACKER).send(new HitBuilders.ScreenViewBuilder().build());
+            GoogleAnalytics.getInstance(getBaseContext()).dispatchLocalHits();
+        }catch(Exception e){
+        }
     }
 
 

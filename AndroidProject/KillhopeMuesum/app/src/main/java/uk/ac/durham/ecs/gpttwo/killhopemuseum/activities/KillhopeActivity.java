@@ -29,9 +29,12 @@ public class KillhopeActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Tracker t = ((KillhopeApplication)getApplication()).getTracker(KillhopeApplication.TrackerName.APP_TRACKER);
-        t.setScreenName("Home");
-        t.send(new HitBuilders.AppViewBuilder().build());
+        try{
+            ((KillhopeApplication)(getApplication())).getTracker(KillhopeApplication.TrackerName.APP_TRACKER).setScreenName("Home");
+            ((KillhopeApplication)(getApplication())).getTracker(KillhopeApplication.TrackerName.APP_TRACKER).send(new HitBuilders.ScreenViewBuilder().build());
+            GoogleAnalytics.getInstance(getBaseContext()).dispatchLocalHits();
+        }catch(Exception e){
+        }
 
         setContentView(R.layout.activity_killhope);
         final Context context = this;
