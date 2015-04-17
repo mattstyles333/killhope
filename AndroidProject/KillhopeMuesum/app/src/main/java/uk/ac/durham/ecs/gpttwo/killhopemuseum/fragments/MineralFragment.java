@@ -105,7 +105,14 @@ public class MineralFragment extends Fragment {
         });
 
         LinearLayout list = (LinearLayout) rootView.findViewById(R.id.mineral_list);
-        list.addView(getNextView(0, null, null));
+        int views = getArguments().getInt("curpos");
+        for(int i=0;i<views+1;i++) {
+            if(i==views){
+                list.addView(getNextView(i, null, null, true));
+            }else {
+                list.addView(getNextView(i, null, null, false));
+            }
+        }
 
 //        ((ImageButton)rootView.findViewById(R.id.imgbutton_nextimage)).setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -137,8 +144,9 @@ public class MineralFragment extends Fragment {
         return rootView;
     }
 
-    public View getNextView(final int position, final ImageButton prevReduceButton, final ImageButton prevExpandButton) {
+    public View getNextView(final int position, final ImageButton prevReduceButton, final ImageButton prevExpandButton, boolean lastOne) {
         LayoutInflater inflator = (LayoutInflater)getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        getArguments().putInt("curpos", position);
 
         final View view = inflator.inflate(R.layout.fragment_mineral_list_item,new LinearLayout(getActivity()),false);
 
@@ -217,7 +225,7 @@ public class MineralFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 LinearLayout nextLevel = (LinearLayout)getView().findViewById(R.id.mineral_list);
-                nextLevel.addView(getNextView(position + 1,reduceButton,expandButton));
+                nextLevel.addView(getNextView(position + 1,reduceButton,expandButton, true));
                 ((ScrollView)getView().findViewById(R.id.mineral_paneright)).post(new Runnable() {
                     @Override
                     public void run() {
@@ -228,12 +236,20 @@ public class MineralFragment extends Fragment {
                 expandButton.setVisibility(View.GONE);
             }
         });
+        if(!lastOne){
+            reduceButton.setVisibility(View.GONE);
+            expandButton.setVisibility(View.GONE);
+        }
 
         return view;
     }
 
     public static MineralFragment newInstance() {
-        return new MineralFragment();
+        MineralFragment mf = new MineralFragment();
+        Bundle bun = new Bundle();
+        bun.putInt("curpos",0);
+        mf.setArguments(new Bundle());
+        return mf;
     }
 
 }
