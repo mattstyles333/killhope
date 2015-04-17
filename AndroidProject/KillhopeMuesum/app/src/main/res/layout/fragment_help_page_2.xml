@@ -3,9 +3,12 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical" android:layout_width="match_parent"
-        android:layout_height="fill_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/menu_padding">
+
         <TextView
             android:background="@drawable/history_format"
             android:layout_width="wrap_content"
@@ -14,23 +17,24 @@
             android:text="Tips for using the Mineral Page"
             style="@style/info_title"/>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/history_format">
         <TextView
             android:layout_gravity="left"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="When any mineral page for a particular mineral loads, it will display an image of the mineral and the most basic information about it. However, there are 3 further levels of information about the mineral you can access. You can do this by doing the following:
-
-   \n"
+            android:text="When any mineral page for a particular mineral loads, it will display an image of the mineral and the most basic information about it. However, there are 3 further levels of information about the mineral you can access. You can do this by doing the following:"
             style="@style/info_text"/>
         <ImageView
             android:id="@+id/helpsearch"
-            android:background="@drawable/blue_button"
             android:layout_gravity="center_horizontal"
             android:src="@drawable/helpsearch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
-            android:padding="5dp"
             style="@style/history_image"/>
         <TextView
             android:layout_width="wrap_content"
@@ -74,18 +78,15 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="You can do this by following these steps:
-\n\n1. Click on the image of the mineral on its mineral page. The page will display as shown in the image below.
-"
+\n\n1. Click on the image of the mineral on its mineral page. The page will display as shown in the image below."
             style="@style/info_text"/>
         <ImageView
             android:id="@+id/helpmoreimages1"
-            android:background="@drawable/blue_button"
             android:layout_gravity="center_horizontal"
             android:src="@drawable/helpmoreimages1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
-            android:padding="5dp"
             style="@style/history_image"/>
         <TextView
             android:layout_width="wrap_content"
@@ -97,16 +98,14 @@
 
         <ImageView
             android:id="@+id/helpmoreimages2"
-            android:background="@drawable/blue_button"
             android:layout_gravity="center_horizontal"
             android:src="@drawable/helpmoreimages2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
-            android:padding="5dp"
             android:layout_weight="0.5"
             style="@style/history_image"
             />
-
+    </LinearLayout>
     </LinearLayout>
 </ScrollView>
