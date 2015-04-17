@@ -95,7 +95,11 @@ public class GlossaryManager {
         ArrayList<GlossaryItem> list = new ArrayList<GlossaryItem>();
         if(query.equals("")){
             for (int i = 0; i < getGlossary().size(); i++) {
+                if(getGlossary(i).getSubs().size()>0){
+                    getGlossary(i).sortSubsAlphabetically();
+                }
                 list.add(getGlossary(i));
+
             }
             Collections.sort(list, new Comparator<GlossaryItem>() {
                 public int compare(GlossaryItem o1, GlossaryItem o2) {
@@ -106,12 +110,12 @@ public class GlossaryManager {
             });
         }else {
             int currentScore = 0;
+            int subScore = 0;
 
             for (int i = 0; i < glossary.size(); i++) {
-                if(getGlossary(i).getSubs().size()>0){
-                    getGlossary(i).sortSubs();
-                }
+
                 currentScore = 0;
+                subScore = 0;
                 for (int l = 0; l < searchWords.size(); l++) {
                     if (getGlossary(i).getName().toLowerCase().contains(searchWords.get(l).toLowerCase())) {
                         currentScore = currentScore + 100;
@@ -131,16 +135,24 @@ public class GlossaryManager {
                     for (int j = 0; j < getGlossary(i).getSubs().size(); j++) {
                         if (getGlossary(i).getSubs().get(j).getName().toLowerCase().contains(searchWords.get(l).toLowerCase())) {
                             currentScore = currentScore + 100;
+                            subScore = subScore +100;
                         }
                         if (getGlossary(i).getSubs().get(j).getName().toLowerCase().contains(" " + searchWords.get(l).toLowerCase())) {
                             currentScore = currentScore + 100;
+                            subScore = subScore +100;
                         }
                         if (getGlossary(i).getSubs().get(j).getName().toLowerCase().equals(searchWords.get(l).toLowerCase())) {
                             currentScore = currentScore + 100;
+                            subScore = subScore +100;
                         }
                         if (getGlossary(i).getSubs().get(j).getInfo().toLowerCase().contains(searchWords.get(l).toLowerCase())) {
                             currentScore = currentScore + 50;
+                            subScore = subScore +50;
                         }
+                        getGlossary(i).getSubs().get(j).setSearchScore(subScore);
+                    }
+                    if(getGlossary(i).getSubs().size()>0){
+                        getGlossary(i).sortSubsByScore();
                     }
                 }
                 getGlossary(i).setSearchScore(currentScore);
