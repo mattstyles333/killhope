@@ -55,8 +55,8 @@ public class GlossaryItem {
 
     public void sortSubsAlphabetically()
     {
-        ArrayList<GlossaryItem> listToSort = (ArrayList<GlossaryItem>) subs.clone();
-        Collections.sort(listToSort, new Comparator<GlossaryItem>() {
+
+        Collections.sort(subs, new Comparator<GlossaryItem>() {
             public int compare(GlossaryItem o1, GlossaryItem o2) {
                 final String glossary1 = o1.getName();
                 final String glossary2 = o2.getName();
@@ -67,8 +67,8 @@ public class GlossaryItem {
 
     public void sortSubsByScore()
     {
-        ArrayList<GlossaryItem> listToSort = (ArrayList<GlossaryItem>) subs.clone();
-        Collections.sort(listToSort, new Comparator<GlossaryItem>() {
+
+        Collections.sort(subs, new Comparator<GlossaryItem>() {
             public int compare(GlossaryItem o1, GlossaryItem o2) {
                 final int glossary1 = o1.getSearchScore();
                 final int glossary2 = o2.getSearchScore();
