@@ -1,5 +1,6 @@
 package uk.ac.durham.ecs.gpttwo.killhopemuseum.fragments;
 
+import android.graphics.Point;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -7,6 +8,8 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.R;
 
@@ -34,6 +37,15 @@ public class HistoryPageFragment extends Fragment {
         doImage(rootView, R.id.historypage5table, R.drawable.historypage5table);
 
         doImage(rootView, R.id.historypage6table, R.drawable.historypage6table);
+
+        if(getResources().getConfiguration().orientation == 1){
+
+        }else{
+            Point size = new Point();
+            getActivity().getWindowManager().getDefaultDisplay().getSize(size);
+            int centre = (int)((float)size.x*0.45f);
+            ((ScrollView)rootView).setPadding((size.x - centre)/2,16,(size.x - centre)/2,16);
+        }
 
         return rootView;
     }
