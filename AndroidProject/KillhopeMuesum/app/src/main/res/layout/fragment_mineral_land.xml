@@ -26,6 +26,7 @@
                 android:text="More Images"
                 android:id="@+id/button_more_images"
                 android:layout_alignParentTop="true"
+                android:textColor="#FFF"
                 android:layout_alignParentRight="true"/>
         </RelativeLayout>
 
