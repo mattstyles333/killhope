@@ -35,7 +35,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="If you press the history option, this will take you to the geological history page as shown to the right."
+        android:text="If you press the history option, this will take you to the geological history page as shown below."
         style="@style/info_text"/>
     <ImageView
         android:background="@drawable/blue_button"
@@ -77,7 +77,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="If you press the Floor Plan option, you will be taken to a page where you will be able to see a floor plan of the whole museum, as shown to the right.
+        android:text="If you press the Floor Plan option, you will be taken to a page where you will be able to see a floor plan of the whole museum, as shown below.
 "
         style="@style/info_text"/>
     <ImageView
@@ -99,7 +99,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="If you press the Quiz option, you will be taken to the quiz page (as shown to the right) which gives you the option of choosing between 3 mineral quizzes with differing difficulty: easy, intermediate and hard."
+        android:text="If you press the Quiz option, you will be taken to the quiz page (as shown below) which gives you the option of choosing between 3 mineral quizzes with differing difficulty: easy, intermediate and hard."
         style="@style/info_text"/>
     <ImageView
         android:background="@drawable/blue_button"

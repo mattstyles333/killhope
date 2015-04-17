@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"  >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="@dimen/menu_padding">
         <TextView
             android:background="@drawable/history_format"
             android:layout_width="wrap_content"
@@ -16,16 +17,20 @@
             android:id="@+id/historyHeader2"
             android:layout_gravity="center_horizontal"
             style="@style/info_title"/>
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/history_format">
         <TextView
-            android:background="@drawable/history_format"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="12.13"
             android:text="As geological time progressed, vast movements of the Earth’s tectonic plates compressed these muds, turning them into slate and forming the Skiddaw Group. (These same movements causes gigantic volcanoes to erupt lava and ash.)"
             style="@style/info_text" />
         <TextView
-            android:background="@drawable/history_format"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="12.13"
@@ -59,7 +64,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1.05"/>
        </LinearLayout>
-
+    </LinearLayout>
     </LinearLayout>
 
 </ScrollView>

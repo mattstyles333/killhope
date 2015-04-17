@@ -3,7 +3,7 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:background="@color/dark_blue">
+    android:layout_height="match_parent" android:background="@color/dark_blue_glos">
 
     <LinearLayout
         android:id="@+id/actionbar_dialog"
@@ -31,6 +31,8 @@
         android:lines="1"
         android:scrollHorizontally="true"
         android:hint="Search..."
+        android:textColor="#FFF"
+        android:textColorHint="#FFF"
         style="@style/info_title"
         android:ellipsize="end"/>
 

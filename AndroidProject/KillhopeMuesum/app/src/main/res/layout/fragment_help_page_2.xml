@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:text="When any mineral page for a particular mineral loads, it will display an image of the mineral and the most basic information about it. However, there are 3 further levels of information about the mineral you can access. You can do this by doing the following:
 
-   \n\n"
+   \n"
             style="@style/info_text"/>
         <ImageView
             android:id="@+id/helpsearch"
@@ -74,7 +74,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="You can do this by following these steps:
-\n1. Click on the image of the mineral on its mineral page. The page will display as shown in the image below.
+\n\n1. Click on the image of the mineral on its mineral page. The page will display as shown in the image below.
 "
             style="@style/info_text"/>
         <ImageView
