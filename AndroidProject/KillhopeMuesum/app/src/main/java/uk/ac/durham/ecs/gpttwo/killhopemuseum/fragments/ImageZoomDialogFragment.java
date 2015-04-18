@@ -53,7 +53,7 @@ public class ImageZoomDialogFragment extends DialogFragment {
 
         final ImageViewTouch mainImage= (ImageViewTouch) rootView.findViewById(R.id.main_image);
         Bitmap bmp = BitmapFactory.decodeResource(getResources(), getRes(getCurrentResIndex()));
-        mainImage.setImageBitmap(bmp, null, 0, 8f);
+        mainImage.setImageBitmap(bmp, null, -1, 8f);
         mainImage.setDisplayType(ImageViewTouchBase.DisplayType.FIT_TO_SCREEN);
 
         (rootView.findViewById(R.id.button_info_close)).setOnClickListener(new View.OnClickListener() {
