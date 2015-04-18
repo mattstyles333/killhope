@@ -44,7 +44,7 @@ public class HistoryPageFragment extends Fragment {
             Point size = new Point();
             getActivity().getWindowManager().getDefaultDisplay().getSize(size);
             int centre = (int)((float)size.x*0.45f);
-            ((ScrollView)rootView).setPadding((size.x - centre)/2,16,(size.x - centre)/2,16);
+            ((ScrollView)rootView).setPadding((size.x - centre)/2,0,(size.x - centre)/2,0);
         }
 
         return rootView;

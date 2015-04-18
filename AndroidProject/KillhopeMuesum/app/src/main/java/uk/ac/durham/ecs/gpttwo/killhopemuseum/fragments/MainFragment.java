@@ -30,8 +30,6 @@ public class MainFragment extends Fragment{
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
 
-        ((KillhopeApplication)getActivity().getApplication()).setCurrentSearch("");
-
         if(getResources().getConfiguration().orientation != 1){
             rootView.setBackgroundResource(R.drawable.bg_land);
         }
@@ -170,6 +168,12 @@ public class MainFragment extends Fragment{
         });
 
         return rootView;
+    }
+
+    @Override
+    public void onResume(){
+        super.onResume();
+        ((KillhopeApplication)getActivity().getApplication()).setCurrentSearch("");
     }
 
     public static MainFragment newInstance(){
