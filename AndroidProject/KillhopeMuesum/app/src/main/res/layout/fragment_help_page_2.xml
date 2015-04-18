@@ -26,7 +26,7 @@
             android:layout_gravity="left"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="When any mineral page for a particular mineral loads, it will display an image of the mineral and the most basic information about it. However, there are 3 further levels of information about the mineral you can access. You can do this by doing the following:"
+            android:text="When any mineral page for a particular mineral loads, it will display an image of the mineral and the most basic information about it (as shown in the image below). However, there are 3 further levels of information about the mineral and additional  images of it which  you can access. This page gives  you tips on how to do this."
             style="@style/info_text"/>
         <ImageView
             android:id="@+id/helpsearch"
@@ -53,9 +53,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
-            android:text="You can do this by following these steps:
-            \n\n 1.  Click on the more information button on the mineral page. The first level of additional information will be displayed. The image below shows you how to do this.
-           \n\n 2.  If there are additional images of the mineral, you will see left and right hand arrows at the top of the page (as shown in the image below). Click on the left or right hand arrow to see the other images of the mineral. Alternatively, you can swipe to the right or left."
+            android:text="1. Click on the downward facing arrow on the bottom of the mineral page (which was shown in the image above)  and you will see an intermediate level of information .
+\n\n2. Repeat step 1 again and you  will see an advanced level of information.
+\n\nk 3. Repeat step 1 another time  and you will see an expert  level of information.
+"
             style="@style/info_text"/>
         <TextView
             android:layout_width="wrap_content"
