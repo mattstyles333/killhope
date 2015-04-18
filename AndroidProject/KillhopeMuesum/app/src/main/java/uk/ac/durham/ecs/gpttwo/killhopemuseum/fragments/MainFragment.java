@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
+import uk.ac.durham.ecs.gpttwo.killhopemuseum.KillhopeApplication;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.activities.FloorPlanActivity;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.activities.HelpActivity;
 import uk.ac.durham.ecs.gpttwo.killhopemuseum.activities.HistoryActivity;
@@ -28,6 +29,8 @@ public class MainFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+
+        ((KillhopeApplication)getActivity().getApplication()).setCurrentSearch("");
 
         if(getResources().getConfiguration().orientation != 1){
             rootView.setBackgroundResource(R.drawable.bg_land);
