@@ -53,14 +53,27 @@ public class GlossaryItem {
         return info;
     }
 
-    public void sortSubs()
+    public void sortSubsAlphabetically()
     {
-        ArrayList<GlossaryItem> listToSort = (ArrayList<GlossaryItem>) subs.clone();
-        Collections.sort(listToSort, new Comparator<GlossaryItem>() {
+
+        Collections.sort(subs, new Comparator<GlossaryItem>() {
             public int compare(GlossaryItem o1, GlossaryItem o2) {
                 final String glossary1 = o1.getName();
                 final String glossary2 = o2.getName();
                 return glossary1.compareTo(glossary2);
+            }
+        });
+    }
+
+    public void sortSubsByScore()
+    {
+
+        Collections.sort(subs, new Comparator<GlossaryItem>() {
+            public int compare(GlossaryItem o1, GlossaryItem o2) {
+                final int glossary1 = o1.getSearchScore();
+                final int glossary2 = o2.getSearchScore();
+                return glossary2 > glossary1 ? 1
+                        : glossary2 < glossary1 ? -1 : 0;
             }
         });
     }

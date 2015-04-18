@@ -2,10 +2,12 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="@dimen/menu_padding">
         <TextView
             android:background="@drawable/history_format"
             android:layout_width="wrap_content"
@@ -15,16 +17,18 @@
             android:id="@+id/textView4"
             android:layout_gravity="center_horizontal"
             style="@style/info_title"/>
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/history_format">
         <TextView
-            android:background="@drawable/history_format"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="At great depths in the Earth, rocks can be saturated with saline water, very much like sea water, this often dissolves chemical elements from the surrounding rocks which contain traces or iron, lead, zinc and the various elements found in Northern Pennines mineral deposits."
             android:layout_gravity="center_horizontal"
             style="@style/info_text"/>
         <TextView
-            android:background="@drawable/history_format"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="The Weardale granite has been a powerful heat source since it was first deposited 400 Million years ago, and is still appreciably hotter than the surrounding rocks."
@@ -45,7 +49,6 @@
             />
 
         <TextView
-            android:background="@drawable/history_format"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="The original geological model for the North Pennine ore field hypothesised that residual heat from the Weardale granite caused heating of groundwater within the overlying carboniferous sediments, as shown in the diagram above. Heating remobilised the fluids, causing them to circulate upwards through cracks in the overlying rocks. This process created a vacuum effect, in turn sourcing fluids from the surrounding Ordovician sediments. These fluids carried dissolved minerals, which were eventually precipitated as the fluids cooled and produced the mineral deposits that we see in the Killhope area today."
@@ -82,5 +85,6 @@
             android:layout_weight="1"
             />
         </LinearLayout>
+    </LinearLayout>
     </LinearLayout>
 </ScrollView>

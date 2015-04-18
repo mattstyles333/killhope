@@ -6,7 +6,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="@dimen/menu_padding">
 
         <TextView
             android:background="@drawable/history_format"
@@ -16,21 +17,22 @@
             android:text="The Weardale Granite"
             android:layout_gravity="center_horizontal"
             style="@style/info_title"/>
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/history_format">
         <TextView
-            android:background="@drawable/history_format"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Movement of the Earths plates caused compression in the North East of England, beginning at around 490 million years ago. "
             style="@style/info_text"/>
         <TextView
-            android:background="@drawable/history_format"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Approximately 400 million years ago a large mass of magma (molten rock) was injected into the Ordovician slates and volcanic rocks. This cooled and crystallised, forming the Weardale Granite."
             style="@style/info_text"/>
         <TextView
-            android:background="@drawable/history_format"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="An unconformity lies above the granite, a time gap in the rock record caused by millions of years of erosion of the overlying rocks. After this significant ‘time gap’ the Carboniferous rocks that make up most of the Northern Pennines were deposited on top of the granite. "
@@ -66,5 +68,5 @@
             />
         </LinearLayout>
     </LinearLayout>
-
+</LinearLayout>
 </ScrollView>
