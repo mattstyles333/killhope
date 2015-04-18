@@ -141,7 +141,7 @@ public class MineralManager {
                         }
                     }
                     getMineral(i).setLastSearchScore(currentScore);
-                    if (getMineral(i).getLastSearchScore() > 10) {
+                    if (getMineral(i).getLastSearchScore() > 5) {
 
                         lastSearchMinerals.add(getMineral(i));
 
