@@ -55,14 +55,37 @@
             android:layout_gravity="left"
             android:text="1. Click on the downward facing arrow on the bottom of the mineral page (which was shown in the image above)  and you will see an intermediate level of information .
 \n\n2. Repeat step 1 again and you  will see an advanced level of information.
-\n\nk 3. Repeat step 1 another time  and you will see an expert  level of information.
+\n\n3. Repeat step 1 another time  and you will see an expert  level of information.
 "
             style="@style/info_text"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:text="\n Tip Number 2"
+            style="@style/info_header"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="\nHow to rotate the image on the Mineral Page:"
+            style="@style/info_title"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="You can do this by following these steps:
+\n\n1.Simply swipe left or right on the image itself to rotate it in that direction. "
+            style="@style/info_text"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="\n Tip Number 3"
             style="@style/info_header"
             />
         <TextView
@@ -79,7 +102,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="You can do this by following these steps:
-\n\n1. Click on the image of the mineral on its mineral page. The page will display as shown in the image below."
+\n\n1. Click on the 'More Images' button of the mineral on its mineral page. The page will display as shown in the image below."
             style="@style/info_text"/>
         <ImageView
             android:id="@+id/helpmoreimages2"
@@ -93,7 +116,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
-            android:text="2. If there are additional images of the mineral, you will see left and right hand arrows at the top of the page (as shown in the image below). Click on the left or right hand arrow to see the other images of the mineral. Alternatively, you can swipe to the right or left."
+            android:text="2. If there are additional images of the mineral, you will see left and right hand arrows at the top of the page (as shown in the image below). Click on the left or right hand arrow to see the other images of the mineral."
            style="@style/info_text"/>
 
 
